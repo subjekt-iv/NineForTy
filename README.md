@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-# grupo_4_
-=======
 # grupo_4_NineForTy
-
->>>>>>> 7bf2fe2022c1a7f6d09e0f24a83e90132a65075c
 
 Descripción:
 
