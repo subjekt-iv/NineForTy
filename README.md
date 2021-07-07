@@ -8,3 +8,4 @@ El sitio va a contar con distintas secciones:
 .Una sección de inicio, exploratoria, para que lxs usuarixs puedan ver todo el contenido de nuestro sitio. Van a poder hacer uso de filtros para que su búqueda pueda ser lo más personalizada posible.
 .Una sección de novedades para que puedan estar al tanto de todo lo nuevo que ofrece nuestro sitio y que a lo mejor sea por tiempo limitado.
 .Un perfil en donde podrán acceder... 
+hola mi nombre es milena
