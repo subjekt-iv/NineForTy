@@ -1,5 +1,11 @@
 # grupo_4_NineForTy
 
+WireFrame: https://www.figma.com/file/KNF1G6mNT5KMaDge2GCOkY/NineForty?node-id=0%3A1
+
+
+Nosotros:
+. Somos un grupo de jóvenes empeñados en crear la nueva metodología de exchange en el mercado de los Non Fungible Tokens, desarrollándonos en un ambiente nuevo vía la implementación de la creatividad humana, donde una criptomoneda no sólo tenga valor monetario, sino, también artístico. Abrimos un mercado de obras digitales, donde cada uno puede presentar su granito de arena y realizar intercambios valuados en la moneda Ethereum, compra y venta.
+
 Descripción:
 
 La idea con respecto al proyecto surgió conversando acerca de los NFT's (Non Fungible Tokens). Nuestro objetivo como equipo es desarollar un sitio de compra y venta de NFT's. Con los NFT's, el arte puede ser tokenizado para crear un certificado digital de propiedad que puede ser comprado y vendido. Por lo tanto queremos que lxs usuarixs puedan acceder a nuestro sitio para coleccionar, vender y comprar NFT's. 
@@ -16,4 +22,5 @@ En cuanto al Footer:
 . Lxs usuarixs tendrán acceso a recursos de ayuda para que su experiencia sea lo más efectiva posible. Contarán con un centro de soporte, un FAQ y un blog. 
 . El sitio contará con botones que redirigirán a las redes sociales en las cuales tenemos presencia como sitio. Como por ejemplo: nuestra cuenta de Instagram, nuestro subreddit (r/NineForTy), nuestra comunidad en Discord y nuestra página de Facebook.
 . Un boton para suscribirse a nuestro Newsletter y una muy breve descripción del mismo.
+
 
