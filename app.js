@@ -11,11 +11,8 @@ app.get('/home', function(request, response){
     response.sendFile(path.join(__dirname, 'views/index.html'))
 })
 
-app.get('/register', function(request, response){
-    response.sendFile(path.join(__dirname, 'views/register.html'))
-})
-app.get('/login', function(request, response){
-    response.sendFile(path.join(__dirname, 'views/login.html'))
+app.get('/carrito', function(request, response){
+    response.sendFile(path.join(__dirname, 'views/carrito.html'))
 })
 
 app.use(express.static('public'))
