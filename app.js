@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
     res.send('Hola mundo!')
 })
 
-app.get('/home', function(request, response){
+app.get('/', function(request, response){
     response.sendFile(path.join(__dirname, 'views/index.html'))
 })
 
@@ -18,6 +18,10 @@ app.get('/login', function(request, response){
     response.sendFile(path.join(__dirname, 'views/login.html'))
 })
 
+app.get('/market', (req, res) => {
+    res.sendFile(path.join (__dirname, 'views/market.html'))
+})
+
 app.use(express.static('public'))
 
 app.get('*', function (request, response){
@@ -25,6 +29,6 @@ app.get('*', function (request, response){
 })
 
 app.listen(port, ()=>{
-    console.log('La app esta funcionado en http://localhost:'+ port +"/home")
+    console.log('La app esta funcionado en http://localhost:'+ port +"/market")
 })
 
