@@ -14,9 +14,10 @@ body{
 }
 
 header{
-    background-color: #2873B9;
+    background-color: rgba(40, 115, 185, 0.7);
     opacity: 70%;
     color: white;
+    
 }
 
 
@@ -119,6 +120,7 @@ footer{
     height: 41px;
     top: 9px;
     left: 9px;
+    
 }
 
 .headertest{
