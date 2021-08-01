@@ -128,8 +128,11 @@ main a{
 }
 
 .logo{
-    width: 10%;
     position: absolute;
+    height: 41px;
+    top: 9px;
+    left: 9px;
+    z-index: 10;
 }
 
 .headertest{
@@ -139,6 +142,19 @@ main a{
 header div a{
     text-decoration: none;
     color: white;
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+.active {
+
+    color: white; 
 }
 
 .resourcesmenu{
