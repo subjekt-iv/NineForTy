@@ -3,10 +3,6 @@ const app = express()
 const port = 3030
 const path = require('path')
 
-app.get('/', function (req, res) {
-    res.send('Hola mundo!')
-})
-
 app.get('/', function(request, response){
     response.sendFile(path.join(__dirname, 'views/index.html'))
 })
@@ -29,6 +25,6 @@ app.get('*', function (request, response){
 })
 
 app.listen(port, ()=>{
-    console.log('La app esta funcionado en http://localhost:'+ port +"/market")
+    console.log('La app esta funcionado en http://localhost:'+ port +"/home")
 })
 
