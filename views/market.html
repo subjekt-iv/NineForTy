@@ -11,38 +11,35 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-       
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                  x.style.display = "none";
+                } else {
+                  x.style.display = "block";
+                }
+              }
+        </script>
     </head>
     <body>
         
         <header>
             <div class="topnav">
-                <a href="#home" class="active">Logo
-                    <div class="barrabusqueda"><input type="text" class="busq" placeholder="Tags, Artists, Collections"></div>
-                </a> 
-                <script>
-                    function myFunction() {
-                        var x = document.getElementById("myLinks");
-                        if (x.style.display === "block") {
-                          x.style.display = "none";
-                        } else {
-                          x.style.display = "block";
-                        }
-                      }
-                      </script>
+                <a href="#home" class="active"><img class="logo" src="/img/logo_cubo_verde.png"></a>
                 <!-- Navigation links (hidden by default) -->
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                  </a>
-                 <div id="myLinks">
-                    <a href="/market.html">Market</a>
+                <div class="barrabusqueda"><input type="text" class="busq" placeholder="Tags, Artists, Collections"></div>
+                <div id="myLinks">
+                    <a href="market">Market</a>
                     <a href="">Features</a>
                     <a href="">Community</a>
-                 </div>
+                </div>
                 <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-               </div>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
+            </div>
         </header>
-       
        
        
     <main id="main-market">
