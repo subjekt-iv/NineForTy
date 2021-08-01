@@ -123,7 +123,8 @@ main a{
     border-radius: 30px;
     border: none;
     height: 2rem;
-    font-size: 100%;
+    font-size: 75%;
+    text-align: center;
     width: 90%;
 }
 
