@@ -14,15 +14,12 @@ body{
 }
 
 header{
-    background-color: #2873B9;
-    opacity: 70%;
     color: white;
 }
 
 
 
 #main-index{
-    background: rgb(40,115,185);
     background: linear-gradient(180deg, rgba(40,115,185,0.7) 15%, rgba(120,190,255,1) 40%, rgba(59,220,152,0.35) 94%);
     text-align: center;
     color: white;
@@ -96,7 +93,6 @@ footer{
 
 .barrabusqueda{
     text-align: center;
-    background-color: #2873B9;
     justify-content: center;
     width: 50%;
     position: absolute;
@@ -119,6 +115,7 @@ footer{
     height: 41px;
     top: 9px;
     left: 9px;
+    z-index: 10;
 }
 
 .headertest{
@@ -181,6 +178,7 @@ width: 50%;
     text-decoration: none;
     font-size: 17px;
     height: 30px;
+    background-color: rgba(40,115,185,70%);
     display: block; 
 }
 
@@ -189,10 +187,11 @@ width: 50%;
     position: absolute;
     right: 0;
     top: 0;
+    
 }
   
 .active {
-    background-color: #2873B9;
+    
     color: white; 
 }
 
