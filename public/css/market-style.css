@@ -34,6 +34,7 @@ header{
 
 #img-market {
     max-width: 100%;
+    
 }
 
 .posts {
@@ -140,6 +141,19 @@ main a{
 header div a{
     text-decoration: none;
     color: white;
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+.active {
+
+    color: white; 
 }
 
 .resourcesmenu{
