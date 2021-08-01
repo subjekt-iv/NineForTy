@@ -21,38 +21,6 @@ header{
     color: white;
 }
 
-<<<<<<< HEAD:public/css/style.css
-#main-market{
-
-    
-    background: rgb(40,115,185);
-    background: linear-gradient(180deg, rgba(40,115,185,0.7) 15%, rgba(120,190,255,1) 40%, rgba(59,220,152,0.35) 94%);
-    text-align: center;
-    padding-bottom: 5%;
-}
-
-#main-market .posts i {
-    position: absolute;
-    right: 57px;
-}
-
-#img-market {
-    max-width: 100%;
-}
-
-.posts {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-margin: 10%;
-margin-top: 0px;
-
-padding: 5% 5%;
-background-color: white;
-border-radius: 30px;
-
-
-=======
 
 
 #main-index{
@@ -60,7 +28,6 @@ border-radius: 30px;
     background: linear-gradient(180deg, rgba(40,115,185,0.7) 15%, rgba(120,190,255,1) 40%, rgba(59,220,152,0.35) 94%);
     text-align: center;
     color: white;
->>>>>>> ce810c42cb977f315f3b8b5ec53d47eb2e6794d5:public/css/index-style.css
 }
 
 footer{
@@ -131,17 +98,12 @@ footer{
 
 .barrabusqueda{
     text-align: center;
-<<<<<<< HEAD:public/css/style.css
-    background-color: #2873B9; 
-    width: 50% ;
-=======
     background-color: #2873B9;
     justify-content: center;
     width: 50%;
     position: absolute;
     top: 0;
     left: 25%;
->>>>>>> ce810c42cb977f315f3b8b5ec53d47eb2e6794d5:public/css/index-style.css
 }
 
 .busq{    
