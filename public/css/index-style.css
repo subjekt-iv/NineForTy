@@ -41,6 +41,7 @@ footer{
 
 #main-index h4{
     padding: 5% 0;
+    
 }
 
 #main-index p{
@@ -57,7 +58,8 @@ footer{
 }
 
 .trending img{
-    width: 100%;
+    width: 80%;
+    padding-bottom: 5%;
 }
 
 .placeholder{
