@@ -57,7 +57,7 @@ main{
 .eth{
     color:white;
     font-weight:500;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .dolares{
@@ -131,12 +131,16 @@ main{
     margin-right: -12px;
 }
 
+#tachito{
+    color: red;
+}
+
 /*linea*/
 
 hr{
     background-color: white;
     color: white;
-    width: 350px;
+    width: 380px;
     height: 2px;
     left: 19px;
     top: 352px;
