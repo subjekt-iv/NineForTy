@@ -224,17 +224,20 @@ width: 50%;
 
     #main-index a {
         position: relative;
-        right: 25%;
+    }
+
+    .index-register{
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .placeholder{
         width: 45%;
-        position: absolute;
-        right: 0%;    
-        top: 63px;
         max-height: 280px;
         max-width: 277px;
+        justify-content: center;
     }
+    
 
 
 }
