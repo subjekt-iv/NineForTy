@@ -71,13 +71,7 @@ footer{
     padding-top: 5%;
 }
 
-h4{
-    padding: 5% 0;
-}
 
-p{
-    padding-bottom: 5%;
-}
 
 main a{
     color: white;
@@ -116,6 +110,7 @@ main a{
 .footer-bottom{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 5px;
     width: 100%;
     flex-direction: row;
     border-top: 1px #C4C4C4 solid;
@@ -177,23 +172,23 @@ header div a{
 }
 
 .resourcesmenu{
-justify-content: center;
-text-align: center;
-width: 50%;
-}
-
-.communitymenu{
-justify-content: center;
-align-items: center;
-text-align: center;
-width: 50%;
-}
-
-.newsletter-div{
-    width: 100%;
+    justify-content: center;
     text-align: center;
-    padding-top: 5%;
-}
+    width: 50%;
+    }
+    
+    .communitymenu{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    }
+
+    .newsletter-div{
+        width: 100%;
+        text-align: center;
+        padding-top: 5%;
+    }
 
 .community{
     justify-content: center;

@@ -1,0 +1,333 @@
+*{
+    font-family:'Poppins', sans-serif;  
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0%;
+}
+
+main{
+    background: linear-gradient(180deg, rgba(40,115,185,0.7) 15%, rgba(120,190,255,1) 40%, rgba(59,220,152,0.35) 98%);
+}
+
+/*fotos*/
+
+#david{
+    width: 100%;
+    height: 100%;
+}
+
+#nextstep{
+    width: 50%;
+    height: 50%;
+}
+
+#dancing{
+    width: 50%;
+    height: 50%;
+}
+
+/*tipografia*/
+
+.nombreobra{
+    color: white;
+    font-weight:500;
+    font-size: 18px;
+}
+
+.nombreartista{
+    color: #5B5B5B;
+    font-weight:500;
+    font-size: 16px;
+}
+
+.pricehistory{
+    color: white;
+    font-weight:400;
+    font-size: 16px;
+}
+
+.pricehistory1{
+    color: white;
+    font-weight:400;
+    font-size: 16px;
+}
+
+.eth{
+    color:white;
+    font-weight:500;
+    font-size: 20px;
+}
+
+.dolares{
+    color:#5B5B5B;
+    font-weight:500;
+    font-size: 15px;
+}
+
+#total{
+    font-size: 25px;
+    color:white;
+    font-weight: 500;
+}
+
+#eth{
+    font-size: 35px;
+    color: white;
+    font-weight: 500;
+}
+
+#pesos{
+    font-size: 25px;
+    color: #5B5B5B;
+}
+
+.info{
+    text-align: right;
+    line-height: 15px;
+    margin-top: -12px;
+}
+
+.precio{
+    text-align: right;
+    line-height: 15px;
+}
+
+#eth{
+    text-align: right;
+}
+
+#pesos{
+    text-align: right;
+}
+
+
+/*botones*/
+
+.view{
+    width: 150px;
+    height: 40px;
+    left: 38px;
+    top: 280px;
+    border-radius: 20px;
+    border-style: none;
+    color: #3BDC98;
+    background-color: white;
+    margin: 15px;
+    font-size: 16px;
+}
+
+#buy{
+    width: 120px;
+    height: 31px;
+    top: 280px;
+    border-radius: 20px;
+    border-style: none;
+    color: white;
+    background-color: #659FD6;
+    margin: 15px;
+    font-size: 20px;
+    margin-right: -12px;
+}
+
+/*linea*/
+
+hr{
+    background-color: white;
+    color: white;
+    width: 350px;
+    height: 2px;
+    left: 19px;
+    top: 352px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-width: 0px;
+    box-shadow: none;
+}
+
+/*pagar*/
+
+#pagar{
+    display: flex;
+    align-content: space-around;
+}
+
+/*pantalla*/
+
+.izq{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.derecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.icono{
+    width: 10px;
+    height: 10px;
+}
+
+#pagar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#dinero{
+    margin-top: -19px;
+    line-height: 10px;
+}
+
+#total{
+    margin-top: -22px;
+    text-align: center;
+}
+
+/*nav*/
+
+.topnav {
+    overflow: hidden;
+    position: relative;
+}
+  
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: white;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 30px;
+    background-color: none;
+    display: block; 
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.active {
+    color: white; 
+}
+
+.busq{    
+    margin-top: 13px;
+    justify-self: center;
+    border-radius: 30px;
+    border: none;
+    height: 2rem;
+    font-size: 75%;
+    text-align: center;
+    width: 90%;
+}
+
+.barrabusqueda{
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+.logo{
+    position: absolute;
+    height: 41px;
+    top: 9px;
+    left: 9px;
+    z-index: 10;
+}
+
+/*footer*/
+
+.resourcesmenu{
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    }
+    
+.communitymenu{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+}
+    
+.newsletter-div{
+    width: 100%;
+    text-align: center;
+    padding-top: 5%;
+}
+    
+.community{
+    justify-content: center;
+    align-items: center;
+}
+    
+.icons{
+    font-size: 200%;
+    flex-wrap: wrap;
+    width: 50%;
+    align-items: center;
+    margin: 0 25%;
+}
+    
+#resources{
+    list-style: none;
+}
+
+footer{
+    background-color: black;
+    color: #C4C4C4;
+    display: flex;
+    justify-content: space-around;
+    font-size: 100%;
+    bottom:0;
+    width:100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 5%;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-direction: row;
+    border-top: 1px #C4C4C4 solid;
+}
+
+.suscribe-button{
+    margin-bottom: 6%;
+    margin-top: 6%;
+    border-radius: 20px;
+    border-style: none;
+    color: white;
+    background-color: #3BDC98;
+    left: 38px;
+    top: 280px;
+    width: 130px;
+    height: 31px;
+}

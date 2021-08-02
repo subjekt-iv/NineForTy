@@ -57,6 +57,10 @@ footer{
     border-radius: 15px;
 }
 
+h2{
+    font-weight: 600;
+}
+
 .trending img{
     width: 80%;
     padding-bottom: 5%;
