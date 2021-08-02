@@ -57,6 +57,10 @@ footer{
     border-radius: 15px;
 }
 
+h2{
+    font-weight: 600;
+}
+
 .trending img{
     width: 80%;
     padding-bottom: 5%;
@@ -78,6 +82,15 @@ footer{
 
 .suscribe-button{
     margin-bottom: 6%;
+    margin-top: 6%;
+    border-radius: 20px;
+    border-style: none;
+    color: white;
+    background-color: #3BDC98;
+    left: 38px;
+    top: 280px;
+    width: 130px;
+    height: 31px;
 }
 
 .fa-chevron-down{
