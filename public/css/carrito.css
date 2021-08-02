@@ -4,7 +4,8 @@
 
 body{
     box-sizing: border-box;
-    margin: 0%;
+    margin: auto;
+    width: 100%;
 }
 
 main{
@@ -282,7 +283,6 @@ hr{
 .newsletter-div{
     width: 100%;
     text-align: center;
-    padding-top: 5%;
 }
     
 .community{
