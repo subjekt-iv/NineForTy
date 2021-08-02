@@ -28,8 +28,12 @@ header{
 }
 
 #main-market .posts i {
-    position: absolute;
-    right: 57px;
+    position: relative;
+    left: 233px;
+    bottom: 17px;
+    
+
+   
 }
 
 #img-market {
@@ -43,11 +47,16 @@ flex-direction: column;
 align-items: flex-start;
 margin: 10%;
 margin-top: 0px;
-
 padding: 5% 5%;
 background-color: white;
 border-radius: 30px;
 }
+
+#hash {
+    font-weight: lighter;
+}
+
+
 
 footer{
     background-color: black;
@@ -62,13 +71,7 @@ footer{
     padding-top: 5%;
 }
 
-h4{
-    padding: 5% 0;
-}
 
-p{
-    padding-bottom: 5%;
-}
 
 main a{
     color: white;
@@ -89,8 +92,13 @@ main a{
 
 }
 
-.suscribe-button{
-    margin-bottom: 6%;
+.subscribe-button{
+    color: white;
+    text-decoration: none;
+    background-color: #3BDC98;
+    padding: 2% 7% ;
+    margin: auto;
+    border-radius: 15px;
 }
 
 .fa-chevron-down{
@@ -102,6 +110,7 @@ main a{
 .footer-bottom{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 5px;
     width: 100%;
     flex-direction: row;
     border-top: 1px #C4C4C4 solid;
@@ -157,24 +166,29 @@ header div a{
     color: white; 
 }
 
-.resourcesmenu{
-justify-content: center;
-text-align: center;
-width: 50%;
+#espacio-boton {
+    display: block;
+    padding: 0.25em 1em;
 }
 
+.resourcesmenu{
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    }
+    
 .communitymenu{
-justify-content: center;
-align-items: center;
-text-align: center;
-width: 50%;
-}
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    }
 
 .newsletter-div{
-    width: 100%;
-    text-align: center;
-    padding-top: 5%;
-}
+        width: 100%;
+        text-align: center;
+        padding-top: 5%;
+    }
 
 .community{
     justify-content: center;
