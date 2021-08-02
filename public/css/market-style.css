@@ -28,8 +28,12 @@ header{
 }
 
 #main-market .posts i {
-    position: absolute;
-    right: 57px;
+    position: relative;
+    left: 233px;
+    bottom: 17px;
+    
+
+   
 }
 
 #img-market {
@@ -43,11 +47,16 @@ flex-direction: column;
 align-items: flex-start;
 margin: 10%;
 margin-top: 0px;
-
 padding: 5% 5%;
 background-color: white;
 border-radius: 30px;
 }
+
+#hash {
+    font-weight: lighter;
+}
+
+
 
 footer{
     background-color: black;
@@ -89,8 +98,13 @@ main a{
 
 }
 
-.suscribe-button{
-    margin-bottom: 6%;
+.subscribe-button{
+    color: white;
+    text-decoration: none;
+    background-color: #3BDC98;
+    padding: 2% 7% ;
+    margin: auto;
+    border-radius: 15px;
 }
 
 .fa-chevron-down{
@@ -155,6 +169,11 @@ header div a{
 .active {
 
     color: white; 
+}
+
+#espacio-boton {
+    display: block;
+    padding: 0.25em 1em;
 }
 
 .resourcesmenu{
