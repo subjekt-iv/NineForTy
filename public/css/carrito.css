@@ -1,0 +1,196 @@
+*{
+    font-family:'Poppins', sans-serif;  
+}
+
+body{
+    background-color: #659FD6;
+    box-sizing: border-box;
+    
+}
+
+/*fotos*/
+
+#david{
+    width: 100%;
+    height: 100%;
+}
+
+#nextstep{
+    width: 50%;
+    height: 50%;
+}
+
+#dancing{
+    width: 50%;
+    height: 50%;
+}
+
+/*tipografia*/
+
+.nombreobra{
+    color: white;
+    font-weight:500;
+    font-size: 18px;
+}
+
+.nombreartista{
+    color: #5B5B5B;
+    font-weight:500;
+    font-size: 16px;
+}
+
+.pricehistory{
+    color: white;
+    font-weight:400;
+    font-size: 16px;
+}
+
+.pricehistory1{
+    color: white;
+    font-weight:400;
+    font-size: 16px;
+}
+
+.eth{
+    color:white;
+    font-weight:500;
+    font-size: 20px;
+}
+
+.dolares{
+    color:#5B5B5B;
+    font-weight:500;
+    font-size: 15px;
+}
+
+#total{
+    font-size: 25px;
+    color:white
+}
+
+#eth{
+    font-size: 35px;
+    color: white;
+}
+
+#pesos{
+    font-size: 25px;
+    color: #5B5B5B;
+}
+
+.info{
+    text-align: right;
+    line-height: 15px;
+    margin-top: -12px;
+}
+
+.precio{
+    text-align: right;
+    line-height: 15px;
+}
+
+#eth{
+    text-align: right;
+}
+
+#pesos{
+    text-align: right;
+}
+
+
+/*botones*/
+
+.view{
+    width: 150px;
+    height: 40px;
+    left: 38px;
+    top: 280px;
+    border-radius: 20px;
+    border-style: none;
+    color: #3BDC98;
+    background-color: white;
+    margin: 15px;
+    font-size: 16px;
+}
+
+#buy{
+    width: 120px;
+    height: 31px;
+    top: 280px;
+    border-radius: 20px;
+    border-style: none;
+    color: white;
+    background-color: #3BDC98;
+    margin: 15px;
+    font-size: 20px;
+    margin-right: -12px;
+}
+
+/*linea*/
+
+hr{
+    color: white;
+    width: 350px;
+    height: 0px;
+    left: 19px;
+    top: 352px;
+    border-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*pagar*/
+
+#pagar{
+    display: flex;
+    align-content: space-around;
+}
+
+/*pantalla*/
+
+.izq{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.derecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.icono{
+    width: 10px;
+    height: 10px;
+}
+
+#pagar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#dinero{
+    margin-top: -19px;
+    line-height: 10px;
+}
+
+#total{
+    margin-top: -22px;
+    text-align: center;
+}
+
+
