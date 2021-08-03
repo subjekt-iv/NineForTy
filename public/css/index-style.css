@@ -49,7 +49,7 @@ footer{
     padding-bottom: 5%;
 }
 
-#main-index a{
+.index-register a{
     color: white;
     text-decoration: none;
     background-color: #3BDC98;
@@ -63,8 +63,10 @@ h2{
 }
 
 .trending img{
-    width: 80%;
+    width: auto;
     padding-bottom: 5%;
+    max-height: 288px;
+
 }
 
 .placeholder{
@@ -193,7 +195,7 @@ width: 50%;
     padding: 14px 22px;
     text-decoration: none;
     font-size: 17px;
-    height: 30px;
+    height: 51px;
     display: block; 
 }
 
@@ -208,27 +210,30 @@ width: 50%;
     color: white; 
 }
 
+
+
 @media (min-width: 481px){
     #main-index{
         display: flex;
         flex-direction: column;
     }
 
-    #main-index h4{
-        width: 50%;
-    }
-
-    #main-index p {
-        width: 50%;
-    }
-
-    #main-index a {
-        position: relative;
+    .trending img{
+        width: auto;
+        padding-bottom: 5%;
+        max-height: 615px;
     }
 
     .index-register{
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
+        width: 50%;
+        margin-left: 5%;
+    }
+
+    .index-register-container{
+        display: flex;
     }
 
     .placeholder{
@@ -238,6 +243,20 @@ width: 50%;
         justify-content: center;
     }
     
+    .fa-chevron-down{
+        display: none;
+    }
+
+    .page-features{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .page-features article{
+        width: 30%;
+        padding-bottom: 5%;
+    }
 
 
 }
@@ -250,4 +269,10 @@ width: 50%;
         display: flex;
         width: auto;
     }
+
+    .page-features article{
+        
+    }
+
+
 }
