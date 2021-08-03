@@ -132,8 +132,15 @@ main{
     margin-right: -12px;
 }
 
-#tachito{
-    color: red;
+.fa-trash-alt{
+    color:red;
+}
+
+.tachito{
+    background-color: transparent;
+    border-style:solid;
+    border-color: red;
+    border-radius: 30px;
 }
 
 /*linea*/
