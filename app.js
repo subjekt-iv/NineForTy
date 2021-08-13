@@ -3,8 +3,11 @@ const app = express()
 const port = 3030
 const path = require('path')
 
+app.set("view engine", "ejs");
+app.set("views", "./views");
+
 app.get('/', function(request, response){
-    response.sendFile(path.join(__dirname, 'views/index.html'))
+    response.render(path.join(__dirname, 'views/index'))
 })
 
 app.get('/register', (req, res) => {
@@ -13,11 +16,11 @@ app.get('/register', (req, res) => {
 
 
 app.get('/carrito', function(request, response){
-    response.sendFile(path.join(__dirname, 'views/carrito.html'))
+    response.render(path.join(__dirname, 'views/carrito'))
 })
 
 app.get('/market', (req, res) => {
-    res.sendFile(path.join (__dirname, 'views/market.html'))
+    res.render(path.join (__dirname, 'views/market'))
 })
 
 
