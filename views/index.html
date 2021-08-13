@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NineForty</title>
+        <meta charset="utf-8">
+        <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link href="/css/index-style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+       
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                  x.style.display = "none";
+                } else {
+                  x.style.display = "block";
+                }
+              }
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="topnav">
+                <a href="#home"> <img class="logo" src="/img/logo_cubo_verde.png"></a>
+                <!-- Navigation links (hidden by default) -->
+                <div class="barrabusqueda"><input type="text" class="busq" placeholder="Tags, Artists, Collections"></div>
+                <div id="myLinks">
+                    <a href="">Home</a>
+                    <a href="market">Market</a>
+                    <a href="">Features</a>
+                    <a href="">Community</a>
+                </div>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                  <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </header>
+        <main id="main-index">
+            <div class="index-register-container">
+                <div class="index-register">
+                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore enim</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum impedit necessitatibus provident possimus laborum. </p> 
+                    <a href="/register">Sign up</a>
+                </div>    
+                <img class="placeholder" src="/img/NFT-13.jpg">
+            </div>
+                <i class="fas fa-chevron-down"></i>
+            <div class="trending">
+                <h2>Trending</h2>
+                <div id="demo" class="carousel slide" data-ride="carousel">
+
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                      <li data-target="#demo" data-slide-to="0" class="active"></li>
+                      <li data-target="#demo" data-slide-to="1"></li>
+                      <li data-target="#demo" data-slide-to="2"></li>
+                    </ul>
+                  
+                    <!-- The slideshow -->
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="/img/dancing.png" alt="dancing">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/img/NFT-2.jpg" alt="NFT 2">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/img/NFT-3.jpg" alt="NFT 3">
+                      </div>
+                    </div>
+                  
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                      <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                      <span class="carousel-control-next-icon"></span>
+                    </a>
+                  
+                  </div>
+                <img >
+                <img >
+                <img >
+            </div>
+            <section class="page-features">
+                <article>
+                    <i class="fas fa-wallet"></i>
+                    <p>Buy and sell NFTs.</p>
+                </article>
+                <article>
+                    <i class="fas fa-edit"></i>
+                    <p>Create your own NFTs.</p>
+                </article>
+                <article>
+                    <i class="fas fa-globe-europe"></i>
+                    <p>Meet artists from all around the world.</p>
+                </article>
+            </div>
+
+        </main>
+    
+        <footer>
+            <div class="resourcesmenu">
+                <h4 class="resources">Resources</h4>
+                <p>Support center</p>
+                <p>FAQ</p>
+                <p>Blog</p>
+            </div>
+            <div class="communitymenu">
+                <h4 class="community">Community</h4>
+                <section class="icons">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-discord"></i>
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-reddit-alien"></i>
+                </section>
+            </div>
+            <div class="newsletter-div">
+                <h4 class="newsletter">Newsletter</h4>
+                <p class="newsletter-text">Subscribe. Stay up to date with our latest news and events.</p>
+                <button class="subscribe-button">Subscribe</button>
+            </div>
+            <div class="footer-bottom">
+                <p>2021 NineForty</p>
+                <p>Privacy</p>
+                <p>Terms</p>
+            </div>
+
+        </footer>
+        </div>
+    </body>
+</html>
