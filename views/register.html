@@ -30,7 +30,7 @@
             <div class="topnav">
                 <a href="#home" class="active"><img class="logo" src="/img/logo_cubo_verde.png"></a>
                 <!-- Navigation links (hidden by default) -->
-                <div class="barrabusqueda"><input type="text" class="busq" placeholder="Tags, Artists, Collections"></div>
+                <div class="barrabusqueda"><input type="text" class="busq"  placeholder="Tags, Artists, Collections"></div>
                 <div id="myLinks">
                     <a href="market">Market</a>
                     <a href="">Features</a>
@@ -49,48 +49,58 @@
             
         
 
-        <h4>Please, complete the following information to join us </h4>
+        <h4>Please, complete the following <br> 
+          information to join us. </h4>
+
+          <br>
+          <br>
         
-    
-        <div class="contenedor">
-          
-          <div class="wrapper">
-           
-            </div>
-            <div class="contacto">
-              <h3>Create Account</h3>
-              <form class="formulario">
-                <p>
-                  <label>Name*</label>
-                  <input type="text" name="nombre" required>
-                </p>
-                <p>
-                  <label>Surname*</label>
-                  <input type="text" name="nombre" required>
-                </p>
-                <p>
-                  <label>E-mail*</label>
-                  <input type="email" name="contacto">
-                </p>
-                <p>
-                  <label>Phone*</label>
-                  <input type="text" name="Phone" required>
-                </p>
-                <p>
-                  <label>Password*</label>
-                  <input type="text" name="contraseña" required>
-                </p>
-                <p class="full">
-                  <button class="boton-wallet">Choose your wallet</button>
-                </p>
-                <p class="full">
-                  <button class="boton-signup">signup</button>  
-                </p>
-              </form>
-            </div>
+        <div class="wrapper">
+          <form action="input">
+        
+          <p id="field"> 
+           <div class="onehalf"><label>*Name</label></div>
+            <input type="text"  name="nombre" required: true placeholder="">
+          </p>
+          <br>
+          <p id="field"> 
+            <div class="onehalf"><label>*Surname</label></div>
+            <input type="text" name="apellido" required: true placeholder="">
+          </p>
+          <br>
+          <p id="field"> 
+            <div class="onehalf"><label>*E-mail</label></div>
+            <input type="text" name="email" required: true placeholder="">
+          </p>
+          <br>
+          <p id="field"> 
+            <div class="otherhalf"><label>*Phone</label></div>
+            <input type="text" name="telefono" required: true placeholder="">
+          </p>
+          <br>
+          <p id="field"> 
+            <div class="otherhalf"><label>*Username</label></div>
+            <input type="text" name="usuario" required: true placeholder="">
+          </p>
+          <br>
+          <p id="field"> 
+            <div class="otherhalf"><label>*Password</label></div>
+            <input type="text" name="contraseña" required: true placeholder ="">
+          </p>
+          <br>
+          <p class="full">
+            <button class="boton-wallet">Choose your wallet</button>
+          </p>
+          <br>
+          <p class="full">
+            <button class="boton-signup">Sign Up</button>  
+          </p>
+          <br>
+        
+          </form>
           </div>
-        </div>
-    
+
+         
 </main>
 
 
