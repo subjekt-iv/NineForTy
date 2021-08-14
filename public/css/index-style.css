@@ -111,15 +111,6 @@ h2{
     font-size: 2rem;
 }
 
-.footer-bottom{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 5px;
-    width: 100%;
-    flex-direction: row;
-    border-top: 1px #C4C4C4 solid;
-}
-
 .barrabusqueda{
     text-align: center;
     justify-content: center;

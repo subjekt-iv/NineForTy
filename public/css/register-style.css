@@ -108,6 +108,14 @@ h2{
     border-top: 1px #C4C4C4 solid;
 }
 
+footer h4{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
 .barrabusqueda{
     text-align: center;
     justify-content: center;
@@ -212,6 +220,15 @@ width: 50%;
 }
 
 
+footer h4{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+    color: #C4C4C4;
+}
+
 
 @media (min-width: 481px){
     #main-index{
@@ -276,6 +293,8 @@ width: 50%;
 
 }
  
+/*Ver fuentes del h4*/
+
 h4{
     color: white;
     text-align: center;
@@ -330,7 +349,7 @@ box-shadow: 0 0 6px 0 rgba(255,255,255, 0.8);
    text-decoration: none;
    font-size: 16px;
    cursor: pointer;
-   border-radius: 20%;
+   border-radius: 20px;
    border-color: white;
 
 }
@@ -345,7 +364,7 @@ color: white;
 height: 40px;
 font-size: 16px;
 cursor: pointer;
-border-radius: 20%;
+border-radius: 20px;
 border-color: white;
 }
 
