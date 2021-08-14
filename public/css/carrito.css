@@ -254,6 +254,15 @@ hr{
     left: 25%;
 }
 
+.cart{
+    width: 15%;
+    position: absolute;
+    top: 0;
+    right: 39px;
+    text-align: end;
+    
+}
+
 .logo{
     position: absolute;
     height: 41px;

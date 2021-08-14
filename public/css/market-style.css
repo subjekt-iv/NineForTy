@@ -235,7 +235,17 @@ header div a{
     right: 0;
     top: 0;
 }
-  
+ 
+
+.cart{
+    width: 15%;
+    position: absolute;
+    top: 0;
+    right: 39px;
+    text-align: end;
+    
+}
+
 .active {
     color: white; 
 }

@@ -219,6 +219,14 @@ width: 50%;
     color: white; 
 }
 
+.cart{
+    width: 15%;
+    position: absolute;
+    top: 0;
+    right: 39px;
+    text-align: end;
+    
+}
 
 footer h4{
     font-size: 1.5rem;
