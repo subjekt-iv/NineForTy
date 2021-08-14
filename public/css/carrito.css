@@ -320,11 +320,11 @@ footer{
     border-top: 1px #C4C4C4 solid;
 }
 
-.suscribe-button{
+.subscribe-button{
     margin-bottom: 6%;
     margin-top: 6%;
     border-radius: 20px;
-    border-style: none;
+    border-style:hidden
     color: white;
     background-color: #3BDC98;
     left: 38px;
