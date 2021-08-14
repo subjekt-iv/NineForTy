@@ -10,6 +10,15 @@ app.get('/', function(request, response){
     response.render(path.join(__dirname, 'views/index'))
 })
 
+app.get('/register', (req, res) => {
+    res.render(path.join (__dirname, 'views/register'))
+})
+
+app.get('/login', (req, res) => {
+    res.render(path.join (__dirname, 'views/login'))
+})
+
+
 app.get('/carrito', function(request, response){
     response.render(path.join(__dirname, 'views/carrito'))
 })
@@ -18,13 +27,15 @@ app.get('/market', (req, res) => {
     res.render(path.join (__dirname, 'views/market'))
 })
 
+
 app.use(express.static('public'))
 
 app.get('*', function (request, response){
     response.send('NOT FOUND', 404)
 })
 
+
 app.listen(port, ()=>{
-    console.log('La app esta funcionado en http://localhost:'+ port )
+    console.log('La app esta funcionado en http://localhost:3030')
 })
 
