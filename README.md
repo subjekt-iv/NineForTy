@@ -1,6 +1,7 @@
 # grupo_4_NineForTy
 
 WireFrame: https://www.figma.com/file/KNF1G6mNT5KMaDge2GCOkY/NineForty?node-id=0%3A1
+
 Trello: https://trello.com/b/OuiW0tLD/proyecto
 
 
@@ -31,4 +32,3 @@ En cuanto al Footer:
 . Un boton para suscribirse a nuestro Newsletter y una muy breve descripción del mismo.
 
 
->>>>>>> 3380ef61725b3e39603a330b2836771a4ab5c17d

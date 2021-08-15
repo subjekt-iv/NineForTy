@@ -27,6 +27,9 @@ app.get('/market', (req, res) => {
     res.render(path.join (__dirname, 'views/market'))
 })
 
+app.get('/detail', (req, res) => {
+    res.render(path.join (__dirname, 'views/products/detail'))
+})
 
 app.use(express.static('public'))
 
