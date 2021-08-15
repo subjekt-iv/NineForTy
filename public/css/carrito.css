@@ -253,6 +253,15 @@ hr{
     left: 25%;
 }
 
+.cart{
+    width: 15%;
+    position: absolute;
+    top: 0;
+    right: 39px;
+    text-align: end;
+    
+}
+
 .logo{
     position: absolute;
     height: 41px;
@@ -314,12 +323,22 @@ footer{
 .footer-bottom{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 5px;
     width: 100%;
     flex-direction: row;
     border-top: 1px #C4C4C4 solid;
 }
 
-.suscribe-button{
+footer h4{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+
+.subscribe-button{
     margin-bottom: 6%;
     margin-top: 6%;
     border-radius: 20px;

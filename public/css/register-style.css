@@ -1,7 +1,9 @@
 *{
     font-family:'Poppins', sans-serif;  
     margin: 0%;
-    padding: 0%;
+    padding:0%;
+    box-sizing: border-box;
+
 }
 
 html {
@@ -41,15 +43,6 @@ footer{
     padding-top: 5%;
 }
 
-.footer-bottom{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 5px;
-    width: 100%;
-    flex-direction: row;
-    border-top: 1px #C4C4C4 solid;
-}
-
 #main-index h4{
     padding: 5% 0;
     
@@ -84,32 +77,43 @@ h2{
     margin: 5%;
 }
 
-.page-features{
-    color: black
-}
+
 
 .page-features i{
     font-size: 2rem;
 
 }
 
-
 .subscribe-button{
-    margin-bottom: 6%;
-    margin-top: 6%;
-    border-radius: 20px;
     color: white;
+    text-decoration: none;
     background-color: #3BDC98;
-    left: 38px;
-    top: 280px;
-    width: 130px;
-    height: 31px;
+    padding: 2% 7% ;
+    margin: auto;
+    border-radius: 15px;
 }
 
 .fa-chevron-down{
     width: 100%;
     color: #3BDC98;
     font-size: 2rem;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5px;
+    width: 100%;
+    flex-direction: row;
+    border-top: 1px #C4C4C4 solid;
+}
+
+footer h4{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
 }
 
 .barrabusqueda{
@@ -151,16 +155,16 @@ header div a{
 }
 
 .resourcesmenu{
-    justify-content: center;
-    text-align: center;
-    width: 50%;
+justify-content: center;
+text-align: center;
+width: 50%;
 }
 
 .communitymenu{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 50%;
+justify-content: center;
+align-items: center;
+text-align: center;
+width: 50%;
 }
 
 .newsletter-div{
@@ -190,7 +194,7 @@ header div a{
     overflow: hidden;
     position: relative;
 }
-
+  
 .topnav #myLinks {
     display: none;
 }
@@ -210,7 +214,7 @@ header div a{
     right: 0;
     top: 0;
 }
-
+  
 .active {
     color: white; 
 }
@@ -224,80 +228,28 @@ header div a{
     
 }
 
-#main-detail{
-    margin: 3%;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
+footer h4{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+    color: #C4C4C4;
 }
 
-#main-detail img{
-    width: 100%;
-}
-
-#main-detail .title{
-    padding-top: 10%;
-    font-weight: bold;
-}
-
-#main-detail .description{
-    padding-top: 5%;
-    padding-bottom: 10%;
-}
-
-#main-detail .tokenStats{
-    width: 100%;
-}
-
-
-#main-detail .tokenStats img{
-    width: 40px;
-    height: 40px;
-}
-
-#main-detail .favorites{
-    border-top: 2px solid #E5E5E5;
-    padding-top: 5%;
-}
-
-#main-detail .tokenStats i{
-    font-size: 3rem;
-}
-
-
-#main-detail .tokenStats{
-border-top: 2px solid #E5E5E5;
-padding-top: 5%;
-}
-
-#main-detail .buy-button{
-    margin-bottom: 6%;
-    margin-top: 6%;
-    border-radius: 20px;
-    color: white;
-    background-color: #3BDC98;
-   justify-content: center;
-    width: 100%;
-    height: 31px;
-}
-
-#main-detail .tokenPrice{
-    font-size: 2.5rem;
-    font-weight: bolder;
-}
 
 @media (min-width: 481px){
     #main-index{
         display: flex;
         flex-direction: column;
     }
-    
+
     .trending img{
         width: auto;
         padding-bottom: 5%;
         max-height: 615px;
     }
-    
+
     .index-register{
         display: flex;
         flex-wrap: wrap;
@@ -332,34 +284,8 @@ padding-top: 5%;
         padding-bottom: 5%;
     }
 
-    #main-detail .tokenDetail{
-        order: -1;
-    }
-    
-    #main-detail .token{
-        width: 50%;
-        position: relative;
-        left: 10%;
-        padding-bottom: 10%;
-    }
 
-    #main-detail .tokentags{
-        font-size: 75%;
-    }
-
-    #main-detail .buy-button{
-        width: 50%;
-        padding: 5%;
-        margin: auto;
-        height: auto;
-    }
-
-    #main-detail .tokenStats{
-        text-align: center;
-    }
 }
-
-
 
 
 @media (min-width: 769px){
@@ -368,31 +294,82 @@ padding-top: 5%;
         width: auto;
     }
 
-    #main-detail{
-        justify-content: space-between;
-    }
-
-    #main-detail .token{
-        width: 40%;
-        position: initial;
-    }
-
-    #main-detail .tokenStats{
-        width: 30%;
-        border-top: none;
-    }
-    
-    #main-detail .tokenDetail{
-        width: 30%;
-    }
-
-    #main-detail .buy-button{
-        width: 20%;
-        position: absolute; 
-        left: 5;
-        bottom: 5%;
-        padding: 2%;
-    }
-
-    
 }
+ 
+/*Ver fuentes del h4*/
+
+h4{
+    color: white;
+    text-align: center;
+    padding-top: 1%;
+    font-size: 19px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+form{
+    display: grid;
+    grid-template-columns: 1fr ;
+color: white;
+padding: 1em 1.5em;
+  border-radius: 0;
+box-shadow: 0 0 6px 0 rgba(255,255,255, 0.8);
+  float: none;
+  max-width: 80%;
+  overflow: hidden;
+  text-transform: uppercase;
+  margin-left: 10%;
+  margin-bottom: 4%;
+}
+
+
+
+
+.wrapper input{
+    background: none;
+    font-size: 18px;
+    line-height: normal;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid#4cd137;
+    background: transparent;
+}
+
+
+
+
+
+
+.boton-wallet{
+    color:#3BDC98;
+    font-family: "roboto";
+    background-color: white;
+   display: block;
+   width: 30%;
+   margin: 10px auto;
+   height: 40px;
+   text-decoration: none;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 20px;
+   border-color: white;
+
+}
+
+.boton-signup{
+font-family: "roboto";
+background: #3BDC98;
+display: block;
+width: 20%;
+margin: 10px auto;
+color: white;
+height: 40px;
+font-size: 16px;
+cursor: pointer;
+border-radius: 20px;
+border-color: white;
+}
+
+
+
