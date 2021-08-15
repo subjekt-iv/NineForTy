@@ -114,7 +114,6 @@ main{
     height: 31px;
     top: 280px;
     border-radius: 20px;
-    border-style: none;
     color: white;
     background-color: #659FD6;
     margin: 15px;
@@ -324,7 +323,6 @@ footer{
     margin-bottom: 6%;
     margin-top: 6%;
     border-radius: 20px;
-    border-style: none;
     color: white;
     background-color: #3BDC98;
     left: 38px;

@@ -15,6 +15,10 @@ app.get('/market', (req, res) => {
     res.render(path.join (__dirname, 'views/market.ejs'))
 })
 
+app.get('/crear', function(request, response){
+    response.render(path.join(__dirname, 'views/crear.ejs'))
+})
+
 app.use(express.static('public'))
 
 app.get('*', function (request, response){
