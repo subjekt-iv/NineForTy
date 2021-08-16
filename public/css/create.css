@@ -1,0 +1,342 @@
+*{
+    font-family:'Poppins', sans-serif;
+    color: white;  
+}
+
+body{
+    box-sizing: border-box;
+    margin: auto;
+    width: 100%;
+}
+
+main{
+    background: linear-gradient(180deg, rgba(40,115,185,0.7) 15%, rgba(120,190,255,1) 40%, rgba(59,220,152,0.35) 98%);
+}
+
+/*nav*/
+
+.topnav {
+    overflow: hidden;
+    position: relative;
+}
+  
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: white;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 30px;
+    background-color: none;
+    display: block; 
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.active {
+    color: white; 
+}
+
+.busq{    
+    margin-top: 13px;
+    justify-self: center;
+    border-radius: 30px;
+    border: none;
+    height: 2rem;
+    font-size: 75%;
+    text-align: center;
+    width: 90%;
+}
+
+.barrabusqueda{
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+.logo{
+    position: absolute;
+    height: 41px;
+    top: 9px;
+    left: 9px;
+    z-index: 10;
+}
+
+.resourcesmenu{
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    }
+    
+.communitymenu{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+}
+    
+.newsletter-div{
+    width: 100%;
+    text-align: center;
+}
+    
+.community{
+    justify-content: center;
+    align-items: center;
+}
+    
+.icons{
+    font-size: 200%;
+    flex-wrap: wrap;
+    width: 50%;
+    align-items: center;
+    margin: 0 25%;
+}
+    
+#resources{
+    list-style: none;
+}
+
+/*footer*/
+
+footer{
+    background-color: black;
+    color: #C4C4C4;
+    display: flex;
+    justify-content: space-around;
+    font-size: 100%;
+    bottom:0;
+    width:100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 5%;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-direction: row;
+    border-top: 1px #C4C4C4 solid;
+}
+
+.suscribe-button{
+    margin-bottom: 6%;
+    margin-top: 6%;
+    border-radius: 20px;
+    color: white;
+    background-color: #3BDC98;
+    left: 38px;
+    top: 280px;
+    width: 130px;
+    height: 31px;
+}
+
+/*seccion subir nft*/
+
+#ilustracion{
+    opacity: 100%;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 3%;
+}
+
+#upload{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    padding:2%;
+    font-size: 20px;
+}
+
+#cajaupload{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    flex-direction: column;
+}
+
+/*seccion info*/
+
+form{
+    display: grid;
+    grid-template-columns: 1fr ;
+    color: white;
+    padding: 1em 1.5em;
+    border-radius: 0;
+    box-shadow: 0 0 6px 0 rgba(255,255,255, 0.8);
+    float: none;
+    max-width: 80%;
+    overflow: hidden;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#title{
+	width:90%;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color: transparent;
+	margin:8px 0;
+	display:inline-block;
+}
+
+#tags{
+	width:90%;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color: transparent;
+	margin:8px 0;
+	display:inline-block;
+}
+
+#price{
+	width:90%;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color: transparent;
+	margin:8px 0;
+	display:inline-block;
+}
+
+/*botones*/
+
+#create{
+    width: 150px;
+    height: 31px;
+    top: 280px;
+    border-radius: 20px;
+    color: white;
+    background-color: #659FD6;
+    margin: 15px;
+    font-size: 18px;
+    border-color: #659FD6;
+    cursor: pointer;
+}
+
+#cajaboton{
+    display: flex;
+    justify-content: center;
+}
+
+input[type="file"]{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+}
+
+.selectCSV{
+    color: white;
+    padding: .5em 1em;
+    background-color: #3BDC98;
+    display: block;
+    text-align: center;
+}
+
+#upload{
+    font-size: 16px;
+    width: 150px;
+    height: 22px;
+    top: 280px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+/*cajas*/
+
+#cajas{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*mediapc*/
+
+@media (min-width: 769px){
+    #cajas{
+        display: flex;
+        flex-direction: row;
+    }
+
+    form{
+        display: grid;
+        grid-template-columns: 1fr ;
+        color: white;
+        padding: 1em 1.5em;
+        border-radius: 0;
+        box-shadow: 0 0 6px 0 rgba(255,255,255, 0.8);
+        float: none;
+        max-width: 80%;
+        overflow: hidden;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+    }
+    
+    #title{
+        width:90%;
+        padding:3px 10px;
+        border:1px solid #f6f6f6;
+        border-radius:3px;
+        background-color: transparent;
+        margin:8px 0;
+        display:inline-block;
+    }
+    
+    #tags{
+        width:90%;
+        padding:3px 10px;
+        border:1px solid #f6f6f6;
+        border-radius:3px;
+        background-color: transparent;
+        margin:8px 0;
+        display:inline-block;
+    }
+    
+    #price{
+        width:90%;
+        padding:3px 10px;
+        border:1px solid #f6f6f6;
+        border-radius:3px;
+        background-color: transparent;
+        margin:8px 0;
+        display:inline-block;
+    }
+    #ilustracion{
+        width: 60%;
+        height: 60%;
+    }
+
+    #imagen{
+        width: 50%;
+    }
+
+    #info{
+        width: 50%;
+    }
+}
+
+
+
