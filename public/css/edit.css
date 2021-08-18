@@ -255,6 +255,7 @@ footer{
     #cajas{
         display: flex;
         flex-direction: row;
+        margin-right: 30%;
     }
     #mynft{
         font-weight:600;
