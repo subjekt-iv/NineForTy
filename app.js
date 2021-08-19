@@ -19,8 +19,8 @@ app.get('/create', (req, res) => {
     res.render(path.join (__dirname, 'views/create.ejs'))
 })
 
-app.get('/edit', (req, res) => {
-    res.render(path.join (__dirname, 'views/edit.ejs'))
+app.get('/mynft', (req, res) => {
+    res.render(path.join (__dirname, 'views/mynft.ejs'))
 })
 
 app.use(express.static('public'))
