@@ -2,8 +2,11 @@ const fs = require("fs");
 const path = require("path");
 
 function findAll(){
-    
+  
+//leer Json
   let tokensJson= fs.readFileSync(path.join(__dirname, "../data/tokens.json"))
+
+//parsear la info
 
   let data = JSON.parse(tokensJson)
   return data
@@ -19,6 +22,9 @@ function writeJson(array){
 
 
 const productController = {
+   
+
+
     create: (req,res) =>{
         res.render("products/create")
     },
@@ -27,10 +33,7 @@ const productController = {
         res.render("products/edit")
     },
 
-    list: (req,res) =>{
-        let tokens = findAll();
-        res.render("products/tokens", {tokens})
-    },  
+    
     detail: (req,res)=>{
         let tokens = findAll();
         
