@@ -38,7 +38,7 @@ const productController = {
             return token.id == req.params.id
         })
 
-        res.render("detail", {token: tokenFound})
+        res.render("products/detail", {token: tokenFound})
     }
 
 }

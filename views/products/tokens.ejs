@@ -15,6 +15,7 @@
         <main>
             <section >
                 <% tokens.forEach(function(token){ %>
+                  <a href="/products/detail/<%= token.id %>">
                     <article>
                       
                       <p>Este token tiene lo siguiente:</p>
@@ -24,7 +25,7 @@
                         <li>Descripcion: <%= token.description %> </li>
                       </ul>
                     </article>
-                    <br>
+                  </a>
                   <% }) %> 
                 
               </section>
