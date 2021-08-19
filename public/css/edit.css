@@ -143,56 +143,125 @@ footer{
     height: 31px;
 }
 
-/*seccion subir nft*/
+/*body*/
 
-#cuadradoblanco{
-    opacity: 100%;
-    width: 50%;
-    height: 50%;
-    display: flex;
-    align-self: center;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 25%;
-    margin-top: 3%;
-}
-
-.upload{
-    display: flex;
-    align-self: center;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 3%;
-    padding:10%;
-}
-
-/*seccion info*/
-
-#formulario{
+#cajas{
     display: flex;
     flex-direction: column;
 }
 
-input [type=search]{
-    
+.posts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10%;
+    margin-top: 0px;
+    padding: 5% 5%;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.img-market{
+    width: 114%;
+    height: 114%;
+    margin-left: -7%;
+}
+
+/*tipografias*/
+
+#mynft{
+    font-weight:600;
+    font-size: 20px;
+    margin-top: 5%;
+    margin-left: 5%;;
+    margin-bottom: 5%;
+}
+
+#hash{
+    color: black;
+    font-weight:normal;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-size: 14px;
+}
+
+.artista{
+    color: black;
+    font-weight: normal;
+    margin-top: 4%;
+    margin-bottom: 0%;
+    font-size: 16px;
+}
+
+.obra{
+    color: black;
+    font-weight:600;
+    margin-top: 4%;
+    margin-bottom: 0%;
+    font-size: 20px;
+}
+
+.price{
+    color: black;
+    font-size: 20px;
+    margin-top: 4%;
+    margin-bottom: 0%;
+    font-weight:500 ;
 }
 
 /*botones*/
 
-#create{
+.edit{
     width: 150px;
-    height: 31px;
+    height: 40px;
+    left: 38px;
     top: 280px;
     border-radius: 20px;
-    color: white;
-    background-color: #659FD6;
-    margin: 15px;
-    font-size: 20px;
-    margin-right: -12px;
-    border-style: hidden;
+    border-style:solid;
+    border-color: #3BDC98;
+    color: #3BDC98;
+    background-color: white;
+    margin: 5%;
+    font-size: 16px;
+    font-weight:500;
 }
 
+.cajaboton{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 5%;
+}
 
+/*mediastablet*/
 
+@media (min-width: 481px){
+    #cajas{
+        display: flex;
+        flex-direction: row;
+    }
+    #mynft{
+        font-weight:600;
+        font-size: 20px;
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+    }
+}
 
+/*mediaspc*/
 
+@media (min-width: 769px){
+    #cajas{
+        display: flex;
+        flex-direction: row;
+        margin-right: 30%;
+    }
+    #mynft{
+        font-weight:600;
+        font-size: 20px;
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+    }
+}
