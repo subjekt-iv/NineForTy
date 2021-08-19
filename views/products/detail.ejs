@@ -26,12 +26,12 @@
                 <img src="../../img/NFT-2.jpg" alt="" class="tokenIMG">
             </div>
             <div class="tokenDetail">
-                <h4 class="title">Title</h4>
-                <h6 class="description">Description</h6>
-                <p class="tokentags">#Tags#Tags#Tags#Tags</p>
+                <h4 class="title"><%= token.name%></h4>
+                <h6 class="description"><%= token.description%></h6>
+                <% for(let i=0;i<token.keywords.length;i++){ %><span class="tokentags">#<%= token.keywords[i]%> </span><%}%>
                 <br>
                 <h6>Price</h6>
-                <span class="tokenPrice">45</span>
+                <span class="tokenPrice"><%= token.price %></span>
                 <span>Ether</span>
             </div>
             <br class="line">

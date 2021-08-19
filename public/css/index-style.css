@@ -243,6 +243,8 @@ header div a{
 #main-detail .description{
     padding-top: 5%;
     padding-bottom: 10%;
+    font-size: 0.5rem;
+    font-weight: normal;
 }
 
 #main-detail .tokenStats{

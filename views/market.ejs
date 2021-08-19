@@ -22,17 +22,22 @@
        
     <main id="main-market">
      
-    <div class="posts">
-        
-        <h5 id="hash">#3d #3dart</h6> <i class="far fa-heart"> </i>
-        <img id="img-market"  src="img/Medegusto.png">
-        <h4>userName</h4>
-        <h2>Title</h2>
-        <div class="price">
-        <p>0,00 Ξ </p>
-        </div>
-
-     </div>
+    <section class="posts">
+     
+      <% tokens.forEach(function(token){ %>
+        <a href="/products/detail/<%= token.id %>">
+          <article>
+            
+            <p>Este token tiene lo siguiente:</p>
+            <ul>
+              <li>ID: $<%= token.id %> </li>
+              <li>Nombre: <%= token.name %> </li>
+              <li>Descripcion: <%= token.description %> </li>
+            </ul>
+          </article>
+        </a>
+        <% }) %> 
+      </section>
      
 
      <div class="posts">
