@@ -23,6 +23,11 @@ app.get('/edit', (req, res) => {
     res.render(path.join (__dirname, 'views/edit.ejs'))
 })
 
+app.get('/register', (req, res) => {
+    res.render(path.join (__dirname, 'views/register.ejs'))
+})
+
+
 app.use(express.static('public'))
 
 app.get('*', function (request, response){
