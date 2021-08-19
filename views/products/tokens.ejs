@@ -13,6 +13,21 @@
 <body>
     <%- include("../partials/header") %>
         <main>
+            <section >
+                <% tokens.forEach(function(token){ %>
+                    <article>
+                      
+                      <p>Este token tiene lo siguiente:</p>
+                      <ul>
+                        <li>ID: $<%= token.id %> </li>
+                        <li>Nombre: <%= token.name %> </li>
+                        <li>Descripcion: <%= token.description %> </li>
+                      </ul>
+                    </article>
+                    <br>
+                  <% }) %> 
+                
+              </section>
         </main>
     <%- include("../partials/footer") %>
 </body>

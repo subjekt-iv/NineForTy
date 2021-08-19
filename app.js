@@ -6,15 +6,8 @@ const path = require('path')
 const indexRouter = require("./routes/index");
 const productsRouter = require('./routes/products');
 
-
 app.use('/', indexRouter);
-
-
 app.use('/products', productsRouter);
-
-
-
-
 
 app.use(express.static('public'))
 
@@ -24,7 +17,7 @@ app.get('*', function (request, response){
 
 /*app.use(function(req, res, next) {
     next(createError(404));
-  });*/
+});*/
 
 app.listen(port, ()=>{
     console.log('La app esta funcionado en http://localhost:'+ port )

@@ -1,3 +1,7 @@
+const fs = require("fs");
+const path = require("path");
+
+
 const mainController = {
     home: (req, res) =>{
       res.render("index")
@@ -13,6 +17,10 @@ const mainController = {
 
     login: (req,res)=>{
         res.render("login")
+    },
+
+    market: (req,res)=>{
+        res.render("market")
     }
 
 }
