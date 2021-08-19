@@ -3,11 +3,8 @@ const app = express()
 const port = 3030
 const path = require('path')
 
-app.set("view engine", "ejs");
-app.set("views", "./views");
-
 app.get('/', function(request, response){
-    response.render(path.join(__dirname, 'views/index'))
+    response.render(path.join(__dirname, 'views/index.ejs'))
 })
 
 app.get('/register', (req, res) => {
@@ -20,13 +17,20 @@ app.get('/login', (req, res) => {
 
 
 app.get('/carrito', function(request, response){
-    response.render(path.join(__dirname, 'views/carrito'))
+    response.render(path.join(__dirname, 'views/carrito.ejs'))
 })
 
 app.get('/market', (req, res) => {
-    res.render(path.join (__dirname, 'views/market'))
+    res.render(path.join (__dirname, 'views/market.ejs'))
 })
 
+app.get('/crear', function(request, response){
+    response.render(path.join(__dirname, 'views/crear.ejs'))
+})
+
+app.get('/detail', (req, res) => {
+    res.render(path.join (__dirname, 'views/products/detail'))
+})
 
 app.use(express.static('public'))
 
@@ -38,4 +42,9 @@ app.get('*', function (request, response){
 app.listen(port, ()=>{
     console.log('La app esta funcionado en http://localhost:3030')
 })
+
+app.set('view engine', 'ejs');
+
+app.set('views', './views');
+
 

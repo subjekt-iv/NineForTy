@@ -93,6 +93,7 @@ h2{
 
 }
 
+
 .subscribe-button{
     margin-bottom: 6%;
     margin-top: 6%;
@@ -109,15 +110,6 @@ h2{
     width: 100%;
     color: #3BDC98;
     font-size: 2rem;
-}
-
-.footer-bottom{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 5px;
-    width: 100%;
-    flex-direction: row;
-    border-top: 1px #C4C4C4 solid;
 }
 
 .barrabusqueda{
@@ -159,16 +151,16 @@ header div a{
 }
 
 .resourcesmenu{
-justify-content: center;
-text-align: center;
-width: 50%;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
 }
 
 .communitymenu{
-justify-content: center;
-align-items: center;
-text-align: center;
-width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
 }
 
 .newsletter-div{
@@ -198,7 +190,7 @@ width: 50%;
     overflow: hidden;
     position: relative;
 }
-  
+
 .topnav #myLinks {
     display: none;
 }
@@ -218,25 +210,94 @@ width: 50%;
     right: 0;
     top: 0;
 }
-  
+
 .active {
     color: white; 
 }
 
+.cart{
+    width: 15%;
+    position: absolute;
+    top: 0;
+    right: 39px;
+    text-align: end;
+    
+}
 
+#main-detail{
+    margin: 3%;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main-detail img{
+    width: 100%;
+}
+
+#main-detail .title{
+    padding-top: 10%;
+    font-weight: bold;
+}
+
+#main-detail .description{
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+
+#main-detail .tokenStats{
+    width: 100%;
+}
+
+
+#main-detail .tokenStats img{
+    width: 40px;
+    height: 40px;
+}
+
+#main-detail .favorites{
+    border-top: 2px solid #E5E5E5;
+    padding-top: 5%;
+}
+
+#main-detail .tokenStats i{
+    font-size: 3rem;
+}
+
+
+#main-detail .tokenStats{
+border-top: 2px solid #E5E5E5;
+padding-top: 5%;
+}
+
+#main-detail .buy-button{
+    margin-bottom: 6%;
+    margin-top: 6%;
+    border-radius: 20px;
+    color: white;
+    background-color: #3BDC98;
+   justify-content: center;
+    width: 100%;
+    height: 31px;
+}
+
+#main-detail .tokenPrice{
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
 
 @media (min-width: 481px){
     #main-index{
         display: flex;
         flex-direction: column;
     }
-
+    
     .trending img{
         width: auto;
         padding-bottom: 5%;
         max-height: 615px;
     }
-
+    
     .index-register{
         display: flex;
         flex-wrap: wrap;
@@ -271,7 +332,31 @@ width: 50%;
         padding-bottom: 5%;
     }
 
+    #main-detail .tokenDetail{
+        order: -1;
+    }
+    
+    #main-detail .token{
+        width: 50%;
+        position: relative;
+        left: 10%;
+        padding-bottom: 10%;
+    }
 
+    #main-detail .tokentags{
+        font-size: 75%;
+    }
+
+    #main-detail .buy-button{
+        width: 50%;
+        padding: 5%;
+        margin: auto;
+        height: auto;
+    }
+
+    #main-detail .tokenStats{
+        text-align: center;
+    }
 }
 
 
@@ -283,4 +368,31 @@ width: 50%;
         width: auto;
     }
 
+    #main-detail{
+        justify-content: space-between;
+    }
+
+    #main-detail .token{
+        width: 40%;
+        position: initial;
+    }
+
+    #main-detail .tokenStats{
+        width: 30%;
+        border-top: none;
+    }
+    
+    #main-detail .tokenDetail{
+        width: 30%;
+    }
+
+    #main-detail .buy-button{
+        width: 20%;
+        position: absolute; 
+        left: 5;
+        bottom: 5%;
+        padding: 2%;
+    }
+
+    
 }

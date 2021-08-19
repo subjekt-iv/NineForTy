@@ -116,7 +116,6 @@ main{
     height: 31px;
     top: 280px;
     border-radius: 20px;
-    border-style: none;
     color: white;
     background-color: #659FD6;
     margin: 15px;
@@ -254,6 +253,15 @@ hr{
     position: absolute;
     top: 0;
     left: 25%;
+}
+
+.cart{
+    width: 15%;
+    position: absolute;
+    top: 0;
+    right: 39px;
+    text-align: end;
+    
 }
 
 .logo{

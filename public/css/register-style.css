@@ -108,6 +108,14 @@ h2{
     border-top: 1px #C4C4C4 solid;
 }
 
+footer h4{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+}
+
 .barrabusqueda{
     text-align: center;
     justify-content: center;
@@ -211,6 +219,23 @@ width: 50%;
     color: white; 
 }
 
+.cart{
+    width: 15%;
+    position: absolute;
+    top: 0;
+    right: 39px;
+    text-align: end;
+    
+}
+
+footer h4{
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+    color: #C4C4C4;
+}
 
 
 @media (min-width: 481px){
@@ -269,13 +294,10 @@ width: 50%;
         width: auto;
     }
 
-    .page-features article{
-        
-    }
-
-
 }
  
+/*Ver fuentes del h4*/
+
 h4{
     color: white;
     text-align: center;
@@ -330,7 +352,7 @@ box-shadow: 0 0 6px 0 rgba(255,255,255, 0.8);
    text-decoration: none;
    font-size: 16px;
    cursor: pointer;
-   border-radius: 20%;
+   border-radius: 20px;
    border-color: white;
 
 }
@@ -345,7 +367,7 @@ color: white;
 height: 40px;
 font-size: 16px;
 cursor: pointer;
-border-radius: 20%;
+border-radius: 20px;
 border-color: white;
 }
 
