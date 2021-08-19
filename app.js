@@ -9,6 +9,11 @@ const productsRouter = require('./routes/products');
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
 
+app.get('/register', (req, res) => {
+    res.render(path.join (__dirname, 'views/register.ejs'))
+})
+
+
 app.use(express.static('public'))
 
 app.get('*', function (request, response){
