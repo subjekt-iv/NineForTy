@@ -20,6 +20,9 @@ app.get('/register', (req, res) => {
     res.render(path.join (__dirname, 'views/register.ejs'))
 })
 
+app.get('/mynft', (req, res) => {
+    res.render(path.join (__dirname, 'views/mynft.ejs'))
+})
 
 app.use(express.static('public'))
 

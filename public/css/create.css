@@ -336,11 +336,10 @@ input[type="file"]{
 
     #info{
         width: 50%;
+        margin-top: 2%;
     }
     #cajaboton{
         display: flex;
-        justify-content: flex-end;
-        margin-right: 13%;
     }
 }
 
