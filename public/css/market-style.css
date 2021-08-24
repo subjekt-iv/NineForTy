@@ -238,7 +238,10 @@ header div a{
     right: 0;
     top: 0;
 }
- 
+
+.nft{
+    width: 110%;
+}
 
 .cart{
     width: 15%;
