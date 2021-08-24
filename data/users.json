@@ -1,4 +1,4 @@
-[{"id":1,"first_name":"Gabrielle","last_name":"Wanne","email":"gwanne0@nationalgeographic.com","password":"Q36ZSp3tA","category":"user","image":"user_1.jpg"},
+[{"id":1,"first_name":"Gabrielle","last_name":"Wanne","email":"gwanne0@nationalgeographic.com","password":"Q36ZSp3tA","category":"user","image":"../../img/david.png"},
 {"id":2,"first_name":"Petronilla","last_name":"Cleevely","email":"pcleevely1@java.com","password":"sEH6wBhHHTZ","category":"user","image":"user_2.jpg"},
 {"id":3,"first_name":"Chic","last_name":"Tock","email":"ctock2@qq.com","password":"WnYhFoyiyw","category":"user","image":"user_3.jpg"},
 {"id":4,"first_name":"Colver","last_name":"Fludder","email":"cfludder3@yandex.ru","password":"PIR6kRSEh","category":"user","image":"user_4.jpg"},

@@ -23,7 +23,7 @@
         <%- include("../partials/header") %>
         <main id="main-detail">
             <div class="token">
-                <img src="../../img/NFT-2.jpg" alt="" class="tokenIMG">
+                <img src="<%= token.image %>" alt="" class="tokenIMG">
             </div>
             <div class="tokenDetail">
                 <h4 class="title"><%= token.name%></h4>
@@ -36,7 +36,7 @@
             </div>
             <br class="line">
             <div class="tokenStats">
-                <div class="author"><img src="../../img/placeholder.png"> @author</div>
+                <div class="author"><img src="<%= token.image %>"> @author</div>
                 <br>
                 <div class="favsviews">
                     <div class="favorites">
