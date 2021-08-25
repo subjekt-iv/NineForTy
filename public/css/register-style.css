@@ -237,6 +237,41 @@ footer h4{
     color: #C4C4C4;
 }
 
+/*botones*/
+
+.boton-wallet{
+    color:#3BDC98;
+    font-family:'Poppins', sans-serif; 
+    background-color: white;
+
+   margin: 10px auto;
+   text-decoration: none;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 20px;
+   border-color: white;
+   width: 200px;
+   height: 31px;
+   top: 280px;
+   color: white;
+   background-color: #659FD6;
+   margin: 15px;
+}
+
+.boton-signup{
+font-family:'Poppins', sans-serif; 
+background: #3BDC98;
+display: block;
+width: 20%;
+margin: 10px auto;
+color: white;
+height: 40px;
+font-size: 16px;
+cursor: pointer;
+border-radius: 20px;
+border-color: white;
+}
+
 
 @media (min-width: 481px){
     #main-index{
@@ -343,7 +378,7 @@ box-shadow: 0 0 6px 0 rgba(255,255,255, 0.8);
 
 .boton-wallet{
     color:#3BDC98;
-    font-family: "roboto";
+    font-family:'Poppins', sans-serif; 
     background-color: white;
    display: block;
    width: 30%;
@@ -358,7 +393,7 @@ box-shadow: 0 0 6px 0 rgba(255,255,255, 0.8);
 }
 
 .boton-signup{
-font-family: "roboto";
+font-family:'Poppins', sans-serif; 
 background: #3BDC98;
 display: block;
 width: 20%;

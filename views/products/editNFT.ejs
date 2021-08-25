@@ -42,10 +42,10 @@
         </div>
     </header>
 
-    <form action="/products/create" enctype="multipart/form-data" method="POST" id="formulario">
+    <form action="/products/editNFT/<%= token.id %>?_method=PUT" enctype="multipart/form-data" method="POST" id="formulario">
     <div id="cajas">
     <div id="imagen">
-        <img id="ilustracion" src="/img/imagen-create.svg">
+        <img id="ilustracion" src="<%= token.image %>">
 
         <div id="cajaupload">
             <label id="upload" class="selectCSV"  for="botonupload">Upload your NFT</label>
@@ -56,16 +56,16 @@
     <div id="info">
         
         <label for="title">Title*</label>
-        <input type="text" name="title" id="title">
+        <input type="text" name="title" id="title" placeholder="<%= token.name %>">
 
     <label for="description">Desc*</label>
-        <input type="text" name="description" id="title">
+        <input type="text" name="description" id="title" placeholder="<%= token.description %>">
 
-    <label for="tags">Tags*</label>
-        <input type="text" name="tags" id="tags" placeholder="Separar tags con un espacio">
+    <label for="keywords">Tags*</label>
+        <input type="text" name="keywords" id="tags" placeholder="<%= token.keywords %>">
 
     <label for="price">Price*</label>
-        <input type="number" name="price" id="price">
+        <input type="number" name="price" id="price" placeholder="<%= token.price %>">
         </div>
     </div>  
     <div id="cajaboton"><button type="submit" id="create">Crate NFT</button></div>

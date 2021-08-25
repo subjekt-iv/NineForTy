@@ -22,15 +22,22 @@
        
     <main id="main-market">
      
-      <div class="posts">
-        
-        <% tokensJson.forEach(function(token){ %>
-        <h5 id="hash"><%= token.tags %></h5> <i class="far fa-heart"> </i>
-        <img src="img/Onset.png" <%= token.id %>  id="img-market" >
-        <h4> <%= token.username %></h4>
-        <h2><%= token.tile %></h2>
-        <p><%= token.price %>Ξ</p>
-
+    <section class="posts">
+     
+      <% tokens.forEach(function(token){ %>
+        <a href="/products/detail/<%= token.id %>">
+          <img src="<%= token.image %>" class="nft" alt="nftMarket" class="tokenIMG"></a>
+          <article>
+            
+            <p>Este token tiene lo siguiente:</p>
+            <ul>
+              <li>ID: #<%= token.id %> </li>
+              <li>Nombre: <%= token.name %> </li>
+              <li>Descripcion: <%= token.description %> </li>
+              <li>Precio: Ξ<%= token.price %> </li>
+            </ul>
+          </article>
+        </a>
         <% }) %> 
      </div>
      

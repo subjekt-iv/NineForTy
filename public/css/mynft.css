@@ -1,0 +1,267 @@
+*{
+    font-family:'Poppins', sans-serif;
+    color: white;  
+}
+
+body{
+    box-sizing: border-box;
+    margin: auto;
+    width: 100%;
+}
+
+main{
+    background: linear-gradient(180deg, rgba(40,115,185,0.7) 15%, rgba(120,190,255,1) 40%, rgba(59,220,152,0.35) 98%);
+}
+
+/*nav*/
+
+.topnav {
+    overflow: hidden;
+    position: relative;
+}
+  
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: white;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 30px;
+    background-color: none;
+    display: block; 
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.active {
+    color: white; 
+}
+
+.busq{    
+    margin-top: 13px;
+    justify-self: center;
+    border-radius: 30px;
+    border: none;
+    height: 2rem;
+    font-size: 75%;
+    text-align: center;
+    width: 90%;
+}
+
+.barrabusqueda{
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+.logo{
+    position: absolute;
+    height: 41px;
+    top: 9px;
+    left: 9px;
+    z-index: 10;
+}
+
+.resourcesmenu{
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    }
+    
+.communitymenu{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+}
+    
+.newsletter-div{
+    width: 100%;
+    text-align: center;
+}
+    
+.community{
+    justify-content: center;
+    align-items: center;
+}
+    
+.icons{
+    font-size: 200%;
+    flex-wrap: wrap;
+    width: 50%;
+    align-items: center;
+    margin: 0 25%;
+}
+    
+#resources{
+    list-style: none;
+}
+
+/*footer*/
+
+footer{
+    background-color: black;
+    color: #C4C4C4;
+    display: flex;
+    justify-content: space-around;
+    font-size: 100%;
+    bottom:0;
+    width:100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-top: 5%;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-direction: row;
+    border-top: 1px #C4C4C4 solid;
+}
+
+.suscribe-button{
+    margin-bottom: 6%;
+    margin-top: 6%;
+    border-radius: 20px;
+    color: white;
+    background-color: #3BDC98;
+    left: 38px;
+    top: 280px;
+    width: 130px;
+    height: 31px;
+}
+
+/*body*/
+
+#cajas{
+    display: flex;
+    flex-direction: column;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10%;
+    margin-top: 0px;
+    padding: 5% 5%;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.img-market{
+    width: 114%;
+    height: 114%;
+    margin-left: -7%;
+}
+
+/*tipografias*/
+
+#mynft{
+    font-weight:600;
+    font-size: 20px;
+    margin-top: 5%;
+    margin-left: 5%;;
+    margin-bottom: 5%;
+}
+
+#hash{
+    color: black;
+    font-weight:normal;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-size: 14px;
+}
+
+.artista{
+    color: black;
+    font-weight: normal;
+    margin-top: 4%;
+    margin-bottom: 0%;
+    font-size: 16px;
+}
+
+.obra{
+    color: black;
+    font-weight:600;
+    margin-top: 4%;
+    margin-bottom: 0%;
+    font-size: 20px;
+}
+
+.price{
+    color: black;
+    font-size: 20px;
+    margin-top: 4%;
+    margin-bottom: 0%;
+    font-weight:500 ;
+}
+
+/*botones*/
+
+.edit{
+    width: 150px;
+    height: 40px;
+    left: 38px;
+    top: 280px;
+    border-radius: 20px;
+    border-style:solid;
+    border-color: #3BDC98;
+    color: #3BDC98;
+    background-color: white;
+    margin: 5%;
+    font-size: 16px;
+    font-weight:500;
+}
+
+.cajaboton{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 5%;
+}
+
+/*mediastablet*/
+
+@media (min-width: 481px){
+    #cajas{
+        display: flex;
+        flex-direction: row;
+    }
+    #mynft{
+        font-weight:600;
+        font-size: 20px;
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+    }
+}
+
+/*mediaspc*/
+
+@media (min-width: 769px){
+    #cajas{
+        display: flex;
+        flex-direction: row;
+        margin-right: 30%;
+    }
+    #mynft{
+        font-weight:600;
+        font-size: 20px;
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+    }
+}
