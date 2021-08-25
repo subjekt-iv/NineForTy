@@ -78,8 +78,11 @@ const productController = {
         })
 
         res.render("products/detail", {token: tokenFound})
+    },
+    
+    myNFT: (req, res) => {
+      res.render('mynft.ejs');
     }
-
 }
 
 module.exports = productController;

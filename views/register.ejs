@@ -40,16 +40,16 @@
           <br>
         
         <div class="wrapper">
-          <form action="input">
+          <form action="/register" enctype="multipart/form-data" method="POST" id="formulario>
         
           <p id="field"> 
            <div class="onehalf"><label>*Name</label></div>
-            <input type="text"  name="nombre" required: true placeholder="">
+            <input type="text"  name="first_name" required: true placeholder="">
           </p>
           <br>
           <p id="field"> 
             <div class="onehalf"><label>*Surname</label></div>
-            <input type="text" name="apellido" required: true placeholder="">
+            <input type="text" name="last_name" required: true placeholder="">
           </p>
           <br>
           <p id="field"> 
@@ -59,18 +59,21 @@
           <br>
           <p id="field"> 
             <div class="otherhalf"><label>*Phone</label></div>
-            <input type="text" name="telefono" required: true placeholder="">
+            <input type="text" name="phone" required: true placeholder="">
           </p>
           <br>
           <p id="field"> 
             <div class="otherhalf"><label>*Username</label></div>
-            <input type="text" name="usuario" required: true placeholder="">
+            <input type="text" name="username" required: true placeholder="">
           </p>
           <br>
           <p id="field"> 
             <div class="otherhalf"><label>*Password</label></div>
-            <input type="text" name="contraseña" required: true placeholder ="">
+            <input type="password" name="password" required: true placeholder ="">
           </p>
+          <br>
+          <label id="upload" class="selectCSV"  for="botonupload">Upload your avatar</label>
+          <input type="file" name="avatar" accept=".jpg, .gif, .mp4, .png" id="botonupload">
           <br>
           <p class="full">
             <button class="boton-wallet">Choose your wallet</button>

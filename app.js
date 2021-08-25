@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
        cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
 })
   
-var upload = multer({ storage: storage})
+var upload = multer({ storage: storage});
 
 const indexRouter = require("./routes/index");
 const productsRouter = require('./routes/products');
@@ -28,9 +28,7 @@ app.use('/products', productsRouter);
     res.render(path.join (__dirname, 'views/register.ejs'))
 })
 
-app.get('/mynft', (req, res) => {
-    res.render(path.join (__dirname, 'views/mynft.ejs'))
-})
+
 
 app.get('/create', (req, res) => {
     res.render(path.join (__dirname, 'views/create.ejs'))
