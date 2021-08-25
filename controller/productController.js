@@ -17,7 +17,12 @@ function writeJson(array){
 
 const productController = {
    
+    market: (req, res) => {
 
+      let tokens = findAll();
+
+      res.render("market", { tokens })
+    },
 
     create: (req,res) =>{
         res.render("products/create")
@@ -30,7 +35,7 @@ const productController = {
         id: Number(data[ultimo].id)+1,
         name: req.body.title,
         description: req.body.description,
-        keywords: req.body.tags.split(" "),
+        keywords: req.body.tags.split(" "), 
         price: req.body.price,
         image: "../../img/"+req.file.filename
       }

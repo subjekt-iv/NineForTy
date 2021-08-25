@@ -15,7 +15,7 @@ const storage = multer.diskStorage({
   
 var upload = multer({ storage: storage});
 
-const indexRouter = require("./routes/index");
+const indexRouter = require("./routes/");
 const productsRouter = require('./routes/products');
 
 app.use(methodOverride("_method"));

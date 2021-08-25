@@ -35,11 +35,12 @@
               <li>Nombre: <%= token.name %> </li>
               <li>Descripcion: <%= token.description %> </li>
               <li>Precio: Ξ<%= token.price %> </li>
+              <li>Tags: <% for(let i=0;i<token.keywords.length;i++){ %><span class="tokentags">#<%= token.keywords[i]%> </span><%}%></li>
             </ul>
           </article>
         </a>
         <% }) %> 
-      </section>
+     </div>
      
 
      <div class="posts">
