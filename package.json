@@ -4,7 +4,7 @@
   "description": "WireFrame: https://www.figma.com/file/KNF1G6mNT5KMaDge2GCOkY/NineForty?node-id=0%3A1",
   "main": "app.js",
   "scripts": {
-    "start": "node bin/www",
+    "start": "nodemon bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

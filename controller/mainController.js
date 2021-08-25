@@ -48,11 +48,7 @@ const mainController = {
     },
 
    
-    market: function(req, res){
-      let tokens = findAll() ;  
-      res.render("market", { tokens } )
-
-    },
+    
 }
   
 module.exports = mainController;

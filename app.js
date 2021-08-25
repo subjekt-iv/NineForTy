@@ -42,11 +42,11 @@ app.get('/login', (req, res) => {
     res.render(path.join (__dirname, 'views/login.ejs'))
 })*/
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 app.get('*', function (request, response){
     response.send('NOT FOUND', 404)
-})
+});
 
 /*app.use(function(req, res, next) {
     next(createError(404));
@@ -57,7 +57,4 @@ app.listen(port, ()=>{
 })
 
 app.set('view engine', 'ejs');
-
 app.set('views', path.join(__dirname, './views'));
-
-

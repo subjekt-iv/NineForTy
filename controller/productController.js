@@ -37,7 +37,7 @@ const productController = {
   
       data.push(newNFT)
       writeJson(data)
-      res.redirect("/market")
+      res.redirect("market")
   
     },
   
@@ -47,7 +47,7 @@ const productController = {
         let tokenToEdit = tokens.find(function(token){
             return token.id == req.params.id
         })
-        res.render("products/editNFT", {token: tokenToEdit})
+        res.render("products/edit", {token: tokenToEdit})
     },
     
     update: function(req, res){
@@ -82,7 +82,13 @@ const productController = {
     
     myNFT: (req, res) => {
       res.render('mynft.ejs');
-    }
+    },
+
+    market: function(req, res){
+      let tokens = findAll() ;  
+      res.render("market", { tokens } )
+
+    },
 }
 
 module.exports = productController;
