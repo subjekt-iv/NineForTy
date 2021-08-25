@@ -3,8 +3,12 @@ const app = express()
 const port = 3030
 const path = require('path')
 
-const indexRouter = require("./routes/index");
+const indexRouter = require("./routes/");
 const productsRouter = require('./routes/products');
+
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './views'));
 
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
@@ -24,12 +28,6 @@ app.get('*', function (request, response){
     next(createError(404));
 });*/
 
-app.listen(port, ()=>{
-    console.log('La app esta funcionado en http://localhost:'+ port )
-})
-
-app.set('view engine', 'ejs');
-
-app.set('views', path.join(__dirname, './views'));
 
 
+module.exports = app;

@@ -23,7 +23,12 @@ function writeJson(array){
 
 const productController = {
    
+    market: (req, res) => {
 
+      let tokens = findAll
+
+      res.render("market", { tokens })
+    },
 
     create: (req,res) =>{
         res.render("products/create")
