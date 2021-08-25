@@ -8,10 +8,8 @@ const methodOverride = require("method-override");
 const indexRouter = require("./routes/index");
 const productsRouter = require('./routes/products');
 
-
-
 app.use(methodOverride("_method"));
-
+app.use(express.urlencoded({extended:false}));
 
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
