@@ -17,10 +17,10 @@ var upload = multer({ storage: storage})
 
 router.get("/create", productController.create);
 router.post("/create", upload.single("nftFile"), productController.store);
-router.get("/edit/:id", productController.edit);
+router.get("/editNFT/:id", productController.edit);
 router.get("/detail/:id", productController.detail);
+router.put("/editNFT/:id", upload.single("nftFile"), productController.update);
 /*
-router.put("/edit/:id", productController.update);
 router.delete("/delete/:id" , productController.destroy);*/
 
 module.exports = router;

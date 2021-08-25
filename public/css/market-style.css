@@ -47,7 +47,7 @@ header{
 .posts {
 display: flex;
 flex-direction: column;
-align-items: flex-start;
+align-items: center;
 margin: 10%;
 margin-top: 0px;
 padding: 5% 5%;
