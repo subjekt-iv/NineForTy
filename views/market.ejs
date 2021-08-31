@@ -21,50 +21,17 @@
        
 
     <main id="main-market">
-     
-     
-        <div class="posts">
-  
-          <% tokensJson.forEach(function(token){ %>
-          <h5 id="hash"><%= token.tags %></h5> <i class="far fa-heart"> </i>
-          <img src="img/Onset.png" <%= token.id %>  id="img-market" >
-          <h4> <%= token.username %></h4>
-          <h2><%= token.tile %></h2>
-          <p><%= token.price %>Ξ</p>
+
+      <%tokens.forEach(elem =>{%>
+        
+        <%- include('components/cardProduct', {token: elem}) %>
+       
           <% }) %> 
-        
-       </div>
-     
+</div>
+    
 
-     <div class="posts">
-        
-        <h5 id="hash">#3d #3dart</h5> <i class="far fa-heart"> </i>
-        <img id="img-market" src="img/Onset.png">
-        <h4>userName</h4>
-        <h2>Title</h2>
-        <p>0,00 Ξ</p>
-
-     </div>
-     <div class="posts">
-        
-        <h5 id="hash">#3d #3dart</h5> <i class="far fa-heart"> </i>
-        <img id="img-market" src="img/Rightorder.png">
-        <h4>userName</h4>
-        <h2>Title</h2>
-        <p>0,00 Ξ</p>
-
-     </div>
-     <div class="posts">
-        
-        <h5 id="hash">#3d #3dart</h5> <i class="far fa-heart"> </i>
-        <img id="img-market" src="img/SR_Face_To_Face_dromsjel.png">
-        <h4>userName</h4>
-        <h2>Title</h2>
-        <p>0,00 Ξ</p>
-
-     </div>
-        
     </main>
+
        
     <%- include("./partials/footer") %>
     </div>

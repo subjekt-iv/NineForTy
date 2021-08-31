@@ -31,8 +31,8 @@ const mainController = {
     },
 
     market: (req, res) =>{
-      res.render("market", {tokensJson})
-
+      res.render("market", {tokens: tokensJson});
+  
       },
 
     cart: (req, res) =>{
@@ -45,17 +45,8 @@ const mainController = {
         res.render("login")
     },
 
-/*
-    market: function(req, res){
-        //obtenemos todos los autos
-        let tokens = findAll() ;  
-
-        //devuelvo la respuesta
-        res.render("market", { tokens } )
-
-    },
-*/
-  }
-
-
-module.exports = mainController; 
+   
+    
+}
+  
+module.exports = mainController;

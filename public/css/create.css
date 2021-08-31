@@ -225,6 +225,8 @@ label{
     margin-bottom: 3%;
 }
 
+
+
 /*botones*/
 
 #create{
@@ -240,10 +242,27 @@ label{
     cursor: pointer;
 }
 
+
+#delete-button{
+    width: 150px;
+    height: 31px;
+    top: 280px;
+    border-radius: 20px;
+    color: white;
+    background-color: red;
+    margin: 15px;
+    font-size: 18px;
+    border-color: red;
+    cursor: pointer;
+}
+
+
 #cajaboton{
     display: flex;
     justify-content: center;
 }
+
+
 
 input[type="file"]{
     width: 0.1px;
