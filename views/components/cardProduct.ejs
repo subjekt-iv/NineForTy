@@ -1,10 +1,14 @@
 <div class="posts">
 
         <h5 id="hash"><%= token.keywords %></h5> <i class="far fa-heart"> </i>
-        <img src="<%= token.image %>"   id="img-market" >
+        <div class="img-tokens-market">
+        <img src="<%= token.image %>"   id="img-market">
+        </div>
         <h4> <%= token.username %></h4>
         <h2><%= token.name %></h2>
         <p><%= token.price %>Ξ</p>
         <a href="/products/detail/<%= token.id %>">View</a>
+
+
 </div>
 

@@ -77,7 +77,7 @@ const productController = {
             token.description = req.body.description,
             token.keywords = req.body.keywords.split(" "),
             token.price = req.body.price,
-            token.image = "../../img/"+req.file.filename
+            token.image = "../img/"+req.file.filename
           }
           return token;
         })
