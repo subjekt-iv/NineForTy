@@ -26,6 +26,7 @@
 
 <body>
     <main>
+        
         <div class="topnav">
             <a href="/"> <img class="logo" src="/img/logo_cubo_verde.png"></a>
             <!-- Navigation links (hidden by default) -->
@@ -42,10 +43,11 @@
         </div>
     </header>
 
-    <form action="/products/editNFT/<%= token.id %>?_method=PUT" enctype="multipart/form-data" method="POST" id="formulario">
+    <form action="/products/edit/<%= token.id %>?_method=PUT" enctype="multipart/form-data" method="POST" id="formulario">
     <div id="cajas">
     <div id="imagen">
         <img id="ilustracion" src="<%= token.image %>">
+        
 
         <div id="cajaupload">
             <label id="upload" class="selectCSV"  for="botonupload">Upload your NFT</label>
@@ -68,9 +70,17 @@
         <input type="number" name="price" id="price" placeholder="<%= token.price %>">
         </div>
     </div>  
-    <div id="cajaboton"><button type="submit" id="create">Crate NFT</button></div>
+    <div id="cajaboton"><button type="submit" id="create">Create NFT</button></div>
+    <form method="POST" action="/products/delete/<%= token.id %>?_method=DELETE">
+    <div id="cajaboton"><button type="submit" id="delete">Delete NFT</button></div>
+    </form>
+    
 </form>
+
+
+
     </div>
+    
 
 
 

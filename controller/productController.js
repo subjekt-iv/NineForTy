@@ -1,22 +1,29 @@
 const fs = require("fs");
 const path = require("path");
-const methodOverride =  require('method-override');
-
-
 function findAll(){
-  let tokensJson= fs.readFileSync(path.join(__dirname, "../data/tokens.json"));
-  let data = JSON.parse(tokensJson);
-  return data;
+  
+//leer Json
+  let tokensJson= fs.readFileSync(path.join(__dirname, "../data/tokens.json"))
+//parsear la info
+  let data = JSON.parse(tokensJson)
+  return data
 }
-
 function writeJson(array){
+  //transformamos en un string
   let arrayJson = JSON.stringify(array);
+  
+  //procesamos la inform en el Json
   return fs.writeFileSync(path.join(__dirname, "../data/tokens.json"), arrayJson);
 }
 
-
 const productController = {
-   
+
+    market: (req, res) => {
+
+      let tokens = findAll();
+
+      res.render("market", { tokens })
+    },
 
     create: (req,res) =>{
         res.render("products/create")
@@ -39,6 +46,16 @@ const productController = {
       res.redirect("market")
   
     },
+
+    detail: (req,res)=>{
+      let tokens = findAll();
+      
+      let tokenFound = tokens.find(function(token){
+          return token.id == req.params.id
+      })
+
+      res.render("products/detail", {token: tokenFound})
+  },
   
     edit: (req,res) =>{
       let tokens = findAll();
@@ -49,41 +66,50 @@ const productController = {
         res.render("products/edit", {token: tokenToEdit})
     },
     
-    update: function(req, res){
-      let data = findAll();
-  
-      let nftUpdate = data.map(function(token){
-        if(token.id == req.params.id){
-          token.name = req.body.title,
-          token.description = req.body.description,
-          token.keywords = req.body.keywords.split(" "),
-          token.price = req.body.price,
-          token.image = "../../img/"+req.file.filename
-        }
-        return token;
-      })
-      
-      writeJson(data);
-  
-      res.redirect("/products/detail/"+req.params.id)
-  
-    },
-    
-    detail: (req,res)=>{
+      update: (req, res) => {
+        //obtener autos
         let tokens = findAll();
-        
-        let tokenFound = tokens.find(function(token){
-            return token.id == req.params.id
+    
+        //actualizo mi array
+        let tokensActualizados = tokens.map(function(token){
+          if(token.id == req.params.id){
+            token.name = req.body.title,
+            token.description = req.body.description,
+            token.keywords = req.body.keywords.split(" "),
+            token.price = req.body.price,
+            token.image = "../img/"+req.file.filename
+          }
+          return token;
         })
-
-        res.render("products/detail", {token: tokenFound})
-    },
+        
+        //escribo el json
+        writeJson(data);
+  
+        res.redirect("/products/detail/"+req.params.id)
+    
+      },
     
     myNFT: (req, res) => {
       res.render('mynft.ejs');
     },
+    
+    destroy: (req,res) => {
+      
+        //busco todos los autos
+        let tokens = findAll()
+    
+        //filtro los autos que no voy a borrar
+        let dataNueva = tokens.filter(function(token){
+          return token.id != req.params.id
+        })
+    
+        //escribo el json
+        writeJson(dataNueva);
+    
+        //devuelvo una respuesta
+        res.redirect("/market");
 
+    }
     
 }
-
 module.exports = productController;

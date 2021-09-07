@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
     filename: function (req, file, cb) { 
        cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
 })
-  
+
 var upload = multer({ storage: storage})
 
 router.get("/create", productController.create);
@@ -22,7 +22,11 @@ router.put("/edit/:id", upload.single("nftFile"), productController.update);
 router.get("/detail/:id", productController.detail);
 router.get('/myNFT', productController.myNFT);
 
-/*
-router.delete("/delete/:id" , productController.destroy);*/
 
-module.exports = router;
+router.delete("/delete/:id" , productController.destroy);
+
+
+
+module.exports = router
+
+/*productController.destroy*/

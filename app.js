@@ -27,17 +27,12 @@ app.use('/products', productsRouter);
 /*app.get('/register', (req, res) => {
     res.render(path.join (__dirname, 'views/register.ejs'))
 })
-
-
-
 app.get('/create', (req, res) => {
     res.render(path.join (__dirname, 'views/create.ejs'))
 })
-
 app.get('/edit', (req, res) => {
     res.render(path.join (__dirname, 'views/edit.ejs'))
 })
-
 app.get('/login', (req, res) => {
     res.render(path.join (__dirname, 'views/login.ejs'))
 })*/
@@ -58,3 +53,5 @@ app.listen(port, ()=>{
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, './views'));
+
+module.exports = app
