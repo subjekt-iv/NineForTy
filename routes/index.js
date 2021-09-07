@@ -22,6 +22,7 @@ router.get("/login", mainController.login);
 router.get("/register", mainController.register);
 router.post("/register", upload.single("avatar"), mainController.createUSER);
 router.get("/market", mainController.market);
+router.get("/userList", mainController.userList);
 
 
 

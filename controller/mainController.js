@@ -23,32 +23,34 @@ const mainController = {
 
     market: (req, res) =>{
       res.render("market", {tokens: tokensJson});
-  
-
       },
-
-    cart: (req, res) =>{
+      
+      cart: (req, res) =>{
         res.render("carrito")
-    },
-    register: (req,res)=>{
+      },
+      register: (req,res)=>{
         res.render("register")
-    },
-    createUSER: (req,res)=>{
-      let data = findAll();
-      let ultimo = data.length-1;
-      let newUser ={
-        id: Number(data[ultimo].id)+1,
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
-        email: req.body.email,
-        password: req.body.password,
-        image: "../../img/avatar"+req.file.filename
-      }
-
-      data.push(newUser)
-      writeJson(data)
-      res.redirect("/")
-    } ,
+      },
+      createUSER: (req,res)=>{
+        let data = findAll();
+        let ultimo = data.length-1;
+        let newUser ={
+          id: Number(data[ultimo].id)+1,
+          first_name: req.body.first_name,
+          last_name: req.body.last_name,
+          email: req.body.email,
+          password: req.body.password,
+          image: "../../img/avatar"+req.file.filename
+        }
+        
+        data.push(newUser)
+        writeJson(data)
+        res.redirect("/")
+      } ,
+      userList: (req, res) =>{
+        let users = findAll();
+        res.render("userList", {users });
+        },
     login: (req,res)=>{
         res.render("login")
     },
