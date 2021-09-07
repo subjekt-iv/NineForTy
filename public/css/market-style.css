@@ -80,9 +80,7 @@ footer{
         width:  100%;
     }
 
-    .token-name {
-    
-    }
+  
     p {
         display: flex;
         justify-content: center; /* align horizontal */
