@@ -17,12 +17,6 @@ function writeJson(array){
 
 const productController = {
    
-    market: (req, res) => {
-
-      let tokens = findAll();
-
-      res.render("market", { tokens })
-    },
 
     create: (req,res) =>{
         res.render("products/create")
@@ -89,11 +83,7 @@ const productController = {
       res.render('mynft.ejs');
     },
 
-    market: function(req, res){
-      let tokens = findAll() ;  
-      res.render("market", { tokens } )
-
-    },
+    
 }
 
 module.exports = productController;
