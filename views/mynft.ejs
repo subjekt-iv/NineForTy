@@ -52,8 +52,15 @@
 
             <div id="caja1">
                 <div class="posts">
+                    
+                    <%for(let i=0;i<5 ; i++) {%>
+        
+                        <%- include('components/cardProduct', {token: elem}) %>
+                       
+                          <% } %> 
+                    
                     <h5 id="hash">#tylerthecreator</h6>
-                    <img class="img-market"  src="img/NFT-6.jpg">
+                    <img class="img-market"  src="img/SISTERS_OF_SORROW.jpg">
                     <h4 class="artista">cobiscreation</h4>
                     <h2 class="obra">Lumberjack</h2>
                     <p class="price">0,70 Ξ </p>

@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 function findAll(){
-  
 //leer Json
   let tokensJson= fs.readFileSync(path.join(__dirname, "../data/tokens.json"))
 //parsear la info
@@ -90,7 +89,9 @@ const productController = {
       },
     
     myNFT: (req, res) => {
-      res.render('mynft.ejs');
+      let tokens = findAll();
+
+      res.render('mynft.ejs', { tokens });
     },
     
     destroy: (req,res) => {
