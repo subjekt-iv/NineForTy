@@ -20,9 +20,9 @@ router.get('/', mainController.home);
 router.get('/carrito', mainController.cart);
 router.get("/login", mainController.login);
 router.get("/register", mainController.register);
-/*
+
 router.post("/register", upload.single("avatar"), mainController.createUSER);
-*/
+
 
 router.get("/market", mainController.market);
 
