@@ -28,14 +28,14 @@
         
            <!--  <i class="far fa-heart"> </i> -->
             <div class="img-tokens-market">
-            <img src="<%= users.image %>"   id="img-market">
+            <img src="<%= elem.image %>"   id="img-market">
             </div>
-            <h4> HAY QUE PROBAR <%= users.username %></h4>
+            <h4> HAY QUE PROBAR <%= elem.username %></h4>
             <div class="token-name">
-            <p><%= users.first_name %></p>
+            <p><%= elem.first_name %></p>
             </div>
-            <p><%= users.last_name %></p>
-            <a href="/products/detail/<%= users.id %>">View</a>
+            <p><%= elem.last_name %></p>
+            <a href="/<%= elem.id %>">View</a>
     
     
     </div>

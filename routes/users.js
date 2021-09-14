@@ -1,0 +1,38 @@
+const express = require('express');
+const fs = require("fs");
+const path = require("path");
+const router = express.Router();
+const usersController = require("../controller/usersController");
+const multer = require("multer");
+const { check } = require("express-validator");
+
+const validateRegister = [ 
+   check("first_name")
+   .isLength({ min: 4 }).withMessage("You have to give a valid name for your account.")
+   .notEmpty().withMessage("You have to set your account's first name."),
+   check("last_name").notEmpty().withMessage("You have to set your account's last name."),
+   check("email")
+   .notEmpty().withMessage("You have to set your account's email.").bail()
+   .isEmail().withMessage("You have to set a valid e-mail for your account."),
+   check("password")
+   .notEmpty().withMessage("You have to set your account's password.").bail()
+   .isLength( { min: 5 }).withMessage("Your password must be longer than 8 characters."),
+];
+
+const storage = multer.diskStorage({ 
+   destination: function (req, file, cb) { 
+      cb(null, './public/img/avatars'); 
+   }, 
+   filename: function (req, file, cb) { 
+      cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);  } 
+})
+  
+var upload = multer({ storage: storage})
+
+router.get("/login", usersController.login);
+router.get("/register", usersController.register);
+router.post("/register", [validateRegister,upload.single("avatar")], usersController.createUSER);
+router.get("/userList", usersController.userList);
+
+
+module.exports = router;
