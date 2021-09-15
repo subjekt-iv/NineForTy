@@ -27,6 +27,6 @@ router.delete("/delete/:id" , productController.destroy);
 
 
 
-module.exports = router
+module.exports = router;
 
 /*productController.destroy*/

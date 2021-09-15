@@ -17,15 +17,9 @@ var upload = multer({ storage: storage})
 
 
 router.get('/', mainController.home);
-router.get('/carrito', mainController.cart);
-router.get("/login", mainController.login);
-router.get("/register", mainController.register);
-/*
-router.post("/register", upload.single("avatar"), mainController.createUSER);
-*/
+router.get('/carrito', mainController.carrito);
+
 
 router.get("/market", mainController.market);
-
-
 
 module.exports = router;
