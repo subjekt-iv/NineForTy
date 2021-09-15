@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const { validationResult } = require('express-validator');
+const bcrypt = require("bcryptjs");
 
 
 function findAll(){
@@ -22,25 +24,32 @@ const usersController = {
         let data = findAll();
         let ultimo = data.length-1;
         if (req.file == undefined){
-          res.redirect("/users/register/?ifFile=0")
-          for (const key in req.query) {
-            console.log(key, req.query[key])
-          }
+          res.redirect("/users/register/")
         }
-      
+        let errors = validationResult(req);
+        let passEncrypted = bcrypt.hashSync(req.body.password,10);
         let newUser ={
           id: Number(data[ultimo].id)+1,
           first_name: req.body.first_name,
           last_name: req.body.last_name,
           email: req.body.email,
-          password: req.body.password,
+          password: passEncrypted,
+          username: req.body.username,
           image: "../../img/avatar"+req.file.filename
         }
-        
         data.push(newUser)
         writeJson(data)
         res.redirect("/")
-    } ,
+        /*if (errors.isEmpty()) {
+          
+        }
+        
+        
+    } else {
+      console.log(req.body);
+      console.log(errors);
+      res.render("register", { errors: errors.mapped(), old: req.body });*/
+    },
     login: (req,res)=>{
         res.render("login")
     },
