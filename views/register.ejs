@@ -39,47 +39,63 @@
           <br>
         
         <div class="wrapper">
-          <form action="/register" enctype="multipart/form-data" method="POST" id="formulario>
+          <form action="/users/register" enctype="multipart/form-data" method="POST" id="formulario>
         
           <p id="field"> 
            <div class="onehalf"><label>*Name</label></div>
-            <input type="text"  name="first_name" required: true placeholder="">
+            <input type="text"  name="first_name" required: true placeholder="" value="<%= locals.old && old.first_name %>">
           </p>
+          <% if (locals.errors && errors.first_name) { %>
+            <p class="errorSign"><%= errors.first_name.msg %></p>
+          <% } %> 
           <br>
           <p id="field"> 
-            <div class="onehalf"><label>Lastname</label></div>
-            <input type="text" name="last_name" required: true placeholder="">
+            <div class="onehalf"><label>*Lastname</label></div>
+            <input type="text" name="last_name" required: true placeholder="" value="<%= locals.old && old.last_name %>">
           </p>
+          <% if (locals.errors && errors.last_name) { %>
+            <p class="errorSign"><%= errors.last_name.msg %></p>
+            <% } %> 
           <br>
           <p id="field"> 
             <div class="onehalf"><label>*E-mail</label></div>
-            <input type="text" name="email" required: true placeholder="">
+            <input type="text" name="email" required: true placeholder="" value="<%= locals.old && old.email %>">
           </p>
+          <% if (locals.errors && errors.email) { %>
+            <p class="errorSign"><%= errors.email.msg %></p>
+            <% } %> 
           <br>
           <p id="field"> 
             <div class="otherhalf"><label>Phone</label></div>
-            <input type="text" name="phone" required: true placeholder="">
+            <input type="number" name="phone" required: true placeholder="" value="<%= locals.old && old.phone %>">
           </p>
           <br>
           <p id="field"> 
             <div class="otherhalf"><label>*Username</label></div>
-            <input type="text" name="username" required: true placeholder="">
+            <input type="text" name="username" required: true placeholder="" value="<%= locals.old && old.username %>">
           </p>
+          <% if (locals.errors && errors.username) { %>
+            <p class="errorSign"><%= errors.username.msg %></p>
+            <% } %> 
           <br>
           <p id="field"> 
             <div class="otherhalf"><label>*Password</label></div>
             <input type="password" name="password" required: true placeholder ="">
           </p>
+          <% if (locals.errors && errors.password) { %>
+            <p class="errorSign"><%= errors.password.msg %></p>
+            <% } %> 
           <br>
           <label id="upload" class="selectCSV"  for="botonupload">Upload your avatar</label>
           <input type="file" name="avatar" accept=".jpg, .gif, .mp4, .png" id="botonupload">
           <br>
+          
           <p class="full">
             <button class="boton-wallet">*Choose your wallet</button>
           </p>
           <br>
           <p class="full">
-            <button class="boton-signup">Sign Up</button>  
+            <button class="boton-signup" type="submit">Sign Up</button>  
           </p>
           <br>
         

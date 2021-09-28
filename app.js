@@ -4,7 +4,7 @@ const port = 3030
 const path = require('path')
 const methodOverride = require("method-override");
 const multer = require("multer");
-
+const session = require('express-session')
 
 const storage = multer.diskStorage({ 
     destination: function (req, file, cb) { 
@@ -29,6 +29,7 @@ app.use('/users', usersRouter);
 
 
 app.use(express.static('public'));
+app.use(session({secret: "secret"}))
 
 app.get('*', function (request, response){
     response.send('NOT FOUND', 404)
