@@ -15,6 +15,15 @@ function writeJson(array){
     return fs.writeFileSync(path.join(__dirname, "../data/users.json"), arrayJson);
 }
 
+/*el if va entre el req.session y el res.render
+
+if(req.body.recordame!=undefined){
+  res.cookie('recordame', usuarioALoguearse.email, usuarioALoguearse.password, {maxAge:60000})
+}
+
+*/
+
+
 const usersController = {
   register: (req,res)=>{
       let imageVldt = req.query.ifFile;
