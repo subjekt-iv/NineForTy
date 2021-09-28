@@ -9,7 +9,9 @@ const tokensJson = JSON.parse(fs.readFileSync(tokensFilePath, 'utf-8'))
 
 const mainController = {
     home: (req, res) =>{
-      res.render("index")
+      res.render("index",{
+        user: req.session.userLogged 
+      })
     },
 
     market: (req, res) =>{

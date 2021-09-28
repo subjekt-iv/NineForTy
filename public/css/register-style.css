@@ -8,6 +8,8 @@
 
 html {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body{
@@ -113,6 +115,15 @@ footer h4{
     font-weight: 500;
     line-height: 1.2;
     margin-top: 0;
+}
+
+.loggedIn{
+    text-align: center;
+    color: rgb(24, 95, 3);
+    text-shadow: 2px 2px 2px red;
+    margin: 5%;
+    font-size: 1.5em;
+
 }
 
 .barrabusqueda{

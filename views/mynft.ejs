@@ -45,7 +45,13 @@
             </a>
             </div>
         </header>
-
+        <% if (user == undefined) { %>
+            <div class="notlogged">
+            <h1>You're not logged in, please click the following link to do it. </h1>
+            <br>
+            <a href="/users/login"> Login </a>
+           </div>
+           <% } else { %>
         <h4 id="mynft">My NFT'S</h4>
 
         <div id="cajas">
@@ -79,7 +85,7 @@
 
              </div>
          </div>
-
+         <% } %> 
     </main>
 
     <footer>

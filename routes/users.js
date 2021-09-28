@@ -7,19 +7,19 @@ const multer = require("multer");
 const { check } = require("express-validator");
 
 const validateRegister = [ 
-   check("first_name")
+   /*check("first_name")
    .notEmpty().withMessage("You have to set your account's first name.").bail()
    .isLength({ min: 2 }).withMessage("You have to give a valid name for your account."),
    check("last_name").notEmpty().withMessage("You have to set your account's last name."),
    check("username")
    .notEmpty().withMessage("You have to set your account's username.").bail()
-   .isLength({ min: 4 }).withMessage("You have to give a valid username for your account."),
+   .isLength({ min: 4 }).withMessage("You have to give a valid username for your account."),*/
    check("email")
    .notEmpty().withMessage("You have to set your account's email.").bail()
    .isEmail().withMessage("You have to set a valid e-mail for your account."),
    check("password")
-   .notEmpty().withMessage("You have to set your account's password.").bail()
-   .isLength( { min: 5 }).withMessage("Your password must be longer than 8 characters."),
+   .notEmpty().withMessage("You have to set your account's password.")/*.bail()
+   .isLength( { min: 5 }).withMessage("Your password must be longer than 8 characters."),*/
 ];
 
 const storage = multer.diskStorage({ 
@@ -33,9 +33,13 @@ const storage = multer.diskStorage({
 var upload = multer({ storage: storage})
 
 router.get("/login", usersController.login);
+router.post("/login", usersController.processLogin);
 router.get("/register", usersController.register);
 router.post("/register", [validateRegister,upload.single("avatar")], usersController.createUSER);
 router.get("/userList", usersController.userList);
+router.get("/profile", usersController.profile);
+/*router.get("/edit/:id", usersController.editProfile);
+router.put("/edit/:id", usersController.updateProfile);*/
 
 
 module.exports = router;

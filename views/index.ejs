@@ -22,14 +22,21 @@
     <body>
         <%- include("./partials/header") %>
         <main id="main-index">
+          
             <div class="index-register-container">
                 <div class="index-register">
-                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores tempore enim</h4>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum impedit necessitatibus provident possimus laborum. </p> 
+                    <h4>Welcome to the future of trading</h4>
+                    <p>Discover a new way to trade: Buy, sell, create and design your own NFT tokens to put on the market.</p> 
+                    <% if (!user) { %>
+                    <a href="/users/login">Login</a>
                     <a href="/users/register">Sign up</a>
+                    <% } else { %>
+                    <a href="/users/profile">Profile</a>
+                    <% } %> 
                 </div>    
                 <img class="placeholder" src="/img/NFT-13.jpg">
             </div>
+             
                 <i class="fas fa-chevron-down"></i>
             <div class="trending">
                 <h2>Trending</h2>
