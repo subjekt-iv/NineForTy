@@ -18,6 +18,7 @@ var upload = multer({ storage: storage});
 const indexRouter = require("./routes/");
 const productsRouter = require('./routes/products');
 const usersRouter = require('./routes/users');
+const recordameMiddleware=require('!/middlewares/recordameMiddleware');
 
 app.use(methodOverride("_method"));
 app.use(express.urlencoded({extended:false}));
@@ -25,6 +26,8 @@ app.use(express.urlencoded({extended:false}));
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
+app.use(cookieParser());
+app.use(recordameMiddleware);
 
 /*app.get('/register', (req, res) => {
     res.render(path.join (__dirname, 'views/register.ejs'))
