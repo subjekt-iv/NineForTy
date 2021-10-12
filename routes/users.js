@@ -38,8 +38,8 @@ router.get("/register", usersController.register);
 router.post("/register", [validateRegister,upload.single("avatar")], usersController.createUSER);
 router.get("/userList", usersController.userList);
 router.get("/profile", usersController.profile);
-/*router.get("/edit/:id", usersController.editProfile);
-router.put("/edit/:id", usersController.updateProfile);*/
+router.get("/edit/:id", usersController.editProfile);
+/*router.put("/edit/:id", usersController.updateProfile);*/
 
 
 module.exports = router;

@@ -47,7 +47,7 @@ const usersController = {
         email: req.body.email,
         password: passEncrypted,
         username: req.body.username,
-        image: "../../img/avatars/"+req.file.filename
+        avatar: "../../img/avatars/"+req.file.filename
       }
       data.push(newUser)
       writeJson(data)
@@ -109,13 +109,12 @@ const usersController = {
       user: req.session.userLogged 
     });
   },
- /* editProfile: (req,res)=>{
+  editProfile: (req,res)=>{
     let userToEdit = req.session.userLogged;
-    console.log(userToEdit)
     res.render("editProfile", {
       user: req.session.userLogged 
     });
-  },
+  },/*
   updateProfile: (req,res)=>{
     let users = findAll();
     let userToEdit = users.find(id => req.session.userLogged.id);
