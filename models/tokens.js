@@ -6,7 +6,7 @@ const data = JSON.parse(fs.readFileSync(tokensFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const tokens = {
+const Tokens = {
     getAll: () => {
         return data;
     },
@@ -21,4 +21,4 @@ const tokens = {
     }
 }
 
-module.exports = products; 
+module.exports = Tokens; 

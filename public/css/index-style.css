@@ -68,6 +68,19 @@ footer{
     border-radius: 15px;
 }
 
+.notlogged{
+    text-align: center;
+    width: 100%;
+    margin: 5%;
+}
+
+.notlogged a{
+    color: white;
+    text-decoration: none;
+    background-color: #3BDC98;
+    padding: 2% 15%;
+    border-radius: 15px;
+}
 h2{
     font-weight: 600;
 }
@@ -213,6 +226,16 @@ header div a{
 
 .active {
     color: white; 
+}
+
+.posts{
+    background-color: white;
+    margin: 5%;
+    text-align: center;
+}
+
+.list-avatar{
+    width: 20%;
 }
 
 .cart{

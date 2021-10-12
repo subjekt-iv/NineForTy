@@ -143,6 +143,9 @@ footer{
     height: 31px;
 }
 
+.loginerror{
+    color:red
+}
 /*formulario*/
 
 #formulario{

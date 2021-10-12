@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const Tokens = require('../models/Tokens')
+
 function findAll(){
 //leer Json
   let tokensJson= fs.readFileSync(path.join(__dirname, "../data/tokens.json"))
@@ -60,16 +62,21 @@ const productController = {
 
   update: (req, res) => {
       //obtener autos
-      let tokens = findAll();
+      
 
       //actualizo mi array
-      let tokensActualizados = tokens.map(function(token){
+      let tokensActualizados = Tokens.getAll().map(token => {
         if(token.id == req.params.id){
-          token.name = req.body.title,
-          token.description = req.body.description,
-          token.keywords = req.body.keywords.split(" "),
-          token.price = req.body.price,
-          token.image = "../img/"+req.file.filename
+          //token.name = req.body.title,
+          //token.description = req.body.description,
+          //token.keywords = req.body.keywords.split(" "),
+          //token.price = req.body.price,
+          //token.image = "../img/"+req.file.filename
+          token.name = req.body.title
+          token.description = req.body.description
+          token.keywords = req.body.keywords
+					token.price = req.body.price
+          token.image = req.file ?  req.file.filename : token.image
         }
         return token;
       })
@@ -88,20 +95,15 @@ const productController = {
   },
 
   destroy: (req,res) => {
+
+    
     
       //busco todos los autos
-      let tokens = findAll()
+      let tokensActualizados = Tokens.getAll().filter(elem => elem.id != req.params.id);
 
-      //filtro los autos que no voy a borrar
-      let dataNueva = tokens.filter(function(token){
-        return token.id != req.params.id
-      })
+      Tokens.modifiedAll(tokensActualizados);
+		res.redirect('/market');
 
-      //escribo el json
-      writeJson(dataNueva);
-
-      //devuelvo una respuesta
-      res.redirect("/market");
 
   }
       
