@@ -33,11 +33,11 @@ const Token = db.define('nfts', {
     }
 },
 
-/*
+
 {timestamps: false,
 tableName: 'nfts'
 },
-*/
+
 //Crear columnas de createdAt y updatedAt
 )
 

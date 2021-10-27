@@ -64,11 +64,11 @@ app.use(session({
     saveUninitialized: true
 }));
 
-app.get('*', function (request, response){
+/*app.get('*', function (req, res){
     res.status('NOT FOUND', 404).send(body)
 });
 
-/*app.use(function(req, res, next) {
+app.use(function(req, res, next) {
     next(createError(404));
 });*/
 

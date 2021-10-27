@@ -19,8 +19,7 @@ router.get('/carrito', mainController.cart);
 router.get('/market', (req, res) => 
 Nft.findAll()
 .then(nfts => {
-   console.log(nfts);
-   res.sendStatus(200);
+   res.render("market", {tokens: nfts});
 })
 .catch(err => console.log(err)));
 
