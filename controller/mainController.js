@@ -1,8 +1,9 @@
 const fs = require("fs");
 const path = require("path");
-
 const tokensFilePath = path.join(__dirname, "../data/tokens.json")
 const tokensJson = JSON.parse(fs.readFileSync(tokensFilePath, 'utf-8'))
+//Requerir DB
+//Requerir Sequelize
 
 
 

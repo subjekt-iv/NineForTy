@@ -5,6 +5,7 @@ const router = express.Router()
 const productController = require("../controller/productController");
 const multer = require("multer");
 
+
 const storage = multer.diskStorage({ 
     destination: function (req, file, cb) { 
        cb(null, './public/img'); 
@@ -21,9 +22,8 @@ router.get("/edit/:id", productController.edit);
 router.put("/edit/:id", upload.single("nftFile"), productController.update);
 router.get("/detail/:id", productController.detail);
 router.get("/myNFT", productController.myNFT);
-
-
 router.delete("/delete/:id" , productController.destroy);
+
 
 
 

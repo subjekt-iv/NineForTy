@@ -1,11 +1,21 @@
-const express = require('express')
-const app = express()
-const port = 3030
+const express = require('express');
+const app = express();
+const port = 3030;
 const path = require('path')
 const methodOverride = require("method-override");
 const multer = require("multer");
 const session = require("express-session");
 const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+
+//DB
+const db = require('./config/database')
+
+//DB connection testing
+db.authenticate()
+.then(() =>console.log('Database connected...'))
+.catch(err => console.log('Error' + err))
+
 
 app.listen(port, ()=>{
     console.log('La app esta funcionado en http://localhost:'+ port )
@@ -55,7 +65,7 @@ app.use(session({
 }));
 
 app.get('*', function (request, response){
-    response.send('NOT FOUND', 404)
+    res.status('NOT FOUND', 404).send(body)
 });
 
 /*app.use(function(req, res, next) {
