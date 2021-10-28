@@ -13,11 +13,20 @@ const db = require('../config/database')
 
 router.get('/', mainController.home);
 router.get('/carrito', mainController.cart);
-//router.get('/market', mainController.market);
+router.get('/market', mainController.market);
 
 //Testing (Get Token from DB)
+<<<<<<< HEAD
 router.get('/market', mainController.market); 
 
+=======
+/*router.get('/market', (req, res) => 
+Nft.findAll()
+.then(nfts => {
+   res.render("market", {tokens: nfts});
+})
+.catch(err => console.log(err)));*/
+>>>>>>> 4a8b1f47676c68892ec7c84fa14405253cb393d6
 
 router.get('pruebaSession', function (req, res) {
 

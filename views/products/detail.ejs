@@ -23,12 +23,12 @@
         <%- include("../partials/header") %>
         <main id="main-detail">
             <div class="token">
-                <img src="<%= token.image %>" alt="" class="tokenIMG">
+                <img src="../../img/<%= token.image %>" alt="" class="tokenIMG">
             </div>
             <div class="tokenDetail">
                 <h4 class="title"><%= token.name %></h4>
                 <h6 class="description"><%= token.description%></h6>
-                <% for(let i=0;i<token.keywords.length;i++){ %><span class="tokentags">#<%= token.keywords[i]%> </span><%}%>
+               <span class="tokentags">#<%= token.keyword %> </span>
                 <br>
                 <h6>Price</h6>
                 <span class="tokenPrice"><%= token.price %></span>

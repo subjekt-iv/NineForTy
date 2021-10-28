@@ -3,23 +3,23 @@ const Sequelize = require('sequelize') ;
 //const { FORCE } = require('sequelize/types/lib/index-hints');
 const db = require('../config/database');
 
-const Token = db.define('nfts', {
-    nftID:{ 
-        type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true},
-
-    price: {
-        type: Sequelize.INTEGER
+const Usuario = db.define('nfts', {
+    userID:{ 
+        type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true
     },
-    userID: {
-        type: Sequelize.INTEGER
-    },
-    name: {
+    firstName: {
         type: Sequelize.STRING
     },
-    keyword: {
+    lastName: {
         type: Sequelize.STRING
     },
-    description: {
+    userName: {
+        type: Sequelize.STRING
+    },
+    email: {
+        type: Sequelize.STRING
+    },
+    password: {
         type: Sequelize.TEXT
     },
     createdAt: {
@@ -28,24 +28,26 @@ const Token = db.define('nfts', {
     updatedAt: {
         type: Sequelize.INTEGER
     },
-    image: {
+    avatar: {
         type: Sequelize.STRING
     }
 },
 
 
 {timestamps: false,
-tableName: 'nfts'
-}
+tableName: 'users'
+},
 
-//Crear columnas de createdAt y updatedAt
+
 )
 
-/*Token.associate = function(models){
-    Token.belongsTo(models.Usuario,{
-        as: "users",
+/*Usuario.associate = function(models){
+    Usuario.hasMany(models.Nft, {
+        as: "nfts",
         foreignKey: "userID"
     })
 }*/
 
-module.exports = Token;
+
+
+module.exports = Usuario;
