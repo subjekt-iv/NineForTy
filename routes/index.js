@@ -13,15 +13,15 @@ const db = require('../config/database')
 
 router.get('/', mainController.home);
 router.get('/carrito', mainController.cart);
-//router.get('/market', mainController.market);
+router.get('/market', mainController.market);
 
 //Testing (Get Token from DB)
-router.get('/market', (req, res) => 
+/*router.get('/market', (req, res) => 
 Nft.findAll()
 .then(nfts => {
    res.render("market", {tokens: nfts});
 })
-.catch(err => console.log(err)));
+.catch(err => console.log(err)));*/
 
 router.get('pruebaSession', function (req, res) {
 

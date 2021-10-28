@@ -1,6 +1,9 @@
 const fs = require("fs");
 const path = require("path");
 const Tokens = require('../models/Tokens')
+const Nft = require('../models/Nft')
+const Usuario = require('../models/Usuario')
+
 
 function findAll(){
 //leer Json
@@ -42,13 +45,17 @@ const productController = {
   },
 
   detail: (req,res)=>{
-    let tokens = findAll();
+    /*let tokens = findAll();
     
     let tokenFound = tokens.find(function(token){
         return token.id == req.params.id
-    })
+    })*/
 
-    res.render("products/detail", {token: tokenFound})
+    Nft.findByPk(req.params.id,{
+      include:[{association:"Usuario"}]})
+    .then((token)=>{
+      res.render("products/detail", {token: token})}
+      )
   },
 
   edit: (req,res) =>{

@@ -2,12 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const tokensFilePath = path.join(__dirname, "../data/tokens.json")
 const tokensJson = JSON.parse(fs.readFileSync(tokensFilePath, 'utf-8'))
-//Requerir DB
-//Requerir Sequelize
-
-
-
-
+const Nft = require('../models/Nft')
 const mainController = {
     home: (req, res) =>{
       res.render("index",{
@@ -16,7 +11,11 @@ const mainController = {
     },
 
     market: (req, res) =>{
-      res.render("market", {tokens: tokensJson});
+      Nft.findAll()
+      .then(nfts => {
+         res.render("market", {tokens: nfts});
+      })
+      .catch(err => console.log(err))
     },
       
     cart: (req, res) =>{
