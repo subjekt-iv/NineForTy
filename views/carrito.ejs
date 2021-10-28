@@ -21,82 +21,13 @@
     <main>
         <%- include("./partials/header") %>
         
-        <div class="tarjeta">
-            <div class="izq">
-                <img id="img-market" src="img/Onset.png">
-                <button class="view">View artwork</button>
-            </div>
-            <div class="derecha">
-                <div class="info">
-                    <p class="nombreobra">Onset</p>
-                    <p class="nombreartista">winteagle</p>
-                    <div>
-                        <i class="icono" class="fas fa-chart-line fa-fw"></i> 
-                        <p class="pricehistory"><i class="fas fa-chart-line"></i> Price history</p>
-                        <button class="tachito"><i class="far fa-trash-alt"></i></button>
-                    </div>
-                </div>
-                <div class="precio">
-                    <p class="eth">0.50 ETH</p>
-                    <p class="dolares">$458.11</p>
-                </div>
-            </div>
-            </div>
-
-        <hr>
-
-        <div class="tarjeta">
-            <div class="izq">
-                <img id="img-market" src="img/Rightorder.png">
-                <button class="view">View artwork</button>
-            </div>
-            <div class="derecha">
-                <div class="info">
-                    <p class="nombreobra">Right order</p>
-                    <p class="nombreartista">winteagle</p>
-                    <p class="pricehistory"><i class="fas fa-chart-line"></i> Price history</p>
-                    <button class="tachito"><i class="far fa-trash-alt"></i></button>
-                </div>
-                <div class="precio">
-                    <p class="eth">0.50 ETH</p>
-                    <p class="dolares">$458.11</p>
-                </div>
-            </div>
-            </div>
-
-        <hr>
-
-        <div class="tarjeta">
-            <div class="izq">
-                <img id="img-market" src="img/SR_Face_To_Face_dromsjel.png">
-                <button class="view">View artwork</button>
-            </div>
-            <div class="derecha">
-                <div class="info">
-                    <p class="nombreobra">Face to Face</p>
-                    <p class="nombreartista">dromsjel</p>
-                    <p class="pricehistory"><i class="fas fa-chart-line"></i> Price history</p>
-                    <button class="tachito"><i class="far fa-trash-alt"></i></button>
-                </div>
-                <div class="precio">
-                    <p class="eth">0.50 ETH</p>
-                    <p class="dolares">$458.11</p>
-                </div>
-            </div>
-            </div>
-
-        <hr>
-
-        <div id="pagar">
-            <div id="total">
-                <p id="totaltexto">TOTAL:</p>
-            </div>
-            <div id="dinero">
-                <p id="eth">1.50 ETH</p>
-                <p id="pesos">$1374.33</p>
-                <button id="buy">Buy</button>
-            </div>
-        </div>
+      
+        <%tokens.forEach(elem =>{%>
+        
+            <%- include('components/cartProduct', {token: elem}) %>
+           
+              <% }) %>
+        
 
     </main>
     <%- include("./partials/footer") %>
