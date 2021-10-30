@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 const Tokens = require('../models/Tokens')
-const Nft = require('../models/Nft')
-const Usuario = require('../models/Usuario')
+const Nft = require('../database/models/Nft')
+const Usuario = require('../database/models/Usuario')
 
 
 function findAll(){

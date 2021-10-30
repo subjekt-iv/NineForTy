@@ -9,13 +9,15 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 //DB
-const db = require('./config/database')
+const db = require('./database/config/config')
+
 
 //DB connection testing
+/*
 db.authenticate()
 .then(() =>console.log('Database connected...'))
 .catch(err => console.log('Error' + err))
-
+*/
 
 app.listen(port, ()=>{
     console.log('La app esta funcionado en http://localhost:'+ port )
