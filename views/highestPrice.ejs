@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <%- include("./partials/head") %>
+        <link href="/css/market-style.css" rel="stylesheet">
+       
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                  x.style.display = "none";
+                } else {
+                  x.style.display = "block";
+                }
+              }
+        </script>
+    </head>
+    <body>
+        <%- include("./partials/header") %>
+       
+
+    <main id="main-market">
+
+      <%nfts.forEach(nfts =>{%>
+        
+        <%- include('components/highestPriceProduct', {nfts: nfts}) %>
+       
+          <% }) %>
+    
+
+    </main>
+
+       
+    <%- include("./partials/footer") %>
+    </div>
+</body>
+</html>

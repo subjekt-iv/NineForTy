@@ -9,7 +9,18 @@ const productController = {
       res.render("products/detail", {nfts: nfts})
     })
     
+  },
+  highestPrice: (req, res) => {
+    db.Nfts.findAll({
+      where: {
+        price:10
+      }
+    })
+    .then(nfts => {
+      res.render("highestPrice", {nfts: nfts})
+    })
   }
+
 
 }
 
