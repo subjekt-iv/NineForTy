@@ -3,6 +3,7 @@ const path = require("path");
 const { validationResult, body } = require('express-validator');
 const User = require('../models/User')
 const bcrypt = require("bcryptjs");
+const db = require('../database/models')
 
 
 /*function findAll(){
@@ -17,6 +18,20 @@ function writeJson(array){
 }
 */
 const usersController = {
+  userList: (req, res) =>{
+    db.Users.findAll()
+    .then(users => {
+      res.render("userList", {users: users})
+    })
+    /*
+    res.render("userList", {users,
+      user: req.session.userLogged });
+      */
+  }
+}
+
+/*
+
   register: (req,res)=>{
       let imageVldt = req.query.ifFile;
       res.render("register", {
@@ -50,12 +65,13 @@ const usersController = {
       
       
     }
-    
+    */
+   /*
     
 } else {
   console.log(req.body);
   console.log(errors);
-  res.render("register", { errors: errors.mapped(), old: req.body });*/
+  res.render("register", { errors: errors.mapped(), old: req.body });
 },
 login: (req,res)=>{
   let errors = [];
@@ -93,11 +109,7 @@ processLogin:(req,res)=>{
   };
 },
 
-  userList: (req, res) =>{
-    let users = findAll();
-    res.render("userList", {users,
-      user: req.session.userLogged });
-  },
+ 
   profile: (req,res)=>{
     res.render("profile", {
       user: req.session.userLogged 
@@ -125,7 +137,7 @@ processLogin:(req,res)=>{
       user: req.session.userLogged 
     }));
   }*/
-
+/*
 
     userList: (req, res) =>{
       let users = findAll();
@@ -138,4 +150,6 @@ processLogin:(req,res)=>{
       });
     }
   }
-module.exports = usersController;
+  */
+
+module.exports = usersController

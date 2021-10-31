@@ -1,12 +1,12 @@
 <div class="tarjeta">
     <div class="izq">
-        <img src="../../img/ <%= token.image %>" >
+        <img src="../../img/<%= nfts.image %>" id="izq" >
         <button class="view">View artwork</button>
     </div>
     <div class="derecha">
         <div class="info">
-            <p class="nombreobra"> <%= token.name %> </p>
-            <p class="nombreartista"><%= token.userID %></p>
+            <p class="nombreobra"> <%= nfts.name %> </p>
+            <p class="nombreartista"><%= nfts.userID %></p>
             <div>
                 <i class="icono" class="fas fa-chart-line fa-fw"></i> 
                 <p class="pricehistory"><i class="fas fa-chart-line"></i> Price history</p>
@@ -14,8 +14,8 @@
             </div>
         </div>
         <div class="precio">
-            <p class="eth"><%= token.price %></p>
-            <p class="dolares"><%= token.price * 3946 %></p>
+            <p class="eth"><%= nfts.price %></p>
+            <p class="dolares"><%= nfts.price * 3946 %></p>
         </div>
     </div>
     </div>

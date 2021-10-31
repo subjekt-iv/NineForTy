@@ -17,12 +17,14 @@ const mainController = {
     },
       
     cart: (req, res) =>{
-      Nft.findAll()
+      
+      db.Nfts.findByPk(req.params.id)
       .then(nfts => {
-         res.render("carrito", {tokens: nfts});
+        res.render("carrito", {nfts: nfts})
       })
-      .catch(err => console.log(err));
-    },
+      .catch(err => console.log(err))
+        
+    }
 
     
 }

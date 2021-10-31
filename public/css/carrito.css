@@ -10,9 +10,6 @@ body{
     
 }
 
-main{
-   
-}
 
 /*fotos*/
 
@@ -158,7 +155,7 @@ hr{
 
 /*pantalla*/
 
-.izq{
+#izq{
     display: flex;
     flex-direction: column;
     width: 50%;

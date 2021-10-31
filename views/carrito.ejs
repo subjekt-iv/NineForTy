@@ -21,16 +21,18 @@
     <main>
         <%- include("./partials/header") %>
         
-      
-        <%tokens.forEach(elem =>{%>
         
-            <%- include('components/cartProduct', {token: elem}) %>
+      
+       
+        
+            <%- include('components/cartProduct', {nfts: nfts}) %>
            
-              <% }) %>
+             
         
 
     </main>
     <%- include("./partials/footer") %>
+    
 
 </body>
 </html>

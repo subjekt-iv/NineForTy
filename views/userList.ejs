@@ -19,17 +19,17 @@
   <body>
     <%- include("./partials/header") %>
     <main id="main-market">
-      <%users.forEach(elem =>{%>
+      <%users.forEach(users =>{%>
       <div class="posts">
           <div class="img-tokens-market">
-            <img src="<%= elem.avatar %>"   class="list-avatar">
+            <img src="<%= users.avatar %>"   class="list-avatar">
           </div>
-          <h4><%= elem.username %></h4>
+          <h4><%= users.username %></h4>
           <div class="token-name">
-            <p><%= elem.first_name %></p>
+            <p><%= users.first_name %></p>
           </div>
-          <p><%= elem.last_name %></p>
-          <a href="/<%= elem.id %>">View</a>
+          <p><%= users.last_name %></p>
+          <a href="/<%= users.id %>">View</a>
       </div>
       <% }) %> 
     </main>

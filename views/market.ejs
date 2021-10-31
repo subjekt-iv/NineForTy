@@ -20,9 +20,9 @@
 
     <main id="main-market">
 
-      <%nfts.forEach(elem =>{%>
+      <%nfts.forEach(nfts =>{%>
         
-        <%- include('components/cardProduct', {token: elem}) %>
+        <%- include('components/cardProduct', {nfts: nfts}) %>
        
           <% }) %>
     

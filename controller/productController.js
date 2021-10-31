@@ -1,9 +1,43 @@
-const fs = require("fs");
-const path = require("path");
-const Tokens = require('../models/Tokens')
-const Nft = require('../database/models/Nft')
-const Usuario = require('../database/models/Usuario')
+const db = require('../database/models')
 
+
+
+const productController = {
+  detail: (req, res) => {
+    db.Nfts.findByPk(req.params.id)
+    .then(nfts => {
+      res.render("products/detail", {nfts: nfts})
+    })
+    
+  }
+
+}
+
+
+
+module.exports = productController;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 function findAll(){
 //leer Json
@@ -49,7 +83,7 @@ const productController = {
     
     let tokenFound = tokens.find(function(token){
         return token.id == req.params.id
-    })*/
+    })
 
     Nft.findByPk(req.params.id,{
       include:[{association:"Usuario"}]})
@@ -115,4 +149,6 @@ const productController = {
   }
       
 }
-module.exports = productController;
+
+*/
+

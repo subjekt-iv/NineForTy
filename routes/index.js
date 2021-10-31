@@ -12,7 +12,7 @@ const db = require('../database/config/config')
 
 
 router.get('/', mainController.home);
-router.get('/carrito', mainController.cart);
+router.get('/carrito/:id', mainController.cart);
 router.get('/market', mainController.market);
 
 //Testing (Get Token from DB)

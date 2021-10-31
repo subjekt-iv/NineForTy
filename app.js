@@ -10,14 +10,9 @@ const bodyParser = require('body-parser');
 
 //DB
 const db = require('./database/config/config')
+//const Nft = require('./database/models/index')
 
 
-//DB connection testing
-/*
-db.authenticate()
-.then(() =>console.log('Database connected...'))
-.catch(err => console.log('Error' + err))
-*/
 
 app.listen(port, ()=>{
     console.log('La app esta funcionado en http://localhost:'+ port )

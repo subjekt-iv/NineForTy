@@ -1,9 +1,10 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'users'
+    let alias = 'Users'
         
     let cols =  {
         userID: {
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            primaryKey: true
         },
         firstName: {
             type: dataTypes.STRING

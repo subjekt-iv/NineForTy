@@ -23,20 +23,20 @@
         <%- include("../partials/header") %>
         <main id="main-detail">
             <div class="token">
-                <img src="../../img/<%= token.image %>" alt="" class="tokenIMG">
+                <img src="../../img/<%= nfts.image %>" alt="" class="tokenIMG">
             </div>
             <div class="tokenDetail">
-                <h4 class="title"><%= token.name %></h4>
-                <h6 class="description"><%= token.description%></h6>
-               <span class="tokentags">#<%= token.keyword %> </span>
+                <h4 class="title"><%= nfts.name %></h4>
+                <h6 class="description"><%= nfts.description%></h6>
+               <span class="tokentags">#<%= nfts.keyword %> </span>
                 <br>
                 <h6>Price</h6>
-                <span class="tokenPrice"><%= token.price %></span>
+                <span class="tokenPrice"><%= nfts.price %></span>
                 <span>Ether</span>
             </div>
             <br class="line">
             <div class="tokenStats">
-                <div class="author"><img src="<%= token.image %>"> @author</div>
+                <div class="author"><img src="<%= nfts.image %>"> @author</div>
                 <br>
                 <div class="favsviews">
                     <div class="favorites">
@@ -51,7 +51,11 @@
                     </div>
                 </div>
             </div>
-            <button class="buy-button" type="button">Buy Token</button>
+          
+            <a class="buy-button" href="/carrito/<%= nfts.nftID %>">Buy</a>
+
+
+            
             
         </main>
     
