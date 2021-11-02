@@ -190,34 +190,53 @@ form{
     margin-right: 5%;
 }
 
-#title{
-	width:90%;
-	padding:3px 10px;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color: transparent;
-	margin:8px 0;
-	display:inline-block;
-}
-
-#tags{
-	width:90%;
-	padding:3px 10px;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color: transparent;
-	margin:8px 0;
-	display:inline-block;
-}
-
 #price{
-	width:90%;
+    width:90%;
+    height: 5%;
 	padding:3px 10px;
 	border:1px solid #f6f6f6;
 	border-radius:3px;
 	background-color: transparent;
 	margin:8px 0;
 	display:inline-block;
+}
+
+#name{
+    width:90%;
+    height: 5%;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color: transparent;
+	margin:8px 0;
+	display:inline-block;
+	
+}
+
+#keyword{
+    width:90%;
+    height: 5%;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color: transparent;
+	margin:8px 0;
+	display:inline-block;
+
+}
+
+#description {
+
+    width:90%;
+    height: 11%;
+    padding:3px 10px;
+    border:1px solid #f6f6f6;
+    border-radius:3px;
+    background-color: transparent;
+    margin:8px 0;
+    display:inline-block;
+    
+    
 }
 
 label{

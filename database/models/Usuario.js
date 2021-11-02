@@ -30,6 +30,13 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'users'
         };
         const Usuario = sequelize.define(alias, cols, config)
+        
+        Usuario.associate = (models) => {
+            Usuario.hasMany(models.Nfts, {
+                as: "nfts",
+                foreignKey: "userID"
+            })
+        }
         return Usuario
         }
 

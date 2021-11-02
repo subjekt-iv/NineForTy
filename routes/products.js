@@ -16,13 +16,14 @@ const storage = multer.diskStorage({
 
 var upload = multer({ storage: storage})
 
-//router.get("/create", productController.create);
-//router.post("/create", upload.single("nftFile"), productController.store);
+router.get("/create", productController.add);
+router.post("/create", productController.create);
 //router.get("/edit/:id", productController.edit);
 //router.put("/edit/:id", upload.single("nftFile"), productController.update);
+router.get("/lowestPrice", productController.lowestPrice)
 router.get("/highestPrice", productController.highestPrice)
 router.get("/detail/:id", productController.detail);
-//router.get("/myNFT", productController.myNFT);
+router.get("/myNFT", productController.myNFT);
 //router.delete("/delete/:id" , productController.destroy);
 
 

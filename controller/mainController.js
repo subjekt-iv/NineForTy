@@ -9,7 +9,11 @@ const mainController = {
     },
 
     market: (req, res) =>{
-      db.Nfts.findAll()
+      db.Nfts.findAll({
+          include:[{association: "users"}],
+          order: [["price", "ASC"]]
+        }
+      )
       .then(nfts => {
          res.render("market", {nfts: nfts});
       })

@@ -1,4 +1,7 @@
-const db = require('../database/models')
+const { sequelize } = require('../database/models');
+const db = require('../database/models');
+const Op = db.Sequelize.Op;
+
 
 
 
@@ -7,21 +10,74 @@ const productController = {
     db.Nfts.findByPk(req.params.id)
     .then(nfts => {
       res.render("products/detail", {nfts: nfts})
-    })
+    });
     
   },
   highestPrice: (req, res) => {
     db.Nfts.findAll({
       where: {
-        price:10
+        price: {[db.Sequelize.Op.gte]:5}
       }
     })
     .then(nfts => {
       res.render("highestPrice", {nfts: nfts})
+    });
+  },
+  lowestPrice: (req, res) => {
+    db.Nfts.findAll({
+      where: {
+        price: {[db.Sequelize.Op.lt]:5}
+      }
     })
-  }
+    .then(nfts => {
+      res.render("lowestPrice", {nfts: nfts})
+    });
+  },
+
+  myNFT: (req, res) => {
+    db.Nfts.findAll()
+    .then( nfts => {
+      res.render("myNFT", {nfts: nfts})
+    });
+  },
+  
+  add: (req, res) => {
+    res.render("products/create")
+  },
 
 
+  create: (req,res, next) =>{
+    var price = req.body.price;
+    var name = req.body.name;
+    var keyword = req.body.keyword;
+    var description = req.body.description;
+    //var image = "../../img/"+req.body.filename;
+    
+    sequelize.query(`INSERT INTO nfts (price, name, keyword, description, image ) VALUES ('${price}', '${name}', '${keyword}', ${description})`)
+    .then( function(projects) {
+    if (err) throw err;
+    console.log(projects);
+   
+    })
+    .catch(error => {
+      console.error('onRejected function called: ' + error.message);
+    })
+    
+    res.redirect("/market");
+    },
+/*
+    create: (req,res, next) =>{
+      db.Nfts.create({
+        price: req.body.price,
+        //userID: req.body.userID,
+        name: req.body.name,
+        keyword: req.body.keyword,
+        description: req.body.description,
+        image:  "../../img/"+req.body.filename
+      });
+      res.redirect("/market");
+  },
+  */
 }
 
 
@@ -67,9 +123,7 @@ function writeJson(array){
 
 const productController = {
     
-  create: (req,res) =>{
-      res.render("products/create")
-  },
+ 
 
   store: (req, res) =>{
     let data = findAll();

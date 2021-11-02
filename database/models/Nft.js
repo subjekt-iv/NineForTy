@@ -42,5 +42,12 @@ let config = {timestamps: false,
 
 
 const Nft = sequelize.define(alias, cols, config)
+
+Nft.associate = (models) => {
+    Nft.belongsTo(models.Users, {
+        as: "users",
+        foreignKey: "userID"
+    })
+}
 return Nft
 }
