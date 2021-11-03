@@ -36,13 +36,10 @@ const productsRouter = require('./routes/products');
 const usersRouter = require('./routes/users');
 const recordameMiddleware = require('./middlewares/recordameMiddleware');
 
-app.use(methodOverride("_method"));
-app.use(express.urlencoded({extended:false}));
-app.use(session({secret:"Welcome to the session",
-resave: true,
-saveUninitialized: true
-         
-}))
+
+//app.use(methodOverride("_method"));
+//app.use(express.urlencoded({extended:false}));
+
 
 app.use('/', indexRouter);
 app.use('/products', productsRouter);

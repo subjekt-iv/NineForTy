@@ -46,30 +46,11 @@ const productController = {
   },
 
 
-  create: (req,res, next) =>{
-    var price = req.body.price;
-    var name = req.body.name;
-    var keyword = req.body.keyword;
-    var description = req.body.description;
-    //var image = "../../img/"+req.body.filename;
-    
-    sequelize.query(`INSERT INTO nfts (price, name, keyword, description, image ) VALUES ('${price}', '${name}', '${keyword}', ${description})`)
-    .then( function(projects) {
-    if (err) throw err;
-    console.log(projects);
-   
-    })
-    .catch(error => {
-      console.error('onRejected function called: ' + error.message);
-    })
-    
-    res.redirect("/market");
-    },
-/*
+  
     create: (req,res, next) =>{
       db.Nfts.create({
         price: req.body.price,
-        //userID: req.body.userID,
+        userID: req.body.userID,
         name: req.body.name,
         keyword: req.body.keyword,
         description: req.body.description,
@@ -77,6 +58,8 @@ const productController = {
       });
       res.redirect("/market");
   },
+/*
+   
   */
 }
 
