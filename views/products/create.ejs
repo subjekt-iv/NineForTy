@@ -42,39 +42,40 @@
         </div>
     </header>
 
-    <form action="/products/create" method="POST" enctype="multipart/form-data">
-    <div id="cajas">
-    <div id="imagen">
-        <img id="ilustracion" src="/img/imagen-create.svg">
+    <form action="/products/create" method="POST" enctype="multipart/form-data" >
+        <div id="cajas">
+            <div id="imagen">
+                <img id="ilustracion" src="/img/imagen-create.svg">
 
-        <div id="cajaupload">
+                <div id="cajaupload">
+                
+                    <label for="botonupload" id="upload" class="selectCSV">Upload your NFT</label>
+                    <input type="file" 
+                        id="botonupload" name="botonupload" 
+                        accept=".jpg, .gif, .mp4, .png"
+                    > 
+                </div>
+            </div>  
+
+            <div id="info">
             
-                <label for="botonupload" id="upload" class="selectCSV">Upload your NFT</label>
-                <input type="file" 
-                       id="botonupload" name="botonupload" 
-                       accept=".jpg, .gif, .mp4, .png"> 
+                <label for="price">Price*</label>
+                <input type="number"  id="price" name="price">
+
+                <label for="name">Name*</label>
+                    <input type="text" id="name" name="name">
+
+                <label for="keyword">Hashtags*</label>
+                    <input type="text" id="keyword" name="keyword" placeholder="Please leave a space between tags">
+
+                <label for="description">Description*</label>
+                    <input type="text" id="description" name="description">
+            </div>
+        </div>  
+        <div id="cajaboton">
+            <button type="submit" id="create">Create NFT</button>
         </div>
-    </div>  
-
-    <div id="info">
-        
-        <label for="price">Price*</label>
-        <input type="number"  id="price" name="price">
-
-    <label for="name">Name*</label>
-        <input type="text" id="name" name="name">
-
-    <label for="keyword">Hashtags*</label>
-        <input type="text" id="keyword" name="keyword" placeholder="Please leave a space between tags">
-
-    <label for="description">Description*</label>
-        <input type="text" id="description" name="description">
-        </div>
-    </div>  
-    <div id="cajaboton">
-        <button type="submit" id="create">Create NFT</button>
-    </div>
-</form>
+    </form>
     
 
 

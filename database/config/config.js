@@ -3,7 +3,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "raptor700",
+    "password": "",
     "database": "NineForTy",
     "host": "127.0.0.1",
     "dialect": "mysql",

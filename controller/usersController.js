@@ -27,8 +27,8 @@ const usersController = {
     res.render("userList", {users,
       user: req.session.userLogged });
       */
-  }
-}
+  },
+
 
 /*
 
@@ -72,14 +72,27 @@ const usersController = {
   console.log(req.body);
   console.log(errors);
   res.render("register", { errors: errors.mapped(), old: req.body });
-},
+},*/
 login: (req,res)=>{
   let errors = [];
     res.render("login",{errors})
 },
-processLogin:(req,res)=>{
-  let users = findAll();
-  let userToLogin = users.find(user=>user.email === req.body.email);
+ processLogin:(req,res)=>{
+   let userToLogin = undefined;
+  db.Users.findOne({
+    where: { email: req.body.email}
+  }).then((result => console.log(result))
+  )
+  
+  console.log(userToLogin)
+  req.session.userLogged = userToLogin
+  if(userToLogin){
+    console.log(userToLogin)
+    console.log(req.session.userLogged)}
+
+
+  
+  /*let userToLogin = users.find(user=>user.email === req.body.email);
   if(userToLogin){
     let passwordCheck = bcrypt.compareSync(req.body.password, userToLogin.password)
     if(passwordCheck){
@@ -106,8 +119,8 @@ processLogin:(req,res)=>{
           }
         }}
     );
-  };
-},
+  };*/
+},/*
 
  
   profile: (req,res)=>{
@@ -151,5 +164,5 @@ processLogin:(req,res)=>{
     }
   }
   */
-
+}
 module.exports = usersController

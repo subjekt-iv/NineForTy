@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 var upload = multer({ storage: storage})
 
 router.get("/create", productController.add);
-router.post("/create", productController.create);
+router.post("/create", upload.single("botonupload"), productController.create);
 //router.get("/edit/:id", productController.edit);
 //router.put("/edit/:id", upload.single("nftFile"), productController.update);
 router.get("/lowestPrice", productController.lowestPrice)
