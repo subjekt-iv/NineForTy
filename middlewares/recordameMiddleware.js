@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const { validationResult } = require('express-validator');
 const bcrypt = require("bcryptjs");
+const db = require('../database/models');
 
 
 function findAll(){
@@ -11,12 +12,21 @@ function findAll(){
 };
 
 function recordameMiddleware(req, res, next){
+/*    
     if(req.cookies.recordame!=undefined&&req.session.userLogged==undefined){
-        let users = findAll();
-        let userToLogin = users.find(user=>user.email === req.cookies.email);
-        req.session.userLogged = userToLogin;
+        db.Users.findOne({
+            where: { email: req.body.email}
+          })
+          .then((userToLogin => {req.session.userLogged = userToLogin}))
+          
+          /*
+          let users = findAll();
+          let userToLogin = users.find(user=>user.email === req.cookies.email);
+          req.session.userLogged = userToLogin;
+        }
+        
     }
-    next();
+    next();*/
 }
 
 module.exports = recordameMiddleware;

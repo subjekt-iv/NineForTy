@@ -7,12 +7,18 @@ const multer = require("multer");
 const session = require("express-session");
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const indexRouter = require("./routes/");
+const productsRouter = require('./routes/products');
+const usersRouter = require('./routes/users');
+const recordameMiddleware = require('./middlewares/recordameMiddleware');
 
 //DB
 const db = require('./database/config/config')
 //const Nft = require('./database/models/index')
 
+app.use(express.json());
 
+app.use(express.urlencoded({extended:false}));
 
 app.listen(port, ()=>{
     console.log('La app esta funcionado en http://localhost:'+ port )
@@ -31,32 +37,25 @@ var upload = multer({ storage: storage});
 
 */
 
-const indexRouter = require("./routes/");
-const productsRouter = require('./routes/products');
-const usersRouter = require('./routes/users');
-const recordameMiddleware = require('./middlewares/recordameMiddleware');
 
 
-//app.use(methodOverride("_method"));
-//app.use(express.urlencoded({extended:false}));
 
-
-app.use('/', indexRouter);
-app.use('/products', productsRouter);
-app.use('/users', usersRouter);
-
-app.use(methodOverride('_method'));
-app.use(express.urlencoded({extended:false}));
 app.use(cookieParser());
-app.use(recordameMiddleware);
-app.use(express.static('public'));
-//app.use(session({secret: "secret"}))
-
 app.use(session({
     secret: "secret",
     resave: true,
     saveUninitialized: true
 }));
+//app.use(recordameMiddleware);
+
+app.use('/', indexRouter);
+app.use('/products', productsRouter);
+app.use('/users', usersRouter);
+
+app.use(express.static('public'));
+app.use(methodOverride('_method'));
+//app.use(session({secret: "secret"}))
+
 
 /*app.get('*', function (req, res){
     res.status('NOT FOUND', 404).send(body)

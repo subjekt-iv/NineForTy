@@ -46,7 +46,20 @@ const productController = {
   },
 
 
-  
+  create: (req,res, next) =>{
+    //req.body.userID
+    db.Nfts.create({
+      price: req.body.price,
+      userID: 10,
+      name: req.body.name,
+      keyword: req.body.keyword,
+      description: req.body.description,
+      image:  req.file.filename
+    }
+    )
+    .then(res.redirect("/market"));
+    },
+/*
     create: (req,res, next) =>{
       db.Nfts.create({
         price: req.body.price,
