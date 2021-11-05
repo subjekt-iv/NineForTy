@@ -56,12 +56,7 @@
             <p class="errorSign"><%= errors.email.msg %></p>
             <% } %> 
           <br>
-          <p id="field"> 
-            <div class="otherhalf"><label>Phone</label></div>
-            <input type="number" name="phone" required: true placeholder="" value="<%= locals.old && old.phone %>">
-          </p>
-          <br>
-          <p id="field"> 
+         <p id="field"> 
             <div class="otherhalf"><label>*Username</label></div>
             <input type="text" name="username" required: true placeholder="" value="<%= locals.old && old.username %>">
           </p>

@@ -38,11 +38,10 @@ var uploadFile = multer({ storage: storage})
 
 router.get("/login", usersController.login);
 router.post("/login", usersController.processLogin);
-//router.get("/register", usersController.register);
-//router.post("/register", uploadFile.single('avatar'), validations, usersController.processRegister);
-//router.post("/register", [validations, uploadFile.single("avatar")], usersController.createUSER);
+router.get("/register", usersController.register);
+router.post("/register", [validations, uploadFile.single("avatar")], usersController.createUSER);
 router.get("/userList", usersController.userList);
-//router.get("/profile", usersController.profile);
+router.get("/profile", usersController.profile);
 //router.get("/edit/:id", usersController.editProfile);
 /*router.put("/edit/:id", usersController.updateProfile);*/
 

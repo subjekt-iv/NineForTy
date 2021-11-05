@@ -108,6 +108,21 @@ main{
     list-style: none;
 }
 
+
+.notlogged{
+    text-align: center;
+    width: 100%;
+    margin: 5%;
+}
+
+.notlogged a{
+    color: white;
+    text-decoration: none;
+    background-color: #3BDC98;
+    padding: 2% 15%;
+    border-radius: 15px;
+}
+
 /*footer*/
 
 footer{

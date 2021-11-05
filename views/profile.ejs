@@ -30,10 +30,11 @@
                 <img src="<%= user.avatar %>" alt="" class="tokenIMG">
             </div>
             <div class="tokenDetail">
-                <h4 class="title"><%= user.first_name %></h4>
-                <h4 class="title"><%= user.last_name %></h4>
+                <h4 class="title"><%= user.firstName %></h4>
+                <h4 class="title"><%= user.lastName %></h4>
+                <h4 class="title"><%= user.userName %></h4>
                 <h6 ><%= user.email%></h6>
-                <a href="/users/edit/<%= user.id %> ">Edit user</a>
+                <a href="/users/edit/<%= user.userID %> ">Edit user</a>
             </div>
             <br class="line"> <% } %> 
         </main>
