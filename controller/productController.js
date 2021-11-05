@@ -7,10 +7,12 @@ const Op = db.Sequelize.Op;
 
 const productController = {
   detail: (req, res) => {
-    db.Nfts.findByPk(req.params.id)
+    db.Nfts.findByPk(req.params.id,{
+      include:[{association: "users"}]})
     .then(nfts => {
       res.render("products/detail", {nfts: nfts})
-    });
+    })
+    .then();
     
   },
   highestPrice: (req, res) => {
@@ -42,15 +44,15 @@ const productController = {
   },
   
   add: (req, res) => {
-    res.render("products/create")
+    res.render("products/create", {user: req.session.userLogged} )
   },
 
 
   create: (req,res, next) =>{
-    //req.body.userID
+    console.log(req.session.userLogged.userID);
     db.Nfts.create({
       price: req.body.price,
-      userID: 10,
+      userID: req.session.userLogged.userID,
       name: req.body.name,
       keyword: req.body.keyword,
       description: req.body.description,

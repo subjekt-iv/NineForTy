@@ -30,7 +30,7 @@ const usersController = {
   },
 
 
-/*
+
 
   register: (req,res)=>{
       let imageVldt = req.query.ifFile;
@@ -40,7 +40,19 @@ const usersController = {
       } )
   },
   createUSER: (req,res)=>{
-      let data = findAll();
+    let passEncrypted = bcrypt.hashSync(req.body.password,10);
+    db.Users.create({
+      firstName: req.body.first_name,
+      lastName: req.body.last_name,
+      userName: req.body.username,
+      email: req.body.email,
+      password: passEncrypted,
+      avatar:  "../../img/avatars/"+req.file.filename
+    })
+
+    .then(res.redirect("/users/login"));
+  },
+    /*  let data = findAll();
       let ultimo = data.length-1;
       if (req.file == undefined){
         res.redirect("/users/register/")
@@ -72,62 +84,54 @@ const usersController = {
   console.log(req.body);
   console.log(errors);
   res.render("register", { errors: errors.mapped(), old: req.body });
-},*/
-login: (req,res)=>{
+*/login: (req,res)=>{
   let errors = [];
     res.render("login",{errors})
 },
  processLogin:(req,res)=>{
-   let userToLogin = undefined;
   db.Users.findOne({
-    where: { email: req.body.email}
-  }).then((result => console.log(result))
-  )
+    where: { email: req.body.email},
+  }).then(function(result){
+    
+    
+    userToLogin = result 
   
-  console.log(userToLogin)
-  req.session.userLogged = userToLogin
-  if(userToLogin){
-    console.log(userToLogin)
-    console.log(req.session.userLogged)}
-
-
-  
-  /*let userToLogin = users.find(user=>user.email === req.body.email);
-  if(userToLogin){
-    let passwordCheck = bcrypt.compareSync(req.body.password, userToLogin.password)
-    if(passwordCheck){
-      delete userToLogin.password;
-      req.session.userLogged = userToLogin;
-      if(req.body.recordame!==undefined){
-        res.cookie('recordame', userToLogin.email, userToLogin.password, {maxAge:60000})
+    if(userToLogin){
+      //let passwordCheck = bcrypt.compareSync(req.body.password, userToLogin.password)
+      if(req.body.password == userToLogin.password){
+        delete userToLogin.password;
+        req.session.userLogged = userToLogin;
+        if(req.body.recordame!==undefined){
+         res.cookie('recordame', userToLogin.email, userToLogin.password, {maxAge:60000})
+         
+        };
+        res.redirect("/users/profile")
+      } else{
+        return res.render("login", { 
+          errors: {
+            password: {
+              msg: "Wrong password"
+            }
+          }})
+        }
+      } else {
+        return res.render("login", { 
+            errors: {
+              email: {
+                msg: "There's no account associated with this email"
+               }
+              }}
+          );
+        }
       }
-      res.redirect("/users/profile");
-    } else{
-      return res.render("login", { 
-        errors: {
-          password: {
-            msg: "Wrong password"
-          }
-        }})
-    }
-  }
-  else {
-    return res.render("login", { 
-        errors: {
-          email: {
-            msg: "There's no account associated with this email"
-          }
-        }}
-    );
-  };*/
-},/*
-
- 
+    )
+  },  
+  
   profile: (req,res)=>{
     res.render("profile", {
       user: req.session.userLogged 
     });
-  },
+  },/*
   editProfile: (req,res)=>{
     let userToEdit = req.session.userLogged;
     res.render("editProfile", {
