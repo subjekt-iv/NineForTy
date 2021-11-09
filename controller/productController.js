@@ -61,6 +61,8 @@ const productController = {
     )
     .then(res.redirect("/market"));
     },
+    
+    
 /*
     create: (req,res, next) =>{
       db.Nfts.create({
