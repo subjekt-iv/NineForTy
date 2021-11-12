@@ -43,40 +43,40 @@
         </div>
     </header>
 
-    <form action="/products/edit/<%= token.id %>?_method=PUT" enctype="multipart/form-data" method="POST" id="formulario">
-    <div id="cajas">
-    <div id="imagen">
-        <img id="ilustracion" src="<%= token.image %>">
-        
+    <form action="/products/edit/<%= nft.nftID %> "method="POST" enctype="multipart/form-data"  >
+        <div id="cajas">
+            <div id="imagen">
+                <img id="ilustracion" src="../../img/<%= nft.image %>">
 
-        <div id="cajaupload">
-            <label id="upload" class="selectCSV"  for="botonupload">Upload your NFT</label>
-                <input type="file" name="nftFile" accept=".jpg, .gif, .mp4, .png" id="botonupload"> 
+                <div id="cajaupload">
+                
+                    <label for="botonupload" id="upload" class="selectCSV">Upload your NFT</label>
+                    <input type="file" 
+                        id="botonupload" name="botonupload" 
+                        accept=".jpg, .gif, .mp4, .png"
+                    > 
+                </div>
+            </div>  
+
+            <div id="info">
+            
+                <label for="price">Price*</label>
+                <input type="number"  id="price" name="price" value="<%=nft.price%>">
+
+                <label for="name">Name*</label>
+                    <input type="text" id="name" name="name" value="<%=nft.name%>">
+
+                <label for="keyword">Hashtags*</label>
+                    <input type="text" id="keyword" name="keyword" value="<%=nft.keyword%>">
+
+                <label for="description">Description*</label>
+                    <input type="text" id="description" name="description" value="<%=nft.description%>">
+            </div>
+        </div>  
+        <div id="cajaboton">
+            <button type="submit" id="create">Update NFT</button>
         </div>
-    </div>  
-
-    <div id="info">
-        
-        <label for="title">Title*</label>
-        <input type="text" name="title" id="title" placeholder="<%= token.name %>">
-
-    <label for="description">Desc*</label>
-        <input type="text" name="description" id="title" placeholder="<%= token.description %>">
-
-    <label for="keywords">Tags*</label>
-        <input type="text" name="keywords" id="tags" placeholder="<%= token.keywords %>">
-
-    <label for="price">Price*</label>
-        <input type="number" name="price" id="price" placeholder="<%= token.price %>">
-        </div>
-    </div>  
-    <div id="cajaboton"><button type="submit" id="create">Create NFT</button></div>
-    
-    <form method="POST" action="/products/delete/<%= token.id %>?_method=DELETE">
-    <div id="cajaboton"><button type="submit" id="delete">Delete NFT</button></div>
     </form>
-    
-</form>
 
 
 

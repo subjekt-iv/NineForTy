@@ -4,6 +4,7 @@ const path = require("path");
 const router = express.Router()
 const productController = require("../controller/productController");
 const multer = require("multer");
+//const bodyParser = require('body-parser')
 
 
 const storage = multer.diskStorage({ 
@@ -18,9 +19,9 @@ var upload = multer({ storage: storage})
 
 router.get("/create", productController.add);
 router.post("/create", upload.single("botonupload"), productController.create);
-//router.get("/edit/:id", productController.edit);
-//router.put("/edit/:id", upload.single("nftFile"), productController.update);
-router.get("/lowestPrice", productController.lowestPrice)
+router.get("/edit/:id", productController.edit);
+router.post("/edit/:id", upload.single("botonupload"), productController.update);
+//router.get("/edit/:id", productController.update)
 router.get("/highestPrice", productController.highestPrice)
 router.get("/detail/:id", productController.detail);
 router.get("/myNFT", productController.myNFT);
