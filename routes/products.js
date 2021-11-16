@@ -24,7 +24,7 @@ router.get("/lowestPrice", productController.lowestPrice)
 router.get("/highestPrice", productController.highestPrice)
 router.get("/detail/:id", productController.detail);
 router.get("/myNFT", productController.myNFT);
-//router.delete("/delete/:id" , productController.destroy);
+router.get("/delete/:id" , productController.destroy);
 
 
 

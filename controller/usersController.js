@@ -105,7 +105,7 @@ const usersController = {
          res.cookie('recordame', userToLogin.email, userToLogin.password, {maxAge:60000})
          
         };
-        res.redirect("/users/profile")
+        res.redirect("/users/profile/")
       } else{
         return res.render("login", { 
           errors: {
@@ -128,20 +128,48 @@ const usersController = {
   },  
   
   profile: (req,res)=>{
-    res.render("profile", {
-      user: req.session.userLogged 
-    });
-  },/*
+    db.Users.findByPk(req.session.userLogged.userID)
+    .then(user => res.render("profile", {
+      user: user
+    }))
+    
+  },
   editProfile: (req,res)=>{
-    let userToEdit = req.session.userLogged;
-    res.render("editProfile", {
-      user: req.session.userLogged 
-    });
-  },/*
+    db.Users.findByPk(req.session.userLogged.userID)
+    .then(user => res.render("editProfile", {
+      user:user
+    }));
+  },
   updateProfile: (req,res)=>{
-    let users = findAll();
-    let userToEdit = users.find(id => req.session.userLogged.id);
-      {
+    let userToEdit = req.session.userLogged;
+
+    console.log(userToEdit)
+    console.log(req.body)
+    console.log(req.file)
+    if ( req.body.password == req.body.password2 ){
+    db.Users.update({
+      firstName: req.body.firstName,
+      lastName:req.body.lastName,
+      userName:req.body.userName,
+      email:req.body.email,
+      password:req.body.password,
+      avatar:  "../../img/avatars/"+req.file.filename
+    },
+    {where:
+      { userID : userToEdit.userID}
+    })
+    .then(res.redirect("/users/profile/"))
+    } else {
+      return res.render("editProfile", { 
+        errors: {
+          password: {
+            msg: "Passwords don't match"
+          }
+        },
+        user: req.session.userLogged })
+    }
+    
+      /*{
         userToEdit.first_name: req.body.first_name,
         userToEdit.last_name: req.body.last_name,
         email: req.body.email,
@@ -152,21 +180,8 @@ const usersController = {
       writeJson(data)
       res.redirect("/users/profile",{
       user: req.session.userLogged 
-    }));
-  }*/
-/*
-
-    userList: (req, res) =>{
-      let users = findAll();
-      res.render("userList", {users,
-        user: req.session.userLogged });
-    },
-    profile: (req,res)=>{
-      res.render("profile", {
-        user: req.session.userLogged 
-      });
-    }
+      */
   }
-  */
+
 }
 module.exports = usersController

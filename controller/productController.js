@@ -61,21 +61,15 @@ const productController = {
     )
     .then(res.redirect("/market"));
     },
-    
-    
-/*
-    create: (req,res, next) =>{
-      db.Nfts.create({
-        price: req.body.price,
-        //userID: req.body.userID,
-        name: req.body.name,
-        keyword: req.body.keyword,
-        description: req.body.description,
-        image:  "../../img/"+req.body.filename
-      });
-      res.redirect("/market");
-  },
-  */
+ 
+    destroy: (req,res,next)=>{
+      db.Nfts.destroy({
+        where: { nftID : req.params.id}
+      })
+      .then(res.redirect("/market"));
+    }
+
+
 }
 
 
