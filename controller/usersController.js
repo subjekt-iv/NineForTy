@@ -40,6 +40,10 @@ const usersController = {
       } )
   },
   createUSER: (req,res)=>{
+    let errors = validationResult(req); 
+   // if (errors.isEmpty()) {
+    if (req.body.password == req.body.password2){
+      console.log(req.body)
     let passEncrypted = bcrypt.hashSync(req.body.password,10);
     db.Users.create({
       firstName: req.body.first_name,
@@ -50,7 +54,15 @@ const usersController = {
       avatar:  "../../img/avatars/"+req.file.filename
     })
 
-    .then(res.redirect("/users/login"));
+    .then(res.redirect("/users/login"));}
+    //} errors.isEmpty closing tag
+    else {
+      res.render("register", {
+        user: req.session.userLogged,
+        errors: errors.mapped(), 
+        old: req.body
+      })
+    }
   },
     /*  let data = findAll();
       let ultimo = data.length-1;
@@ -71,7 +83,7 @@ const usersController = {
       data.push(newUser)
       writeJson(data)
       res.redirect("/")
-      /*if (errors.isEmpty()) {
+      if (errors.isEmpty()) {
         
       }
       
@@ -84,7 +96,8 @@ const usersController = {
   console.log(req.body);
   console.log(errors);
   res.render("register", { errors: errors.mapped(), old: req.body });
-*/login: (req,res)=>{
+*/
+login: (req,res)=>{
   let errors = [];
     res.render("login",{errors})
 },
@@ -97,8 +110,8 @@ const usersController = {
     userToLogin = result 
   
     if(userToLogin){
-      //let passwordCheck = bcrypt.compareSync(req.body.password, userToLogin.password)
-      if(req.body.password == userToLogin.password){
+      let passwordCheck = bcrypt.compareSync(req.body.password, userToLogin.password)
+      if(passwordCheck){
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
         if(req.body.recordame!==undefined){
@@ -128,15 +141,23 @@ const usersController = {
   },  
   
   profile: (req,res)=>{
-    db.Users.findByPk(req.session.userLogged.userID)
+    let user;
+    if (req.session.userLogged) {db.Users.findByPk(req.session.userLogged.userID)
     .then(user => res.render("profile", {
       user: user
-    }))
+    }))}
+    else {
+      res.render("profile", {
+        user: user
+      })
+    }
     
   },
   editProfile: (req,res)=>{
     db.Users.findByPk(req.session.userLogged.userID)
-    .then(user => res.render("editProfile", {
+    .then(user => 
+
+      res.render("editProfile", {
       user:user
     }));
   },
@@ -145,7 +166,6 @@ const usersController = {
 
     console.log(userToEdit)
     console.log(req.body)
-    console.log(req.file)
     if ( req.body.password == req.body.password2 ){
     db.Users.update({
       firstName: req.body.firstName,

@@ -72,6 +72,14 @@
             <p class="errorSign"><%= errors.password.msg %></p>
             <% } %> 
           <br>
+          <p id="field"> 
+            <div class="otherhalf"><label>*Confirm password</label></div>
+            <input type="password" name="password2" required: true placeholder ="">
+          </p>
+          <% if (locals.errors && errors.password2) { %>
+            <p class="errorSign"><%= errors.password2.msg %></p>
+            <% } %> 
+          <br>
 
           <label id="upload" class="selectCSV"  for="botonupload">Upload your avatar</label>
           <input type="file" name="avatar" accept=".jpg, .gif, .mp4, .png" id="botonupload">
