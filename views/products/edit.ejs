@@ -42,8 +42,13 @@
             </a>
         </div>
     </header>
+    <div class="errores">
+        <ul>
 
-    <form action="/products/edit/<%= nft.nftID %> "method="POST" enctype="multipart/form-data"  >
+        </ul>
+    </div>
+
+    <form action="/products/edit/<%= nft.nftID %> "method="POST" enctype="multipart/form-data" class="editForm" >
         <div id="cajas">
             <div id="imagen">
                 <img id="ilustracion" src="../../img/<%= nft.image %>">
@@ -116,6 +121,11 @@
         </div>
 
     </footer>
+
+    <script src="/js/edit.js">
+       
+     
+    </script>  
     
 </body>
 </html>
