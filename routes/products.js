@@ -25,7 +25,11 @@ router.get("/highestPrice", productController.highestPrice)
 router.get("/detail/:id", productController.detail);
 router.post("/delete/:id" , productController.delete);
 router.get("/myNFT", productController.myNFT);
+<<<<<<< HEAD
 
+=======
+router.get("/delete/:id" , productController.destroy);
+>>>>>>> d619b9385aaee9e354a74fccf59b9e02c381fb63
 
 
 

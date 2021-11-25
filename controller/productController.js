@@ -61,6 +61,7 @@ const productController = {
     )
     .then(res.redirect("/market"));
     },
+<<<<<<< HEAD
 
     edit: (req,res) =>{
       db.Nfts.findByPk(req.params.id)
@@ -120,6 +121,17 @@ const productController = {
 /*
    
   */
+=======
+ 
+    destroy: (req,res,next)=>{
+      db.Nfts.destroy({
+        where: { nftID : req.params.id}
+      })
+      .then(res.redirect("/market"));
+    }
+
+
+>>>>>>> d619b9385aaee9e354a74fccf59b9e02c381fb63
 }
 
 

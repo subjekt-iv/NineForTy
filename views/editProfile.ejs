@@ -29,16 +29,31 @@
              <a href="/users/login"> Login </a>
             </div>
             <% } else { %>
-              <form action="/users/edit/<%= user.id %> ">
-              <label for="first_name">First Name</label>
-              <input type="text" name="first_name" required: true value="<%= user.first_name%>">
+              <form action="/users/edit/<%= user.userID %>" enctype="multipart/form-data" method="POST">
+              <label for="firstName">First Name</label>
+              <input type="text" name="firstName" required: true value="<%= user.firstName%>">
               <br>
-              <label for="last_name">Last Name</label>
-              <input type="text" name="last_name" required: true value="<%= user.last_name%>">
+              <label for="lastName">Last Name</label>
+              <input type="text" name="lastName" required: true value="<%= user.lastName%>">
               <br>
-              <label for="username">Username</label>
-              <input type="text" name="username" required: true value="<%= user.username%>">
+              <label for="userName">Username</label>
+              <input type="text" name="userName" required: true value="<%= user.userName%>">
               <br>
+              <label for="email">e-Mail</label>
+              <input type="text" name="email" required: true value="<%= user.email%>">
+              <br>
+              <label for="password">Password</label>
+              <input type="password" name="password" required: true >
+              <br>
+              <label for="password2">Confirm your password</label>
+              <input type="password" name="password2" required: true >
+              <br>
+
+                <% if (locals.errors && errors.password) { %>
+            <p class="errorSign"><%= errors.password.msg %></p>
+            <% } %> 
+          <br>
+
               <label id="upload" class="selectCSV"  for="botonupload">Upload your avatar</label>
               <input type="file" name="avatar" accept=".jpg, .gif, .mp4, .png" id="botonupload">
               <img src="<%= user.avatar %>" alt="" class="tokenIMG">

@@ -228,6 +228,11 @@ header div a{
     color: white; 
 }
 
+
+.errorSign{
+    color: red;
+}
+
 .posts{
     background-color: white;
     margin: 5%;
@@ -308,6 +313,17 @@ padding-top: 5%;
     height: 31px;
 }
 
+#main-detail .delete-button{
+    margin-bottom: 6%;
+    margin-top: 6%;
+    border-radius: 20px;
+    color: white;
+    background-color: red;
+   justify-content: center;
+    width: 100%;
+    height: 31px;
+}
+
 
 #main-detail .tokenPrice{
     font-size: 2.5rem;
@@ -382,6 +398,13 @@ padding-top: 5%;
         height: auto;
     }
 
+    #main-detail .delete-button{
+        width: 50%;
+        padding: 5%;
+        margin: auto;
+        height: auto;
+    }
+
     #main-detail .tokenStats{
         text-align: center;
     }
@@ -419,6 +442,14 @@ padding-top: 5%;
         position: absolute; 
         left: 5;
         bottom: 5%;
+        padding: 2%;
+    }
+    
+    #main-detail .delete-button{
+        width: 20%;
+        position: absolute; 
+        left: 5;
+        bottom: 2%;
         padding: 2%;
     }
 
