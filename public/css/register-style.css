@@ -237,6 +237,11 @@ width: 50%;
     text-align: end;
     
 }
+.tokenIMG {
+width: 200px;
+height: 200px;
+
+}
 
 footer h4{
     font-size: 1.5rem;
