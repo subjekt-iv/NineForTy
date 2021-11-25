@@ -14,6 +14,7 @@ const db = require('../database/config/config')
 router.get('/', mainController.home);
 router.get('/carrito/:id', mainController.cart);
 router.get('/market', mainController.market);
+router.get("/search", mainController.search);
 
 //Testing (Get Token from DB)
 /*router.get('/market', (req, res) => 

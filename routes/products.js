@@ -21,11 +21,11 @@ router.get("/create", productController.add);
 router.post("/create", upload.single("botonupload"), productController.create);
 router.get("/edit/:id", productController.edit);
 router.post("/edit/:id", upload.single("botonupload"), productController.update);
-//router.get("/edit/:id", productController.update)
 router.get("/highestPrice", productController.highestPrice)
 router.get("/detail/:id", productController.detail);
+router.post("/delete/:id" , productController.delete);
 router.get("/myNFT", productController.myNFT);
-//router.delete("/delete/:id" , productController.destroy);
+
 
 
 

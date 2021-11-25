@@ -94,6 +94,16 @@ const productController = {
       
       
       res.redirect("/products/edit/" + req.params.id)
+    },
+    
+
+    delete: (req, res) => {
+      db.Nfts.destroy({
+        where: {
+          nftID: req.params.id
+        }
+      })
+      res.redirect("/market")
     }
 /*
     create: (req,res, next) =>{

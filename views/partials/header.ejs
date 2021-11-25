@@ -2,7 +2,11 @@
     <div class="topnav">
         <a href="#home"> <img class="logo" src="/img/logo_cubo_verde.png"></a>
         <!-- Navigation links (hidden by default) -->
-        <div class="barrabusqueda"><input type="text" class="busq" placeholder="Tags, Artists, Collections"></div>
+        <div class="barrabusqueda">
+            <form action="/search?input=value" method="GET">
+                <input type="text" class="busq" name="value" placeholder="Tags, Artists, Collections">
+            </form>
+        </div>
         <div id="myLinks">
             <a href="/">Home</a>
             <a href="/market">Market</a>

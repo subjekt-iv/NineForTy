@@ -376,8 +376,8 @@ padding-top: 5%;
     }
 
     #main-detail .buy-button{
-        width: 50%;
-        padding: 5%;
+        width: 100%;
+        padding: 100%;
         margin: auto;
         height: auto;
     }
