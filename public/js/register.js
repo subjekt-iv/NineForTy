@@ -41,14 +41,14 @@ window.addEventListener('load', function(){
     let campoPassword = document.querySelector('#password')
     if (campoPassword.value == '') {
         errores.push('You must type a password of your choice')   
-    } else if (campoPassword.value.length < 5) {
-        errores.push('password must be longer')
+    } else if (campoPassword.value.length < 8) {
+        errores.push('password must have 8 characters at least')
     }
 
 let campoPassword2 = document.querySelector('#password2')
 if (campoPassword2.value == '') {
     errores.push('Please repeat your password')   
-} else if (campoPassword2.value.length < 5) {
+} else if (campoPassword2 != campoPassword) {
     errores.push('passwords dont match')
 }
 
