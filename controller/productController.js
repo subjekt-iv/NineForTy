@@ -61,7 +61,6 @@ const productController = {
     )
     .then(res.redirect("/market"));
     },
-<<<<<<< HEAD
 
     edit: (req,res) =>{
       db.Nfts.findByPk(req.params.id)
@@ -96,7 +95,6 @@ const productController = {
       
       res.redirect("/products/edit/" + req.params.id)
     },
-    
 
     delete: (req, res) => {
       db.Nfts.destroy({
@@ -105,23 +103,7 @@ const productController = {
         }
       })
       res.redirect("/market")
-    }
-/*
-    create: (req,res, next) =>{
-      db.Nfts.create({
-        price: req.body.price,
-        userID: req.body.userID,
-        name: req.body.name,
-        keyword: req.body.keyword,
-        description: req.body.description,
-        image:  "../../img/"+req.body.filename
-      });
-      res.redirect("/market");
-  },
-/*
-   
-  */
-=======
+    },
  
     destroy: (req,res,next)=>{
       db.Nfts.destroy({
@@ -131,7 +113,7 @@ const productController = {
     }
 
 
->>>>>>> d619b9385aaee9e354a74fccf59b9e02c381fb63
+
 }
 
 
