@@ -61,7 +61,22 @@ const productController = {
     )
     .then(res.redirect("/market"));
     },
+
     
+    update: (req, res)=>{
+      db.Nfts.update(
+        {
+          price:req.body.price,
+          name:req.body.name,
+          keyword:req.body.keyword,
+          description:req.body.description,
+          image:req.file.filename,
+        },
+        {
+          where: {nftID:req.params.id}
+        }
+      )
+    }
     
 /*
     create: (req,res, next) =>{

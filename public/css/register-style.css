@@ -3,6 +3,7 @@
     margin: 0%;
     padding:0%;
     box-sizing: border-box;
+    color: white;
 
 }
 
@@ -22,7 +23,6 @@ body{
 
 header{
     color: white;
-    
 }
 
 
@@ -30,6 +30,7 @@ header{
     text-align: center;
     color: white;
 }
+
 
 footer{
     background-color: black;
@@ -126,13 +127,36 @@ footer h4{
 
 }
 
-.barrabusqueda{
-    text-align: center;
-    justify-content: center;
-    width: 50%;
+/*nav*/
+
+.topnav {
+    overflow: hidden;
+    position: relative;
+}
+  
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: white;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 30px;
+    background-color: none;
+    display: block; 
+}
+
+.topnav a.icon {
+    display: block;
     position: absolute;
+    right: 0;
     top: 0;
-    left: 25%;
+}
+
+.active {
+    color: white; 
 }
 
 .busq{    
@@ -144,7 +168,15 @@ footer h4{
     font-size: 75%;
     text-align: center;
     width: 90%;
+}
+
+.barrabusqueda{
     text-align: center;
+    justify-content: center;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 25%;
 }
 
 .logo{
@@ -155,14 +187,7 @@ footer h4{
     z-index: 10;
 }
 
-.headertest{
-    width: 100%;
-}
 
-header div a{
-    text-decoration: none;
-    color: white;
-}
 
 .resourcesmenu{
 justify-content: center;
@@ -198,44 +223,6 @@ width: 50%;
 
 #resources{
     list-style: none;
-}
-
-.topnav {
-    overflow: hidden;
-    position: relative;
-}
-  
-.topnav #myLinks {
-    display: none;
-}
-
-.topnav a {
-    color: white;
-    padding: 14px 22px;
-    text-decoration: none;
-    font-size: 17px;
-    height: 51px;
-    display: block; 
-}
-
-.topnav a.icon {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-  
-.active {
-    color: white; 
-}
-
-.cart{
-    width: 15%;
-    position: absolute;
-    top: 0;
-    right: 39px;
-    text-align: end;
-    
 }
 
 footer h4{
