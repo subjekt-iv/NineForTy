@@ -19,10 +19,28 @@ const db = require('./database/config/config')
 app.use(express.json());
 
 app.use(express.urlencoded({extended:false}));
+app.use(cookieParser());
+app.use(session({
+    secret: "secret",
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(express.static('public'));
+app.use(methodOverride('_method'));
+//app.use(recordameMiddleware);
+
+app.use('/', indexRouter);
+app.use('/products', productsRouter);
+app.use('/users', usersRouter);
+
+
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './views'));
 
 app.listen(port, ()=>{
     console.log('La app esta funcionado en http://localhost:'+ port )
 })
+
 
 /*
 const storage = multer.diskStorage({ 
@@ -40,20 +58,7 @@ var upload = multer({ storage: storage});
 
 
 
-app.use(cookieParser());
-app.use(session({
-    secret: "secret",
-    resave: true,
-    saveUninitialized: true
-}));
-//app.use(recordameMiddleware);
 
-app.use('/', indexRouter);
-app.use('/products', productsRouter);
-app.use('/users', usersRouter);
-
-app.use(express.static('public'));
-app.use(methodOverride('_method'));
 //app.use(session({secret: "secret"}))
 
 
@@ -65,8 +70,7 @@ app.use(function(req, res, next) {
     next(createError(404));
 });*/
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, './views'));
+
 
 
 

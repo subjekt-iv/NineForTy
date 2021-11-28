@@ -62,6 +62,7 @@ const productController = {
     .then(res.redirect("/market"));
     },
 
+<<<<<<< HEAD
     
     update: (req, res)=>{
       db.Nfts.update(
@@ -81,16 +82,60 @@ const productController = {
 /*
     create: (req,res, next) =>{
       db.Nfts.create({
+=======
+    edit: (req,res) =>{
+      db.Nfts.findByPk(req.params.id)
+      
+      .then(nft => {
+        res.render("products/edit", {nft: nft})
+      })
+    },
+
+    update: (req, res) => {
+      //console.log(req.session.userLogged.userID)
+      console.log(req.body)
+       
+      
+      db.Nfts.update({
+       
+
+       
+>>>>>>> 7c161e5b19f86fcb457fafc2179d587cc89b6286
         price: req.body.price,
-        //userID: req.body.userID,
+        //userID: req.session.userLogged.userID,
         name: req.body.name,
         keyword: req.body.keyword,
         description: req.body.description,
-        image:  "../../img/"+req.body.filename
-      });
-      res.redirect("/market");
-  },
-  */
+        image:  req.file.filename
+      },
+      {
+        where: {
+          nftID: req.params.id
+      }
+      })
+      
+      
+      res.redirect("/products/edit/" + req.params.id)
+    },
+
+    delete: (req, res) => {
+      db.Nfts.destroy({
+        where: {
+          nftID: req.params.id
+        }
+      })
+      res.redirect("/market")
+    },
+ 
+    destroy: (req,res,next)=>{
+      db.Nfts.destroy({
+        where: { nftID : req.params.id}
+      })
+      .then(res.redirect("/market"));
+    }
+
+
+
 }
 
 
@@ -170,14 +215,7 @@ const productController = {
       )
   },
 
-  edit: (req,res) =>{
-    let tokens = findAll();
-      
-      let tokenToEdit = tokens.find(function(token){
-          return token.id == req.params.id
-      })
-      res.render("products/edit", {token: tokenToEdit})
-  },
+
 
   update: (req, res) => {
       //obtener autos

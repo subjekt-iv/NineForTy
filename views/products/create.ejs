@@ -48,17 +48,22 @@
         <a href="/users/login"> Login </a>
        </div>
        <% } else { %>
-    <form action="/products/create" method="POST" enctype="multipart/form-data" >
+    <div class="errores">
+        <ul>
+
+        </ul>
+    </div>
+    <form action="/products/create" method="POST" enctype="multipart/form-data" class="createform">
         <div id="cajas">
             <div id="imagen">
-                <img id="ilustracion" src="/img/imagen-create.svg">
+                <div id="imagePreview"></div>
 
                 <div id="cajaupload">
                 
                     <label for="botonupload" id="upload" class="selectCSV">Upload your NFT</label>
                     <input type="file" 
                         id="botonupload" name="botonupload" 
-                        accept=".jpg, .gif, .mp4, .png"
+                        accept=".jpg, .gif, .mp4, .png" 
                     > 
                 </div>
             </div>  
@@ -113,6 +118,11 @@
         </div>
 
     </footer>
-    
+
+    <script src="/js/createProduct.js">
+       
+     
+      </script>  
+  
 </body>
 </html>

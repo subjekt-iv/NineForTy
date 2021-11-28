@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <%- include("./partials/head") %>
-  <link href="/css/index-style.css" rel="stylesheet">
+  <link href="/css/register-style.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -20,6 +20,7 @@
   </script>
 </head>
     <body>
+      
         <%- include("./partials/header") %>
         <main id="editProfile">
             <% if (user == undefined) { %>
@@ -29,28 +30,85 @@
              <a href="/users/login"> Login </a>
             </div>
             <% } else { %>
-              <form action="/users/edit/<%= user.id %> ">
-              <label for="first_name">First Name</label>
-              <input type="text" name="first_name" required: true value="<%= user.first_name%>">
               <br>
-              <label for="last_name">Last Name</label>
-              <input type="text" name="last_name" required: true value="<%= user.last_name%>">
               <br>
-              <label for="username">Username</label>
-              <input type="text" name="username" required: true value="<%= user.username%>">
-              <br>
-              <label id="upload" class="selectCSV"  for="botonupload">Upload your avatar</label>
-              <input type="file" name="avatar" accept=".jpg, .gif, .mp4, .png" id="botonupload">
-              <img src="<%= user.avatar %>" alt="" class="tokenIMG">
-              <br>
-              <p class="full">
-                <button class="boton-signup" type="submit">Sign Up</button>  
-              </p>
+              <div class="errores">
+                <ul>
+        
+                </ul>
+              <form action="/users/register" enctype="multipart/form-data" method="POST" class="formulario" >
+        
+                <p id="field"> 
+                 <div class="onehalf"><label>*Name</label></div>
+                  <input type="text" id="first_name"  name="first_name" required: true value="<%= user.firstName%>">
+                </p>
+                <% if (locals.errors && errors.first_name) { %>
+                  <p class="errorSign"><%= errors.first_name.msg %></p>
+                <% } %> 
+                <br>
+                <p id="field"> 
+                  <div class="onehalf"><label>*Lastname</label></div>
+                  <input type="text" id="last_name" name="last_name" required: true value="<%= user.lastName%>">
+                </p>
+                <% if (locals.errors && errors.last_name) { %>
+                  <p class="errorSign"><%= errors.last_name.msg %></p>
+                  <% } %> 
+                <br>
+                <p id="field"> 
+                  <div class="onehalf"><label>*E-mail</label></div>
+                  <input type="text" id="email" name="email" required: true value="<%= user.email%>">
+                </p>
+                <% if (locals.errors && errors.email) { %>
+                  <p class="errorSign"><%= errors.email.msg %></p>
+                  <% } %> 
+                <br>
+               <p id="field"> 
+                  <div class="otherhalf"><label>*Username</label></div>
+                  <input type="text" id="username" name="username" required: true value="<%= user.userName%>">
+                </p>
+                <% if (locals.errors && errors.username) { %>
+                  <p class="errorSign"><%= errors.username.msg %></p>
+                  <% } %> 
+                <br>
+                <p id="field"> 
+                  <div class="otherhalf"><label>*Password</label></div>
+                  <input type="password" id="password" name="password" required: true placeholder ="">
+                </p>
+                <% if (locals.errors && errors.password) { %>
+                  <p class="errorSign"><%= errors.password.msg %></p>
+                  <% } %> 
+                <br>
+                <p id="field"> 
+                  <div class="otherhalf"><label>*Confirm password</label></div>
+                  <input type="password" id="password2" name="password2" required: true placeholder ="">
+                </p>
+                <% if (locals.errors && errors.password2) { %>
+                  <p class="errorSign"><%= errors.password2.msg %></p>
+                  <% } %> 
+                <br>
+      
+                <label id="upload" class="selectCSV"  for="botonupload">Upload your avatar</label>
+                <input type="file" id="create"  name="avatar" accept=".jpg, .gif, .jpeg, .png" id="botonupload">
+                <img src="<%= user.avatar %>" alt="" class="tokenIMG">
+                <br>
+                
+                <p class="full">
+                  <button class="boton-wallet">*Choose your wallet</button>
+                </p>
+                <br>
+                <p class="full">
+                  <button class="boton-signup" type="submit">Update Profile</button>  
+                </p>
+                <br>
               </form>
               <br class="line"> <% } %> 
         </main>
     
         <%- include("./partials/footer") %>
         </div>
+        <script src="/js/editProfile.js">
+       
+     
+        </script>  
     </body>
 </html>
