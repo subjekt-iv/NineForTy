@@ -159,8 +159,7 @@ footer h4{
     color: white; 
 }
 
-.busq{    
-    margin-top: 13px;
+.busq{  
     justify-self: center;
     border-radius: 30px;
     border: none;
@@ -225,8 +224,6 @@ width: 50%;
     list-style: none;
 }
 
-<<<<<<< HEAD
-=======
 .topnav {
     overflow: hidden;
     position: relative;
@@ -270,7 +267,6 @@ height: 200px;
 
 }
 
->>>>>>> 7c161e5b19f86fcb457fafc2179d587cc89b6286
 footer h4{
     font-size: 1.5rem;
     margin-bottom: .5rem;
@@ -389,16 +385,11 @@ h4{
 form{
     display: grid;
     grid-template-columns: 1fr ;
-color: white;
-padding: 1em 1.5em;
-  border-radius: 0;
-box-shadow: 0 0 6px 0 rgba(255,255,255, 0.8);
-  float: none;
-  max-width: 80%;
-  overflow: hidden;
-  text-transform: uppercase;
-  margin-left: 10%;
-  margin-bottom: 4%;
+    padding: 1em 1.5em;
+    float: none;
+    overflow: hidden;
+    text-transform: uppercase;
+    margin-left: 10%;
 }
 
 

@@ -62,27 +62,6 @@ const productController = {
     .then(res.redirect("/market"));
     },
 
-<<<<<<< HEAD
-    
-    update: (req, res)=>{
-      db.Nfts.update(
-        {
-          price:req.body.price,
-          name:req.body.name,
-          keyword:req.body.keyword,
-          description:req.body.description,
-          image:req.file.filename,
-        },
-        {
-          where: {nftID:req.params.id}
-        }
-      )
-    }
-    
-/*
-    create: (req,res, next) =>{
-      db.Nfts.create({
-=======
     edit: (req,res) =>{
       db.Nfts.findByPk(req.params.id)
       
@@ -100,7 +79,6 @@ const productController = {
        
 
        
->>>>>>> 7c161e5b19f86fcb457fafc2179d587cc89b6286
         price: req.body.price,
         //userID: req.session.userLogged.userID,
         name: req.body.name,
