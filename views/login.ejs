@@ -22,7 +22,7 @@
                 <form action="/users/login" method="POST" id="formulario">
 
                     <label for="email">Username/E-mail*</label>
-                    <input type="text" name="email" id="email">
+                    <input type="text" name="email" id="email" required>
                     <% if (locals.errors && errors.email) { %>
                     <p class="loginerror"><%= errors.email.msg %>  </p>
                     <% } %>

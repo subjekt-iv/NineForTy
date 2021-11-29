@@ -49,7 +49,6 @@ const productController = {
 
 
   create: (req,res, next) =>{
-    console.log(req.session.userLogged.userID);
     db.Nfts.create({
       price: req.body.price,
       userID: req.session.userLogged.userID,

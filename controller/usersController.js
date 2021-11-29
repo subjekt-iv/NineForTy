@@ -101,47 +101,15 @@ login: (req,res)=>{
   let errors = [];
     res.render("login",{errors})
 },
-processLogin:(req,res)=>{
-
-  let userToLogin = db.Users.findOne({
-    where: { email: req.body.email }
-  })
-  
-
-  if(userToLogin){
-    let passwordOk = bcrypt.compareSync(req.body.password, userToLogin.password)
-    
-    if (passwordOk) {
-      res.redirect("/users/profile")
-    }
-    return res.render("login", { 
-      errors: {
-        password: {
-          msg: "Las credenciales son invalidas"
-        }
-      }
-    })
-  }
-  return res.render("login", { 
-    errors: {
-      password: {
-        msg: "Wrong password"
-      }
-    }
-  })
- 
-    },  
-  /*
+ processLogin:(req,res)=>{
   db.Users.findOne({
     where: { email: req.body.email},
   }).then(function(result){
     
     
     userToLogin = result 
-
+  
     if(userToLogin){
-      //let passwordCheck = bcrypt.compareSync(req.body.password, userToLogin.password)
-      if(req.body.password == userToLogin.password){
       let passwordCheck = bcrypt.compareSync(req.body.password, userToLogin.password)
       if(passwordCheck){
         delete userToLogin.password;
@@ -164,18 +132,13 @@ processLogin:(req,res)=>{
             errors: {
               email: {
                 msg: "There's no account associated with this email"
-            
                }
               }}
           );
         }
       }
-      
-  }
-)
-*/
-
-
+    )
+  },  
   
   profile: (req,res)=>{
     let user;
@@ -240,5 +203,5 @@ processLogin:(req,res)=>{
       */
   }
 
-  }
+}
 module.exports = usersController

@@ -10,7 +10,9 @@ const bodyParser = require('body-parser');
 const indexRouter = require("./routes/");
 const productsRouter = require('./routes/products');
 const usersRouter = require('./routes/users');
+const apiRouter= require('./routes/apiRoutes.js');
 const recordameMiddleware = require('./middlewares/recordameMiddleware');
+const cors = require('cors')
 
 //DB
 const db = require('./database/config/config')
@@ -27,11 +29,13 @@ app.use(session({
 }));
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
+app.use(cors())
 //app.use(recordameMiddleware);
 
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
+app.use('/api', apiRouter);
 
 
 app.set('view engine', 'ejs');

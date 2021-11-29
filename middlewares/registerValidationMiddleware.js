@@ -14,7 +14,7 @@ const validateRegister = [
     .isEmail().withMessage("You have to set a valid e-mail for your account."),
     check("password")
     .notEmpty().withMessage("You have to set your account's password.").bail()
-    .isLength( { min: 5 }).withMessage("Your password must be longer than 8 characters."),
+    .isLength( { min: 8 }).withMessage("Your password must be longer than 8 characters."),
     check('image').custom((value, { req }) => {
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];

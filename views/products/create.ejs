@@ -70,17 +70,17 @@
 
             <div id="info">
             
-                <label for="price">Price*</label>
+                <label for="price" class="Price">Price*</label>
                 <input type="number"  id="price" name="price">
 
-                <label for="name">Name*</label>
-                    <input type="text" id="name" name="name">
+                <label for="name" class="Name" >Name*</label>
+                <input type="text" id="name" name="name">
 
                 <label for="keyword">Hashtags*</label>
-                    <input type="text" id="keyword" name="keyword" placeholder="Please leave a space between tags">
+                <input type="text" id="keyword" name="keyword" placeholder="Please leave a space between tags">
 
                 <label for="description">Description*</label>
-                    <input type="text" id="description" name="description">
+                <input type="text" id="description" name="description">
             </div>
         </div>  
         <div id="cajaboton">
@@ -129,16 +129,29 @@
 
     let errores = []
 
-    let cajaUpload = document.querySelector('#botonupload')
-    if (cajaUpload.value == '') {
-        errores.push('You must include your file')   
-    } 
+
+    var cajaUpload = document.querySelector('#botonupload')
+    var filePath = cajaUpload.value;
+    var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+    var Price = document.querySelector('.Price');
+    var Name = document.querySelector('.Name');
+    var Price = document.querySelector('.Price');
+    //var t = cajaUpload;
+
+    if (!allowedExtensions.exec(filePath))  {
+            errores.push('Invalid File type');
+
+    } else if (cajaUpload.value == '') {
+        errores.push('You must include your file')
+    }
     
     let campoPrice = document.querySelector('#price')
-    if (this.value == '') {
-        errores.push('Price must be defined')
+    if (campoPrice.value == '') {
+        Price.innerText = "Price must be defined";
+        //errores.push('Price must be defined')
     } else if (campoPrice.value < 1) {
-        errores.push('Price must above 1')
+        Price.innerText = "Price must be above 1";
+        //errores.push('Price must above 1')
     }
 
     let campoNombre = document.querySelector('#name')
