@@ -276,8 +276,48 @@ header div a{
 @media (min-width: 769px){
     #main-market{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 5%;
+        padding-top: 5%;
     }
+    .posts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:50%;
+        height: 50%;  
+        margin: 25%;
+        margin-top: 0px;
+        padding: 5% 5% 5% 5%;
+        background-color: white;
+        border-radius: 30px;
+        }
+
+        .img-tokens-market {
+            position: relative;
+            border-style: dotted;
+            border: black;
+            width:50%;
+            height: 50%;    
+        }
+        #main-market .posts i {
+            position: relative;
+            font-size: x-large;
+           
+            padding: 5%;
+        }
+        
+           
+        
+            #img-market {
+                
+                border-top-left-radius: 30px;
+                border-top-right-radius: 30px;
+                height: 100%;
+                width:  100%;
+             
+            }
 
     
 }
