@@ -144,7 +144,8 @@ footer{
 }
 
 .loginerror{
-    color:red
+    color:red ;
+    font-weight: 200;
 }
 /*formulario*/
 

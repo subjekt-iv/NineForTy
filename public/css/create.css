@@ -362,6 +362,10 @@ input[type="file"]{
         margin:8px 0;
         display:inline-block;
     }
+    #erroresFront {
+        color:red ;
+        font-weight: 200;
+    }
     
     #tags{
         width:90%;

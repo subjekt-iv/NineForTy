@@ -16,26 +16,31 @@ const recordameMiddleware = require('./middlewares/recordameMiddleware');
 const db = require('./database/config/config')
 //const Nft = require('./database/models/index')
 
+//Config
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './views'));
+
 app.use(express.json());
 
+//Middlewares
 app.use(express.urlencoded({extended:false}));
 app.use(cookieParser());
 app.use(session({
     secret: "secret",
-    resave: true,
-    saveUninitialized: true
+    resave: false,
+    saveUninitialized: false
 }));
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 //app.use(recordameMiddleware);
 
+//Rutas
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, './views'));
+
 
 app.listen(port, ()=>{
     console.log('La app esta funcionado en http://localhost:'+ port )

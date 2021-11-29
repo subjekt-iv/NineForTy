@@ -32,13 +32,11 @@
             <% } else { %>
               <br>
               <br>
-              <div class="errores">
-                <ul>
-        
-                </ul>
+              
               <form action="/users/register" enctype="multipart/form-data" method="POST" class="formulario" >
         
                 <p id="field"> 
+                  <div class="acaFirstName" id="erroresFront"></div>
                  <div class="onehalf"><label>*Name</label></div>
                   <input type="text" id="first_name"  name="first_name" required: true value="<%= user.firstName%>">
                 </p>
@@ -47,6 +45,7 @@
                 <% } %> 
                 <br>
                 <p id="field"> 
+                  <div class="acaLastName" id="erroresFront"></div>
                   <div class="onehalf"><label>*Lastname</label></div>
                   <input type="text" id="last_name" name="last_name" required: true value="<%= user.lastName%>">
                 </p>
@@ -55,6 +54,7 @@
                   <% } %> 
                 <br>
                 <p id="field"> 
+                  <div class="acaEmail" id="erroresFront"></div>
                   <div class="onehalf"><label>*E-mail</label></div>
                   <input type="text" id="email" name="email" required: true value="<%= user.email%>">
                 </p>
@@ -63,6 +63,7 @@
                   <% } %> 
                 <br>
                <p id="field"> 
+                <div class="acaUsername" id="erroresFront"></div>
                   <div class="otherhalf"><label>*Username</label></div>
                   <input type="text" id="username" name="username" required: true value="<%= user.userName%>">
                 </p>
@@ -71,6 +72,7 @@
                   <% } %> 
                 <br>
                 <p id="field"> 
+                  <div class="acaPassword1" id="erroresFront"></div>
                   <div class="otherhalf"><label>*Password</label></div>
                   <input type="password" id="password" name="password" required: true placeholder ="">
                 </p>
@@ -79,6 +81,7 @@
                   <% } %> 
                 <br>
                 <p id="field"> 
+                  <div class="acaPassword2" id="erroresFront"></div>
                   <div class="otherhalf"><label>*Confirm password</label></div>
                   <input type="password" id="password2" name="password2" required: true placeholder ="">
                 </p>
@@ -86,7 +89,7 @@
                   <p class="errorSign"><%= errors.password2.msg %></p>
                   <% } %> 
                 <br>
-      
+                <div class="acaAvatar" id="erroresFront"></div>
                 <label id="upload" class="selectCSV"  for="botonupload">Upload your avatar</label>
                 <input type="file" id="create"  name="avatar" accept=".jpg, .gif, .jpeg, .png" id="botonupload">
                 <img src="<%= user.avatar %>" alt="" class="tokenIMG">

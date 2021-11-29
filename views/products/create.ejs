@@ -48,10 +48,7 @@
         <a href="/users/login"> Login </a>
        </div>
        <% } else { %>
-    <div class="errores">
-        <ul>
-
-        </ul>
+    
     </div>
     <form action="/products/create" method="POST" enctype="multipart/form-data" class="createform">
         <div id="cajas">
@@ -59,31 +56,34 @@
                 <div id="imagePreview"></div>
 
                 <div id="cajaupload">
-                
+                   
                     <label for="botonupload" id="upload" class="selectCSV">Upload your NFT</label>
+                    <div class="acaUpload" id="erroresFront"></div>
                     <input type="file" 
-                        id="botonupload" name="botonupload" 
+                        id="botonupload" name="botonupload" onchange="validateImage()"
                         accept=".jpg, .gif, .mp4, .png" 
                     > 
                 </div>
             </div>  
 
             <div id="info">
-            
+            <div class="acaPrice" id="erroresFront"></div>
                 <label for="price">Price*</label>
                 <input type="number"  id="price" name="price">
-
+                
+            <div class="acaName" id="erroresFront"></div>
                 <label for="name">Name*</label>
                     <input type="text" id="name" name="name">
-
+            <div class="acaKeyword" id="erroresFront"></div>
                 <label for="keyword">Hashtags*</label>
                     <input type="text" id="keyword" name="keyword" placeholder="Please leave a space between tags">
-
+            <div class="acaDescription" id="erroresFront"></div>
                 <label for="description">Description*</label>
                     <input type="text" id="description" name="description">
             </div>
         </div>  
         <div id="cajaboton">
+            
             <button type="submit" id="create">Create NFT</button>
         </div>
     </form>

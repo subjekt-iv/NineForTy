@@ -1,50 +1,48 @@
 const fs = require("fs");
 const path = require("path");
-const { validationResult, body } = require('express-validator');
+const {validationResult , body, cookie } = require('express-validator');
 const User = require('../models/User')
 const bcrypt = require("bcryptjs");
-const db = require('../database/models')
+const db = require('../database/models');
 
 
-/*function findAll(){
-    let usersJson= fs.readFileSync(path.join(__dirname, "../data/users.json"))
-    let data = JSON.parse(usersJson)
-    return data
-}
-  
-function writeJson(array){
-    let arrayJson = JSON.stringify(array);
-    return fs.writeFileSync(path.join(__dirname, "../data/users.json"), arrayJson);
-}
-*/
 const usersController = {
-  userList: (req, res) =>{
-    db.Users.findAll()
-    .then(users => {
-      res.render("userList", {users: users})
-    })
-    /*
-    res.render("userList", {users,
-      user: req.session.userLogged });
-      */
-  },
-
-
-
 
   register: (req,res)=>{
       let imageVldt = req.query.ifFile;
-      res.render("register", {
-        imageVldt,
-        user: req.session.userLogged
-      } )
+      res.render("register")
+    
   },
   createUSER: (req,res)=>{
-    let errors = validationResult(req); 
-   // if (errors.isEmpty()) {
-    if (req.body.password == req.body.password2){
-      console.log(req.body)
+    const errors = validationResult(req); 
+
+    if (errors.errors.length > 0) {
+      return res.render ('register', {
+        errors: errors.mapped(),
+        oldData: req.body
+      })
+    }
+
+    
+    db.Users.create({
+      firstName: req.body.first_name,
+      lastName: req.body.last_name,
+      userName: req.body.username,
+      email: req.body.email,
+      password: bcrypt.hashSync(req.body.password,10),
+      avatar:  "../../img/avatars/"+req.file.filename
+    })
+
+    .then(res.redirect("/users/login"));
+    
+
+
+    /*
+   
+    if (errors.isEmpty() && req.body.password == req.body.password2){
+  
     let passEncrypted = bcrypt.hashSync(req.body.password,10);
+        
     db.Users.create({
       firstName: req.body.first_name,
       lastName: req.body.last_name,
@@ -55,7 +53,7 @@ const usersController = {
     })
 
     .then(res.redirect("/users/login"));}
-    //} errors.isEmpty closing tag
+  
     else {
       res.render("register", {
         user: req.session.userLogged,
@@ -63,6 +61,8 @@ const usersController = {
         old: req.body
       })
     }
+    */
+    
   },
     /*  let data = findAll();
       let ultimo = data.length-1;
@@ -115,23 +115,30 @@ processLogin:(req,res)=>{
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
         if(req.body.recordame!==undefined){
-         res.cookie('recordame', userToLogin.email, userToLogin.password, {maxAge:60000})
+         res.cookie('recordame', userToLogin.email, userToLogin.password, {maxAge:60000 * 10})
          
         };
-        res.redirect("/users/profile/")
+        res.redirect("/users/profile/",)
       } else{
         return res.render("login", { 
           errors: {
             password: {
-              msg: "Wrong password"
+              msg: "Invalid credentials"
+            },
+            email: {
+              msg: "Invalid credentials"
+              
             }
           }})
         }
       } else {
         return res.render("login", { 
             errors: {
+              password: {
+                msg: "Invalid credentials"
+              },
               email: {
-                msg: "There's no account associated with this email"
+                msg: "Invalid Credentials"
                }
               }}
           );
@@ -143,8 +150,14 @@ processLogin:(req,res)=>{
 
   
   profile: (req,res)=>{
+    return res.render("profile", {
+      user: req.session.userLogged
+    })
+
+    /*
     let user;
-    if (req.session.userLogged) {db.Users.findByPk(req.session.userLogged.userID)
+    if (req.session.userLogged) {
+      db.Users.findByPk(req.session.userLogged.userID)
     .then(user => res.render("profile", {
       user: user
     }))}
@@ -153,7 +166,7 @@ processLogin:(req,res)=>{
         user: user
       })
     }
-    
+    */
   },
   editProfile: (req,res)=>{
     db.Users.findByPk(req.session.userLogged.userID)
@@ -202,6 +215,23 @@ processLogin:(req,res)=>{
       writeJson(data)
       res.redirect("/users/profile",{
       user: req.session.userLogged 
+      */
+  },
+
+  logout: (req, res) => {
+    
+    req.session.destroy()
+    return res.redirect('/')
+
+  },
+  userList: (req, res) =>{
+    db.Users.findAll()
+    .then(users => {
+      res.render("userList", {users: users})
+    })
+    /*
+    res.render("userList", {users,
+      user: req.session.userLogged });
       */
   }
 

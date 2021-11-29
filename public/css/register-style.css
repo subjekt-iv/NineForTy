@@ -66,6 +66,11 @@ h2{
     font-weight: 600;
 }
 
+#erroresFront {
+    color:red ;
+    font-weight: 200;
+}
+
 .trending img{
     width: auto;
     padding-bottom: 5%;

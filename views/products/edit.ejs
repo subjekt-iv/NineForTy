@@ -42,11 +42,7 @@
             </a>
         </div>
     </header>
-    <div class="errores">
-        <ul>
-
-        </ul>
-    </div>
+    
 
     <form action="/products/edit/<%= nft.nftID %> "method="POST" enctype="multipart/form-data" class="editForm" >
         <div id="cajas">
@@ -56,6 +52,7 @@
                 <div id="cajaupload">
                 
                     <label for="botonupload" id="upload" class="selectCSV">Upload your NFT</label>
+                    <div class="acaUpload" id="erroresFront"></div>
                     <input type="file" 
                         id="botonupload" name="botonupload" 
                         accept=".jpg, .gif, .mp4, .png"
@@ -64,16 +61,16 @@
             </div>  
 
             <div id="info">
-            
+                <div class="acaPrice" id="erroresFront"></div> 
                 <label for="price">Price*</label>
                 <input type="number"  id="price" name="price" value="<%=nft.price%>">
-
+                <div class="acaName" id="erroresFront"></div> 
                 <label for="name">Name*</label>
                     <input type="text" id="name" name="name" value="<%=nft.name%>">
-
+                    <div class="acaKeyword" id="erroresFront"></div> 
                 <label for="keyword">Hashtags*</label>
                     <input type="text" id="keyword" name="keyword" value="<%=nft.keyword%>">
-
+                    <div class="acaDescription" id="erroresFront"></div> 
                 <label for="description">Description*</label>
                     <input type="text" id="description" name="description" value="<%=nft.description%>">
             </div>

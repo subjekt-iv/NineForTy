@@ -20,10 +20,8 @@
       <%- include("./partials/header") %>
 
     <main>
-      <% if (user) { %>
-        <div class="loggedIn"> <h2>You're already logged in!</h2>
-          <a href="/">Press this to go back home</a></div>
-          <% } else { %>
+      
+     
             <h4>Please, complete the following <br> 
               information to join us. </h4>
             
@@ -31,14 +29,17 @@
           <br>
 
       <div class="wrapper">
+        <!--
         <div class="errores">
           <ul>
   
           </ul>
       </div>
-        <form action="/users/register" enctype="multipart/form-data" method="POST" class="formulario" >
+      -->
+        <form action="/users/register"  method="POST" enctype="multipart/form-data" class="formulario" >
         
           <p id="field"> 
+           <div class="acaFirstName" id="erroresFront"></div> 
            <div class="onehalf"><label>*Name</label></div>
             <input type="text" id="first_name"  name="first_name" required: true placeholder="" value="<%= locals.old && old.first_name %>">
           </p>
@@ -47,6 +48,7 @@
           <% } %> 
           <br>
           <p id="field"> 
+            <div class="acaLastName" id="erroresFront"></div> 
             <div class="onehalf"><label>*Lastname</label></div>
             <input type="text" id="last_name" name="last_name" required: true placeholder="" value="<%= locals.old && old.last_name %>">
           </p>
@@ -55,6 +57,7 @@
             <% } %> 
           <br>
           <p id="field"> 
+            <div class="acaEmail" id="erroresFront"></div>
             <div class="onehalf"><label>*E-mail</label></div>
             <input type="text" id="email" name="email" required: true placeholder="" value="<%= locals.old && old.email %>">
           </p>
@@ -63,6 +66,7 @@
             <% } %> 
           <br>
          <p id="field"> 
+          <div class="acaUsername" id="erroresFront"></div>
             <div class="otherhalf"><label>*Username</label></div>
             <input type="text" id="username" name="username" required: true placeholder="" value="<%= locals.old && old.username %>">
           </p>
@@ -71,6 +75,7 @@
             <% } %> 
           <br>
           <p id="field"> 
+            <div class="acaPassword1" id="erroresFront"></div>
             <div class="otherhalf"><label>*Password</label></div>
             <input type="password" id="password" name="password" required: true placeholder ="">
           </p>
@@ -79,6 +84,7 @@
             <% } %> 
           <br>
           <p id="field"> 
+            <div class="acaPassword2" id="erroresFront"></div>
             <div class="otherhalf"><label>*Confirm password</label></div>
             <input type="password" id="password2" name="password2" required: true placeholder ="">
           </p>
@@ -87,8 +93,12 @@
             <% } %> 
           <br>
 
+          <div class="acaAvatar" id="erroresFront"></div>
           <label id="upload" class="selectCSV"  for="botonupload">Upload your avatar</label>
           <input type="file" id="create"  name="avatar" accept=".jpg, .gif, .mp4, .png" id="botonupload">
+          <% if (locals.errors && errors.avatar) { %>
+            <p class="errorSign"><%= errors.avatar.msg %></p>
+          <% } %> 
           <br>
           
           <p class="full">
@@ -101,12 +111,13 @@
           <br>
         </form>
       </div>
-      <% } %> 
+    
     </main>
   <%- include("./partials/footer") %>
   <script src="/js/register.js">
        
      
   </script>  
+
   </body>
 </html>

@@ -1,4 +1,5 @@
 const { sequelize } = require('../database/models');
+const {validationResult , body } = require('express-validator');
 const db = require('../database/models');
 const Op = db.Sequelize.Op;
 
@@ -49,7 +50,17 @@ const productController = {
 
 
   create: (req,res, next) =>{
-    console.log(req.session.userLogged.userID);
+
+
+    const errors = validationResult(req); 
+
+    if (errors.errors.length > 0) {
+      return res.render ('products/create', {
+        errors: errors.mapped(),
+        oldData: req.body
+      })
+    }
+    
     db.Nfts.create({
       price: req.body.price,
       userID: req.session.userLogged.userID,
