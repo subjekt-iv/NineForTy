@@ -101,7 +101,7 @@ login: (req,res)=>{
   let errors = [];
     res.render("login",{errors})
 },
-processLogin:(req,res)=>{
+ processLogin:(req,res)=>{
   db.Users.findOne({
     where: { email: req.body.email},
   }).then(function(result){
@@ -146,8 +146,6 @@ processLogin:(req,res)=>{
       }
     )
   },  
-
-
   
   profile: (req,res)=>{
     return res.render("profile", {
@@ -235,5 +233,5 @@ processLogin:(req,res)=>{
       */
   }
 
-  }
+}
 module.exports = usersController

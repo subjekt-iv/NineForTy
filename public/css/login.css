@@ -1,6 +1,6 @@
 *{
-    font-family:'Poppins', sans-serif;
-    color: white;  
+    font-family:'Poppins', sans-serif; 
+    color: white;
 }
 
 body{
@@ -53,6 +53,7 @@ main{
     height: 2rem;
     font-size: 75%;
     text-align: center;
+    float: none;
     width: 90%;
 }
 
@@ -165,7 +166,7 @@ footer{
     margin-bottom: 5%;
 }
 
-#user{
+#email{
 	width:90%;
 	padding:3px 10px;
 	border:1px solid #f6f6f6;

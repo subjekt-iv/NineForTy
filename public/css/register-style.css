@@ -3,6 +3,7 @@
     margin: 0%;
     padding:0%;
     box-sizing: border-box;
+    color: white;
 
 }
 
@@ -22,7 +23,6 @@ body{
 
 header{
     color: white;
-    
 }
 
 
@@ -30,6 +30,7 @@ header{
     text-align: center;
     color: white;
 }
+
 
 footer{
     background-color: black;
@@ -131,17 +132,39 @@ footer h4{
 
 }
 
-.barrabusqueda{
-    text-align: center;
-    justify-content: center;
-    width: 50%;
-    position: absolute;
-    top: 0;
-    left: 25%;
+/*nav*/
+
+.topnav {
+    overflow: hidden;
+    position: relative;
+}
+  
+.topnav #myLinks {
+    display: none;
 }
 
-.busq{    
-    margin-top: 13px;
+.topnav a {
+    color: white;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 30px;
+    background-color: none;
+    display: block; 
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.active {
+    color: white; 
+}
+
+.busq{  
     justify-self: center;
     border-radius: 30px;
     border: none;
@@ -149,7 +172,15 @@ footer h4{
     font-size: 75%;
     text-align: center;
     width: 90%;
+}
+
+.barrabusqueda{
     text-align: center;
+    justify-content: center;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 25%;
 }
 
 .logo{
@@ -160,14 +191,7 @@ footer h4{
     z-index: 10;
 }
 
-.headertest{
-    width: 100%;
-}
 
-header div a{
-    text-decoration: none;
-    color: white;
-}
 
 .resourcesmenu{
 justify-content: center;
@@ -366,16 +390,11 @@ h4{
 form{
     display: grid;
     grid-template-columns: 1fr ;
-color: white;
-padding: 1em 1.5em;
-  border-radius: 0;
-box-shadow: 0 0 6px 0 rgba(255,255,255, 0.8);
-  float: none;
-  max-width: 80%;
-  overflow: hidden;
-  text-transform: uppercase;
-  margin-left: 10%;
-  margin-bottom: 4%;
+    padding: 1em 1.5em;
+    float: none;
+    overflow: hidden;
+    text-transform: uppercase;
+    margin-left: 10%;
 }
 
 
