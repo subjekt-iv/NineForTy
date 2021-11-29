@@ -49,6 +49,7 @@ const productController = {
 
 
   create: (req,res, next) =>{
+    console.log(req.session.userLogged.userID);
     db.Nfts.create({
       price: req.body.price,
       userID: req.session.userLogged.userID,
@@ -61,25 +62,23 @@ const productController = {
     .then(res.redirect("/market"));
     },
 
-    
-    update: (req, res)=>{
-      db.Nfts.update(
-        {
-          price:req.body.price,
-          name:req.body.name,
-          keyword:req.body.keyword,
-          description:req.body.description,
-          image:req.file.filename,
-        },
-        {
-          where: {nftID:req.params.id}
-        }
-      )
-    }
-    
-/*
-    create: (req,res, next) =>{
-      db.Nfts.create({
+    edit: (req,res) =>{
+      db.Nfts.findByPk(req.params.id)
+      
+      .then(nft => {
+        res.render("products/edit", {nft: nft})
+      })
+    },
+
+    update: (req, res) => {
+      //console.log(req.session.userLogged.userID)
+      console.log(req.body)
+       
+      
+      db.Nfts.update({
+       
+
+       
         price: req.body.price,
         //userID: req.session.userLogged.userID,
         name: req.body.name,
@@ -246,4 +245,3 @@ const productController = {
 }
 
 */
-}
