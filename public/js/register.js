@@ -73,11 +73,18 @@ window.addEventListener('load', function(){
 
 
     let cajaUpload = document.querySelector('#create')
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
     let acaAvatar = document.querySelector('div.acaAvatar')
     if (cajaUpload.value == '') {
     acaAvatar.innerText = 'You must include your file'
     errores.push('You must include your file')   
-    } 
+    } else
+    
+    if (!allowedExtensions.exec(filePath))  {
+        acaUpload.innerHTML = 'Invalid File type'
+            errores.push('Invalid File type');
+        
+    }  
 
 
 
