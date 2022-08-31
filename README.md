@@ -6,7 +6,7 @@ Trello: https://trello.com/b/OuiW0tLD/proyecto
 
 
 Nosotros:
-. Somos un grupo de jóvenes empeñados en crear la nueva metodología de exchange en el mercado de los Non Fungible Tokens, desarrollándonos en un ambiente nuevo vía la implementación de la creatividad humana, donde una criptomoneda no sólo tenga valor monetario, sino, también artístico. Abrimos un mercado de obras digitales, donde cada uno puede presentar su granito de arena y realizar intercambios valuados en la moneda Ethereum, compra y venta.
+Somos un grupo de jóvenes empeñados en crear la nueva metodología de exchange en el mercado de los Non Fungible Tokens, desarrollándonos en un ambiente nuevo vía la implementación de la creatividad humana, donde una criptomoneda no sólo tenga valor monetario, sino, también artístico. Abrimos un mercado de obras digitales, donde cada uno puede presentar su granito de arena y realizar intercambios valuados en la moneda Ethereum, compra y venta.
 
 Descripción:
 
